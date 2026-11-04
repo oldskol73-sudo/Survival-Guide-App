@@ -42,13 +42,13 @@ class _PdfReaderScreenState extends State<PdfReaderScreen> {
             return const Padding(
               padding: EdgeInsets.all(24),
               child: Text('This file no longer matches its recorded SHA-256. It may have been edited or corrupted. Re-download it before relying on it.',
-                  style: TextStyle(color: OledTheme.danger)),
+                  style: TextStyle(color: AppTheme.danger)),
             );
           }
           return PdfViewer.file(
             StoragePaths.instance.resolve(widget.item.target),
             initialPageNumber: widget.page,
-            params: const PdfViewerParams(backgroundColor: OledTheme.black),
+            params: const PdfViewerParams(backgroundColor: AppTheme.bg),
           );
         },
       ),
@@ -73,7 +73,7 @@ class _ZimScreenState extends State<ZimScreen> {
     final server = LoopbackServer.instance!;
     _c = WebViewController()
       ..setJavaScriptMode(JavaScriptMode.unrestricted) // ZIM pages use JS for collapsible sections
-      ..setBackgroundColor(OledTheme.black)
+      ..setBackgroundColor(AppTheme.bg)
       ..setNavigationDelegate(NavigationDelegate(
         onNavigationRequest: (req) {
           // Only our own loopback origin. External links in Wikipedia articles are refused.

@@ -1,4 +1,4 @@
-// App shell and the four main screens: Library (Stage A sync), Search (FTS5), Ask (RAG), Settings.
+// App shell and the four main screens: Home (guided tasks), Library (Stage A sync), Search (FTS5), Settings.
 
 import 'package:flutter/material.dart';
 
@@ -10,7 +10,10 @@ import '../core/services.dart';
 import '../core/settings.dart';
 import '../core/theme.dart';
 import '../downloads/download_engine.dart';
-import '../rag/rag_controller.dart';
+import '../family/family_screen.dart';
+import '../home/field_guide_screen.dart';
+import '../home/gear_screen.dart';
+import '../home/home_screen.dart';
 import '../search/fts_index.dart';
 import '../viewers/viewer_screens.dart';
 
@@ -26,9 +29,10 @@ class _HomeShellState extends State<HomeShell> {
   @override
   Widget build(BuildContext context) {
     final pages = [
+      HomeScreen(onOpenTab: (i) => setState(() => _tab = i)),
       const LibraryScreen(),
+      const FamilyScreen(),
       const AirGapGate(featureName: 'library search', child: SearchScreen()),
-      const AirGapGate(featureName: 'AI questions', child: AskScreen()),
       const SettingsScreen(),
     ];
     return Scaffold(
@@ -36,12 +40,39 @@ class _HomeShellState extends State<HomeShell> {
       bottomNavigationBar: NavigationBar(
         selectedIndex: _tab,
         onDestinationSelected: (i) => setState(() => _tab = i),
+        height: 88,
+        indicatorColor: Colors.transparent,
         destinations: const [
-          NavigationDestination(icon: Icon(Icons.library_books_outlined), label: 'Library'),
-          NavigationDestination(icon: Icon(Icons.search), label: 'Search'),
-          NavigationDestination(icon: Icon(Icons.psychology_alt_outlined), label: 'Ask'),
-          NavigationDestination(icon: Icon(Icons.tune), label: 'Settings'),
+          NavigationDestination(icon: _NavThumb('home'), selectedIcon: _NavThumb('home', selected: true), label: 'Home'),
+          NavigationDestination(icon: _NavThumb('library'), selectedIcon: _NavThumb('library', selected: true), label: 'Library'),
+          NavigationDestination(icon: _NavThumb('family'), selectedIcon: _NavThumb('family', selected: true), label: 'Family'),
+          NavigationDestination(icon: _NavThumb('search'), selectedIcon: _NavThumb('search', selected: true), label: 'Search'),
+          NavigationDestination(icon: _NavThumb('settings'), selectedIcon: _NavThumb('settings', selected: true), label: 'Settings'),
         ],
+      ),
+    );
+  }
+}
+
+/// Picture button for a bottom-bar tab. The selected tab gets a bright ring; the others are dimmed.
+class _NavThumb extends StatelessWidget {
+  const _NavThumb(this.name, {this.selected = false});
+  final String name;
+  final bool selected;
+
+  @override
+  Widget build(BuildContext context) {
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 150),
+      width: 50,
+      height: 50,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(14),
+        border: Border.all(color: selected ? AppTheme.accent : AppTheme.outline, width: selected ? 2.5 : 1),
+      ),
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(11),
+        child: Opacity(opacity: selected ? 1 : 0.6, child: Image.asset('assets/home/nav_$name.jpg', fit: BoxFit.cover, gaplessPlayback: true)),
       ),
     );
   }
@@ -64,12 +95,19 @@ class LibraryScreen extends StatelessWidget {
           if (engine.lowDisk.value)
             Card(
               child: ListTile(
-                leading: const Icon(Icons.sd_storage_outlined, color: OledTheme.danger),
+                leading: const Icon(Icons.sd_storage_outlined, color: AppTheme.danger),
                 title: const Text('Storage almost full: downloads paused'),
                 subtitle: const Text('Free space or switch to an SD card in Settings, then resume.'),
                 trailing: TextButton(onPressed: engine.resumeAfterLowDisk, child: const Text('Resume')),
               ),
             ),
+          // Field Guide and Gear live here now that Home follows the new tile layout.
+          Row(children: [
+            Expanded(child: _LibraryShortcut(icon: Icons.menu_book_rounded, label: 'Field Guide', page: const FieldGuideScreen())),
+            const SizedBox(width: 10),
+            Expanded(child: _LibraryShortcut(icon: Icons.backpack_rounded, label: 'Gear', page: const GearScreen())),
+          ]),
+          const SizedBox(height: 12),
           if (!settings.sealed)
             FilledButton.icon(
               icon: const Icon(Icons.cloud_download_outlined),
@@ -85,6 +123,32 @@ class LibraryScreen extends StatelessWidget {
   }
 }
 
+class _LibraryShortcut extends StatelessWidget {
+  const _LibraryShortcut({required this.icon, required this.label, required this.page});
+  final IconData icon;
+  final String label;
+  final Widget page;
+
+  @override
+  Widget build(BuildContext context) => Material(
+        color: AppTheme.card,
+        shape: RoundedRectangleBorder(side: const BorderSide(color: AppTheme.outline), borderRadius: BorderRadius.circular(16)),
+        child: InkWell(
+          borderRadius: BorderRadius.circular(16),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => page)),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 14),
+            child: Row(children: [
+              Icon(icon, color: AppTheme.accent),
+              const SizedBox(width: 10),
+              Expanded(child: Text(label, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
+              const Icon(Icons.chevron_right, color: AppTheme.muted),
+            ]),
+          ),
+        ),
+      );
+}
+
 class _CategoryTile extends StatelessWidget {
   const _CategoryTile({required this.category});
   final Category category;
@@ -97,9 +161,9 @@ class _CategoryTile extends StatelessWidget {
     final usable = category.items.where((i) => jobs[i.id]?.isUsable ?? false).length;
     return Card(
       child: ExpansionTile(
-        leading: Text(category.code, style: const TextStyle(color: OledTheme.amber, fontWeight: FontWeight.w700)),
+        leading: Text(category.code, style: const TextStyle(color: AppTheme.accent, fontWeight: FontWeight.w700)),
         title: Text(category.title),
-        subtitle: Text('$usable / ${category.items.length} ready', style: const TextStyle(color: OledTheme.muted)),
+        subtitle: Text('$usable / ${category.items.length} ready', style: const TextStyle(color: AppTheme.muted)),
         trailing: Switch(
           value: enabled,
           onChanged: s.sealed
@@ -131,9 +195,9 @@ class _ItemRow extends StatelessWidget {
       _ => item.isPlaceholder ? 'Set a URL in the catalog' : st.name,
     };
     final color = switch (st) {
-      JobStatus.verified || JobStatus.unverified => OledTheme.ok,
-      JobStatus.corrupt || JobStatus.failed || JobStatus.insufficientSpace => OledTheme.danger,
-      _ => OledTheme.muted,
+      JobStatus.verified || JobStatus.unverified => AppTheme.ok,
+      JobStatus.corrupt || JobStatus.failed || JobStatus.insufficientSpace => AppTheme.danger,
+      _ => AppTheme.muted,
     };
     return ListTile(
       dense: true,
@@ -191,7 +255,7 @@ class _SearchScreenState extends State<SearchScreen> {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Text(r.error ?? '${r.hits.length} results · ${r.elapsed.inMicroseconds / 1000} ms',
-              style: const TextStyle(color: OledTheme.muted, fontSize: 13)),
+              style: const TextStyle(color: AppTheme.muted, fontSize: 13)),
         ),
       Expanded(
         child: ListView.builder(
@@ -229,76 +293,10 @@ class _Snippet extends StatelessWidget {
         spans.add(TextSpan(text: p));
         continue;
       }
-      spans.add(TextSpan(text: p.substring(0, end), style: const TextStyle(color: OledTheme.amber, fontWeight: FontWeight.w700)));
+      spans.add(TextSpan(text: p.substring(0, end), style: const TextStyle(color: AppTheme.accent, fontWeight: FontWeight.w700)));
       spans.add(TextSpan(text: p.substring(end + 1)));
     }
-    return Text.rich(TextSpan(style: const TextStyle(color: OledTheme.muted), children: spans), maxLines: 4, overflow: TextOverflow.ellipsis);
-  }
-}
-
-// ---------------------------------------------------------------- Ask (RAG)
-
-class AskScreen extends StatefulWidget {
-  const AskScreen({super.key});
-  @override
-  State<AskScreen> createState() => _AskScreenState();
-}
-
-class _AskScreenState extends State<AskScreen> {
-  final _q = TextEditingController();
-
-  @override
-  Widget build(BuildContext context) {
-    return RagBuilder(
-      pipeline: Services.pipeline,
-      builder: (context, rag) => ListView(
-        padding: const EdgeInsets.all(16),
-        children: [
-          TextField(
-            controller: _q,
-            minLines: 1,
-            maxLines: 4,
-            decoration: const InputDecoration(
-              labelText: 'Ask the library',
-              hintText: 'How do I test water for biological contaminants without test strips?',
-              border: OutlineInputBorder(),
-            ),
-          ),
-          const SizedBox(height: 12),
-          FilledButton(
-            onPressed: rag.busy ? rag.stop : () => rag.ask(_q.text),
-            style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-            child: Text(rag.busy ? 'Stop' : 'Ask'),
-          ),
-          if (rag.status.isNotEmpty && rag.busy)
-            Padding(padding: const EdgeInsets.only(top: 12), child: Text(rag.status, style: const TextStyle(color: OledTheme.muted))),
-          if (rag.notice != null)
-            Padding(padding: const EdgeInsets.only(top: 12), child: Text(rag.notice!, style: const TextStyle(color: OledTheme.amber))),
-          if (rag.error != null)
-            Padding(padding: const EdgeInsets.only(top: 12), child: Text(rag.error!, style: const TextStyle(color: OledTheme.danger))),
-          if (rag.answer.isNotEmpty)
-            Padding(padding: const EdgeInsets.only(top: 16), child: SelectableText(rag.answer, style: const TextStyle(fontSize: 16, height: 1.5))),
-          if (rag.sources.isNotEmpty) ...[
-            const SizedBox(height: 20),
-            const Text('Sources', style: TextStyle(fontWeight: FontWeight.w600)),
-            for (final s in rag.sources)
-              Card(
-                child: ListTile(
-                  leading: Text('S${s.n}', style: const TextStyle(color: OledTheme.amber, fontWeight: FontWeight.w700)),
-                  title: Text(s.citation),
-                  subtitle: Text(s.text, maxLines: rag.retrievalOnly ? 8 : 3, overflow: TextOverflow.ellipsis),
-                  onTap: () {
-                    final item = Services.catalog.itemById(s.itemId);
-                    if (item != null) {
-                      Navigator.of(context).push(MaterialPageRoute(builder: (_) => PdfReaderScreen(item: item, page: s.page)));
-                    }
-                  },
-                ),
-              ),
-          ],
-        ],
-      ),
-    );
+    return Text.rich(TextSpan(style: const TextStyle(color: AppTheme.muted), children: spans), maxLines: 4, overflow: TextOverflow.ellipsis);
   }
 }
 
@@ -339,7 +337,7 @@ class SettingsScreen extends StatelessWidget {
         ),
         const Divider(),
         ListTile(
-          leading: Icon(s.sealed ? Icons.lock : Icons.lock_open, color: s.sealed ? OledTheme.ok : OledTheme.amber),
+          leading: Icon(s.sealed ? Icons.lock : Icons.lock_open, color: s.sealed ? AppTheme.ok : AppTheme.accent),
           title: Text(s.sealed ? 'Node sealed (Stage B)' : 'Seal node (enter Stage B)'),
           subtitle: Text(s.sealed
               ? 'All non-loopback connections are blocked inside the app. ${NetworkLockdown.blockedLog.length} blocked attempts logged.'

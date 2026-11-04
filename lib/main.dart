@@ -14,6 +14,9 @@ import 'core/services.dart';
 import 'core/settings.dart';
 import 'core/storage_paths.dart';
 import 'core/theme.dart';
+import 'family/family_store.dart';
+import 'home/checklist_store.dart';
+import 'vault/vault_store.dart';
 import 'downloads/download_engine.dart';
 import 'rag/vector_store.dart';
 import 'search/fts_index.dart';
@@ -30,6 +33,9 @@ Future<void> main() async {
   var paths = await StoragePaths.init();
   final settings = await AppSettings.load(paths.stateDir, catalog.categories.where((c) => c.defaultEnabled).map((c) => c.id));
   if (settings.volumeIndex != 0) paths = await StoragePaths.init(volumeIndex: settings.volumeIndex);
+  await ChecklistStore.load(paths.stateDir);
+  await FamilyStore.load(paths.stateDir);
+  await VaultStore.init(paths.stateDir);
 
   if (settings.sealed) NetworkLockdown.engage();
 
@@ -97,9 +103,9 @@ class _SurvivalNodeAppState extends State<SurvivalNodeApp> {
   Widget build(BuildContext context) => MaterialApp(
         title: 'Survival Node',
         debugShowCheckedModeBanner: false,
-        theme: OledTheme.build(),
-        darkTheme: OledTheme.build(),
+        theme: AppTheme.build(),
         themeMode: ThemeMode.dark,
+        darkTheme: AppTheme.build(),
         home: const HomeShell(),
       );
 }

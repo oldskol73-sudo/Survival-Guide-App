@@ -72,7 +72,7 @@ class RagPipeline {
     await llm?.unload();
   }
 
-  Stream<RagEvent> ask(String question, {String? category, int topN = 3}) async* {
+  Stream<RagEvent> ask(String question, {String? category, int topN = 3, String? instruction}) async* {
     final q = question.trim();
     if (q.isEmpty) return;
 
@@ -102,7 +102,7 @@ class RagPipeline {
     // 3. Build a prompt that fits: prompt + reply + margin must fit n_ctx; drop or trim lowest-ranked sources.
     final budget = tier.nCtx - tier.maxNewTokens - 64;
     var used = List<Source>.of(sources);
-    var user = _userPrompt(q, used);
+    var user = _userPrompt(q, used, instruction);
     while (true) {
       final n = await llm!.countPromptTokens(_systemPrompt, user);
       if (n < 0) {
@@ -118,7 +118,7 @@ class RagPipeline {
         if (cut < 200) break; // cannot shrink further; generate() will report too-long
         used = [Source(s.n, s.itemId, s.title, s.page, '${s.text.substring(0, cut)}…')];
       }
-      user = _userPrompt(q, used);
+      user = _userPrompt(q, used, instruction);
     }
 
     // 4. Stream.
@@ -148,7 +148,7 @@ class RagPipeline {
   /// iOS builds link llama.cpp with Metal: offload all layers. Android runs on CPU (Vulkan drivers vary too much).
   int get _gpuLayers => Platform.isIOS ? 99 : 0;
 
-  static String _userPrompt(String q, List<Source> sources) {
+  static String _userPrompt(String q, List<Source> sources, [String? instruction]) {
     final b = StringBuffer('Sources:\n');
     for (final s in sources) {
       b.writeln('[S${s.n}] ${s.title}, page ${s.page}:');
@@ -156,6 +156,7 @@ class RagPipeline {
       b.writeln();
     }
     b.writeln('Question: $q');
+    if (instruction != null) b.writeln(instruction);
     return b.toString();
   }
 

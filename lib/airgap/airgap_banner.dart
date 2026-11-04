@@ -19,15 +19,15 @@ class AirGapBanner extends StatelessWidget {
       valueListenable: AirGapMonitor.instance,
       builder: (context, s, _) {
         final (color, icon, label) = switch (s.level) {
-          AirGapLevel.sealed => (OledTheme.ok, Icons.shield_outlined, 'AIR-GAPPED · all reportable radios off'),
-          AirGapLevel.unconfirmed => (OledTheme.amber, Icons.help_outline, 'UNCONFIRMED · confirm Airplane Mode'),
-          AirGapLevel.exposed => (OledTheme.danger, Icons.wifi_tethering_error, 'EXPOSED · ${s.activeInterfaces.join(', ')}'),
+          AirGapLevel.sealed => (AppTheme.ok, Icons.shield_outlined, 'AIR-GAPPED · all reportable radios off'),
+          AirGapLevel.unconfirmed => (AppTheme.warn, Icons.help_outline, 'UNCONFIRMED · confirm Airplane Mode'),
+          AirGapLevel.exposed => (AppTheme.danger, Icons.wifi_tethering_error, 'EXPOSED · ${s.activeInterfaces.join(', ')}'),
         };
         return Semantics(
           liveRegion: true,
           label: 'Air-gap status: $label',
           child: Material(
-            color: OledTheme.black,
+            color: AppTheme.bg,
             child: Container(
               decoration: BoxDecoration(border: Border(bottom: BorderSide(color: color, width: 2))),
               padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
@@ -42,7 +42,7 @@ class AirGapBanner extends StatelessWidget {
                 ),
                 IconButton(
                   tooltip: 'Re-check radios',
-                  icon: const Icon(Icons.refresh, color: OledTheme.muted, size: 20),
+                  icon: const Icon(Icons.refresh, color: AppTheme.muted, size: 20),
                   onPressed: AirGapMonitor.instance.refresh,
                 ),
               ]),
@@ -111,38 +111,38 @@ class _Checklist extends StatelessWidget {
         child: ListView(
           padding: const EdgeInsets.fromLTRB(20, 24, 20, 32),
           children: [
-            Icon(exposed ? Icons.warning_amber_rounded : Icons.help_outline, color: exposed ? OledTheme.danger : OledTheme.amber, size: 40),
+            Icon(exposed ? Icons.warning_amber_rounded : Icons.help_outline, color: exposed ? AppTheme.danger : AppTheme.warn, size: 40),
             const SizedBox(height: 12),
-            Text(exposed ? 'Radios are active' : 'Air gap not confirmed', style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: OledTheme.text)),
+            Text(exposed ? 'Radios are active' : 'Air gap not confirmed', style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: AppTheme.text)),
             const SizedBox(height: 8),
-            Text('Disable every network interface before opening $featureName.', style: const TextStyle(color: OledTheme.muted, fontSize: 16)),
+            Text('Disable every network interface before opening $featureName.', style: const TextStyle(color: AppTheme.muted, fontSize: 16)),
             if (exposed) ...[
               const SizedBox(height: 20),
-              const Text('Detected', style: TextStyle(color: OledTheme.text, fontWeight: FontWeight.w600)),
+              const Text('Detected', style: TextStyle(color: AppTheme.text, fontWeight: FontWeight.w600)),
               for (final i in status.activeInterfaces)
                 Padding(
                   padding: const EdgeInsets.only(top: 6),
                   child: Row(children: [
-                    const Icon(Icons.circle, size: 8, color: OledTheme.danger),
+                    const Icon(Icons.circle, size: 8, color: AppTheme.danger),
                     const SizedBox(width: 10),
-                    Expanded(child: Text(i, style: const TextStyle(color: OledTheme.danger))),
+                    Expanded(child: Text(i, style: const TextStyle(color: AppTheme.danger))),
                   ]),
                 ),
             ],
             const SizedBox(height: 24),
-            const Text('Steps', style: TextStyle(color: OledTheme.text, fontWeight: FontWeight.w600)),
+            const Text('Steps', style: TextStyle(color: AppTheme.text, fontWeight: FontWeight.w600)),
             for (var n = 0; n < steps.length; n++)
               Padding(
                 padding: const EdgeInsets.only(top: 10),
                 child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  SizedBox(width: 26, child: Text('${n + 1}.', style: const TextStyle(color: OledTheme.amber, fontWeight: FontWeight.w600))),
-                  Expanded(child: Text(steps[n], style: const TextStyle(color: OledTheme.text))),
+                  SizedBox(width: 26, child: Text('${n + 1}.', style: const TextStyle(color: AppTheme.accent, fontWeight: FontWeight.w600))),
+                  Expanded(child: Text(steps[n], style: const TextStyle(color: AppTheme.text))),
                 ]),
               ),
             for (final w in status.warnings)
               Padding(
                 padding: const EdgeInsets.only(top: 14),
-                child: Text(w, style: const TextStyle(color: OledTheme.muted, fontSize: 13)),
+                child: Text(w, style: const TextStyle(color: AppTheme.muted, fontSize: 13)),
               ),
             const SizedBox(height: 28),
             FilledButton.icon(
@@ -162,7 +162,7 @@ class _Checklist extends StatelessWidget {
             const SizedBox(height: 12),
             TextButton(
               onPressed: onProceed,
-              style: TextButton.styleFrom(minimumSize: const Size.fromHeight(48), foregroundColor: OledTheme.muted),
+              style: TextButton.styleFrom(minimumSize: const Size.fromHeight(48), foregroundColor: AppTheme.muted),
               child: const Text('Proceed anyway (not air-gapped)'),
             ),
           ],

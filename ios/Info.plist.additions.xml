@@ -31,3 +31,11 @@
 <array>
   <string>com.bbflight.background_downloader.taskId</string>
 </array>
+
+<!-- Documents vault -->
+<key>NSFaceIDUsageDescription</key>
+<string>Unlocks your private documents vault. Nothing leaves this device.</string>
+<key>NSCameraUsageDescription</key>
+<string>Photograph a document to store it in your private vault.</string>
+<key>NSPhotoLibraryUsageDescription</key>
+<string>Choose a photo of a document to store it in your private vault.</string>

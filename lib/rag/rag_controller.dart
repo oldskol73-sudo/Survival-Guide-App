@@ -29,7 +29,7 @@ class RagController extends ChangeNotifier with WidgetsBindingObserver {
 
   bool get busy => phase == RagPhase.retrieving || phase == RagPhase.generating;
 
-  void ask(String question, {String? category}) {
+  void ask(String question, {String? category, String? instruction}) {
     _sub?.cancel();
     phase = RagPhase.retrieving;
     status = '';
@@ -41,7 +41,7 @@ class RagController extends ChangeNotifier with WidgetsBindingObserver {
     notifyListeners();
 
     final pipeline = _pipeline = _makePipeline();
-    _sub = pipeline.ask(question, category: category).listen((e) {
+    _sub = pipeline.ask(question, category: category, instruction: instruction).listen((e) {
       switch (e) {
         case RagStatus(:final message):
           status = message;

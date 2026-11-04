@@ -29,7 +29,11 @@ android {
 
     externalNativeBuild { cmake { path = file("../../native/CMakeLists.txt"); version = "3.22.1" } }
 
-    packaging { jniLibs.useLegacyPackaging = false }
+    packaging {
+        jniLibs.useLegacyPackaging = false
+        // arm64-only app: stray x86/armv7 plugin libs would make Android start the process in the wrong ABI.
+        jniLibs.excludes += listOf("lib/x86_64/**", "lib/x86/**", "lib/armeabi-v7a/**")
+    }
 
     buildTypes {
         release {
