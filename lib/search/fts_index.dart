@@ -185,9 +185,9 @@ class FtsIndex {
 
   // ------------------------------------------------------------------ search
 
-  SearchResult search(String userQuery, {String? category, int limit = 30, int offset = 0}) {
+  SearchResult search(String userQuery, {String? category, int limit = 30, int offset = 0, bool raw = false}) {
     final sw = Stopwatch()..start();
-    final match = FtsQuery.build(userQuery);
+    final match = raw ? userQuery : FtsQuery.build(userQuery);
     if (match == null) return SearchResult(const [], sw.elapsed, error: 'Nothing to search for');
 
     List<SearchHit> run(String expr) {
@@ -229,6 +229,26 @@ class FtsIndex {
         return SearchResult(const [], sw.elapsed, error: e.message);
       }
     }
+  }
+
+  /// Search for a question written in plain language. Tries every content word first; if that finds fewer than
+  /// [minHits] pages, matches any of them and lets relevance ranking put the pages with the most (and rarest)
+  /// words first. If the chosen area has nothing, the whole library is searched.
+  SearchResult searchNatural(String question, {String? category, int limit = 20, int minHits = 3}) {
+    final words = FtsQuery.contentWords(question);
+    if (words.isEmpty) return search(question, category: category, limit: limit);
+    final sw = Stopwatch()..start();
+    final all = words.map((w) => '"$w"').join(' ');
+    final any = words.map((w) => '"$w"').join(' OR ');
+    var best = const <SearchHit>[];
+    for (final cat in [if (category != null) category, null]) {
+      final r = search(all, category: cat, limit: limit, raw: true).hits;
+      if (r.length >= minHits) return SearchResult(r, sw.elapsed, rewrittenQuery: all);
+      final o = search(any, category: cat, limit: limit, raw: true).hits;
+      if (o.isNotEmpty) return SearchResult(o.length >= r.length ? o : r, sw.elapsed, rewrittenQuery: any);
+      if (r.length > best.length) best = r;
+    }
+    return SearchResult(best, sw.elapsed, rewrittenQuery: all);
   }
 
   /// Library-wide counts for the status screen.

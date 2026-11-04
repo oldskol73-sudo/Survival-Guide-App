@@ -184,7 +184,7 @@ class RagPipeline {
       }
     }
 
-    final fr = fts.search(q, category: category, limit: 20);
+    final fr = fts.searchNatural(q, category: category, limit: 20);
     for (var i = 0; i < fr.hits.length; i++) {
       final h = fr.hits[i];
       final key = '${h.itemId}#${h.page}';

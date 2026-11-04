@@ -99,4 +99,28 @@ class FtsQuery {
 
   /// Fallback used if FTS5 still rejects the expression: the whole input as one phrase.
   static String asPhrase(String input) => '"${input.replaceAll('"', '""').trim()}"';
+
+  static const _stop = {
+    'a', 'an', 'the', 'and', 'or', 'but', 'if', 'then', 'so', 'of', 'to', 'in', 'on', 'at', 'by', 'for', 'with', 'from',
+    'as', 'is', 'are', 'was', 'were', 'be', 'been', 'being', 'am', 'do', 'does', 'did', 'doing', 'have', 'has', 'had',
+    'having', 'i', 'me', 'my', 'mine', 'we', 'us', 'our', 'you', 'your', 'he', 'she', 'it', 'its', 'they', 'them',
+    'their', 'this', 'that', 'these', 'those', 'there', 'here', 'what', 'which', 'who', 'whom', 'whose', 'when',
+    'where', 'why', 'how', 'can', 'could', 'should', 'would', 'will', 'shall', 'may', 'might', 'must', 'not', 'no',
+    'nor', 'too', 'very', 'just', 'about', 'into', 'over', 'under', 'up', 'down', 'out', 'off', 'again', 'also',
+    'than', 'any', 'some', 'such', 'only', 'own', 'same', 'both', 'each', 'few', 'more', 'most', 'other', 'get',
+    'got', 'make', 'made', 'need', 'needs', 'want', 'wants', 'like', 'use', 'using', 'used', 'please', 'help', 'one',
+    'two',
+  };
+
+  /// The content words of a typed sentence ("My only water source is a muddy stream" -> water, source, muddy,
+  /// stream). Used for questions written in plain language, where requiring EVERY word to appear on one page
+  /// (the default for typed search) finds nothing.
+  static List<String> contentWords(String input) {
+    final seen = <String>{};
+    for (final m in RegExp(r"[A-Za-z0-9][A-Za-z0-9'-]*").allMatches(input.toLowerCase())) {
+      final w = m.group(0)!.replaceAll("'", '');
+      if (w.length >= 2 && !_stop.contains(w)) seen.add(w);
+    }
+    return seen.toList();
+  }
 }

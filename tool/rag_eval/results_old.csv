@@ -1,0 +1,282 @@
+screen,area,scenario,result,top pages
+solver,water,My only water source is a muddy stream,NONE,
+solver,water,How long do I boil water to make it safe,NONE,
+solver,water,How much bleach do I add to a gallon of water,NONE,
+solver,water,Water from a pond smells bad and has green algae,NONE,
+solver,water,Make a water filter from sand and charcoal,NONE,
+solver,water,Solar still to get drinking water in the desert,NONE,
+solver,water,Collect rain water safely,NONE,
+solver,water,Is it safe to drink melted snow,NONE,
+solver,water,What are signs of dehydration,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p12; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p50
+solver,water,How much water does a person need per day,NONE,
+solver,water,Find water in dry country,PASS,RAINWATER HARVESTING p2
+solver,water,Purify water with iodine tablets,PASS,Drinking Water Still Construction p3; WATERFAQ p12; WATERFAQ p11
+solver,water,Water tastes like chemicals after treating it,PASS,RAINWATER CATCHMENT SYSTEMS p35
+solver,water,Store drinking water for emergencies,PASS,EPA Emergency Disinfection Drinking Water 2017 p1; EPA Emergency Disinfection Drinking Water 2017 p2; WATER DISINFECTION STUDY p70
+solver,water,Well water after a flood,PASS,DRILLING AND WELL CONSTRUCTION p122; DRILLING AND WELL CONSTRUCTION p10; EPA Emergency Disinfection Drinking Water 2017 p2
+solver,water,Pipes frozen and no water,NONE,
+solver,water,Build a latrine away from our water,NONE,
+solver,water,Wash hands with no running water,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p14
+solver,water,Giardia from stream water what now,NONE,
+solver,water,Can I drink seawater,NONE,
+solver,water,Distill water with a pot and lid,NONE,
+solver,water,Cloudy water how to clear it,NONE,
+solver,water,Septic system backed up after storm,NONE,
+solver,water,Dispose of human waste in camp,NONE,
+solver,water,How to treat water for a baby,NONE,
+solver,food,How do I can green beans safely,NONE,
+solver,food,Signs that canned food has spoiled botulism,NONE,
+solver,food,Store flour and rice for years,NONE,
+solver,food,Preserve meat without a freezer,NONE,
+solver,food,How to dry fruit and vegetables,WRONG,ORGANIC GARDENING TECNOLOGY p9; ORGANIC GARDENING TECNOLOGY p28; WORMOLOGY 101 p46
+solver,food,Plant a survival garden first season,PASS,HOME VEGETABLE GARDENING p109; GROWING PEPPERS p3
+solver,food,What wild plants are safe to eat,PASS,THE WILD FAST FOOD COOKBOOK p6; THE WILD FAST FOOD COOKBOOK p9; FM 21-76 Survival 1957 p280
+solver,food,Universal edibility test steps,NONE,
+solver,food,Catch fish with no fishing rod,NONE,
+solver,food,Set a snare for small game,PASS,FM 21-76 Survival 1957 p145; FM 21-76 Survival 1957 p146
+solver,food,How to clean and gut a rabbit,PASS,FM 21-76 Survival 1957 p163
+solver,food,Cook without a stove or pots,NONE,
+solver,food,Food in power outage fridge freezer how long safe,NONE,
+solver,food,Make bread without yeast,NONE,
+solver,food,Pickle vegetables in jars,PASS,USDA Canning 06 Fermented Pickled p25; USDA Canning 06 Fermented Pickled p29; USDA Canning 06 Fermented Pickled p27
+solver,food,Keep bugs and mice out of stored grain,NONE,
+solver,food,How long does honey and salt and sugar last,NONE,
+solver,food,How to render fat and make tallow or lard,NONE,
+solver,food,Sprout seeds for fresh greens in winter,NONE,
+solver,food,Raise chickens for eggs,NONE,
+solver,food,How to butcher a deer in the field,PASS,BIG GAME FROM HUNT TO HOME p4
+solver,food,Cooking food safely to avoid food poisoning,PASS,FM 21-76 Survival 1957 p280; THE WILD FAST FOOD COOKBOOK p6; FM 21-76 Survival 1957 p301
+solver,food,Feed a family of four for a month on stored food,NONE,
+solver,food,Insects as a food source,PASS,FM 21-76 Survival 1957 p17; DIY FOOD DRYER p10; DISEASE AND ANTROPOD MANAGEMENT IN GREENHOUSES p75
+solver,food,Fermenting food without special equipment,WRONG,USDA Canning 01 Principles p3; BEEKEEPING BASICS p67
+solver,medical,Heavy bleeding from a deep cut on the arm,NONE,
+solver,medical,How do I apply a tourniquet,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p197; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p204
+solver,medical,Someone is not breathing and has no pulse,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p220; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p174
+solver,medical,Choking adult cannot speak,NONE,
+solver,medical,Broken leg and no hospital nearby,NONE,
+solver,medical,Severe burn on the hand,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p62; TC 4-02.1 First Aid 2018 p48; HERBAL-MEDICAL DICTIONARY p46
+solver,medical,Child has a high fever,NONE,
+solver,medical,Snake bite on the ankle,NONE,
+solver,medical,Signs of hypothermia and how to treat,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p56; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p42
+solver,medical,Heat stroke vs heat exhaustion,NONE,
+solver,medical,Deep puncture wound in the foot from a nail,NONE,
+solver,medical,Infection spreading red streaks from a wound,NONE,
+solver,medical,How to clean and close a wound without stitches,NONE,
+solver,medical,Diarrhea for two days dehydration,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p367; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p369; PREVENTIVE MEDICINE FOR GROUND FORCES p43
+solver,medical,Make oral rehydration solution,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p41; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p175
+solver,medical,Allergic reaction swelling face,PASS,TC 4-02.1 First Aid 2018 p91
+solver,medical,Dislocated shoulder,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p281; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p309; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p318
+solver,medical,Head injury after a fall confused,NONE,
+solver,medical,Frostbite on fingers and toes,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p41; TC 4-02.1 First Aid 2018 p59; PREVENTIVE MEDICINE FOR GROUND FORCES p40
+solver,medical,Tooth abscess and severe tooth pain,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p125; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p126
+solver,medical,Childbirth with no doctor,NONE,
+solver,medical,Diabetic person with no insulin,PASS,HERBAL-MEDICAL DICTIONARY p29; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p105; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p45
+solver,medical,Chest pain and left arm numb,NONE,
+solver,medical,Bee sting swelling,PASS,TC 4-02.1 First Aid 2018 p48
+solver,medical,Tick bite how to remove,NONE,
+solver,medical,Sprained ankle can't walk,NONE,
+solver,medical,Eye chemical splash,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p194
+solver,medical,Carbon monoxide headache dizzy in the house,NONE,
+solver,medical,Drowning victim pulled from water,WRONG,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p223
+solver,medical,Treat shock after injury,PASS,TC 4-02.1 First Aid 2018 p82; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p146
+solver,medical,Make a splint for a broken arm,NONE,
+solver,medical,Antibiotic alternatives in a long emergency,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p202
+solver,medical,Pain relief without medicine,PASS,WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 2 p230
+solver,medical,Treat poison ivy rash,PASS,BLOODBORNE PATHOGEN EXPOSURE GUIDE p37
+solver,medical,Someone swallowed bleach or chemicals,NONE,
+solver,medical,Asthma attack no inhaler,NONE,
+solver,medical,Seizure what to do,WRONG,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p367
+solver,medical,Stroke signs face drooping,NONE,
+solver,medical,Lice or scabies outbreak in a shelter,NONE,
+solver,medical,Infant not feeding and weak,NONE,
+solver,medical,Elderly parent dehydrated and confused,NONE,
+solver,medical,Pandemic isolation mask and hygiene,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p92
+solver,medical,Radiation exposure what to do,WRONG,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p406
+solver,carpentry,Build an emergency shelter in the woods tonight,NONE,
+solver,carpentry,"Trees down on my roof, patch a hole",NONE,
+solver,carpentry,Frame a small cabin wall,NONE,
+solver,carpentry,How do I build a door and hinge,PASS,THE CONSTRUCTION OF A YURT p2
+solver,carpentry,Insulate a room to keep heat in,NONE,
+solver,carpentry,Build a log cabin joint notch,NONE,
+solver,carpentry,Board up windows before a hurricane,NONE,
+solver,carpentry,Build a storage shed,NONE,
+solver,carpentry,Sharpen an axe and a saw,PASS,HAND TOOLS p13; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p224; CROSSCUT SAW MANUAL p12
+solver,carpentry,Make a simple table and bench,PASS,BUILDING A TRADITIONAL WORKBENCH p12; BUILDING A TRADITIONAL WORKBENCH p17; HOW TO BUILD A MULTIMACHINE p8
+solver,carpentry,Waterproof a wood roof,PASS,FM 5-426 Carpentry p130; FM 5-426 Carpentry p50; HAND TOOLS p17
+solver,carpentry,Build a chimney or stove pipe through a wall,NONE,
+solver,carpentry,Dig a root cellar,NONE,
+solver,carpentry,Estimate lumber needed to build a 12 by 16 shed,NONE,
+solver,carpentry,"Use hand tools: plane, chisel, drill",PASS,HAND TOOLS p9; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p304
+ask,,Start a fire in the rain,WRONG,SURVIVING ATOMIC WEAPONS p7
+ask,,No matches how to make fire,WRONG,RAINWATER CATCHMENT SYSTEMS p45; A GUIDE TO RESIDENTIAL  WOOD HEATING p32
+ask,,Keep warm at night without a heater,NONE,
+ask,,Heat a room safely with a wood stove,PASS,A GUIDE TO RESIDENTIAL  WOOD HEATING p23; A GUIDE TO RESIDENTIAL  WOOD HEATING p11
+ask,,Stay cool in a heat wave with no power,NONE,
+ask,,Lost in the forest what do I do first,NONE,
+ask,,Find north without a compass,NONE,
+ask,,Cross a fast river safely,NONE,
+ask,,Survive a blizzard in a car,NONE,
+ask,,Build a snow shelter,PASS,FM 21-76 Survival 1957 p179; FM 21-76 Survival 1957 p180; FM 21-76 Survival 1957 p182
+ask,,Tornado warning what to do at home,NONE,
+ask,,Earthquake just happened now what,NONE,
+ask,,Flood waters rising,PASS,BIOGAS3 p32; PREVENTIVE MEDICINE FOR GROUND FORCES p28; FM 24-18 Tactical Single Channel Radio 1987 p100
+ask,,Wildfire approaching evacuation,NONE,
+ask,,Hurricane preparation checklist,NONE,
+ask,,Lightning storm while hiking,NONE,
+ask,,Power grid down for weeks,NONE,
+ask,,Defend my home from looters,NONE,
+ask,,Stay hidden and quiet in an unsafe area,NONE,
+ask,,Bug out bag what to pack,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p27; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p30
+ask,,Emergency kit for a car,NONE,
+ask,,Nuclear fallout shelter basics,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p117
+ask,,Chemical spill or gas leak evacuate,NONE,
+ask,,Pandemic stockpile what do I need,NONE,
+ask,,Economic collapse barter goods,NONE,
+ask,,How to sharpen a knife in the field,NONE,
+ask,,Tie knots for shelter and rescue,NONE,
+ask,,Make rope from natural fibers,PASS,SAFETY MANUAL FOR MACHINE SHOPS p35; MACHINERY'S HANDBOOK 27TH EDITION p3339
+ask,,Hunting small game traps trapping laws and methods,NONE,
+ask,,Teach kids what to do if lost,NONE,
+ask,,Pets in an emergency,NONE,
+ask,,Mental stress and panic in a crisis,NONE,
+ask,,Keep a group organized and make decisions,PASS,FM 21-76 Survival 1957 p11
+ask,,Long term food and seed saving plan for a year,NONE,
+ask,,Soap making from ash and fat,NONE,
+ask,,Make charcoal,PASS,WOOD FUEL PROPERTIES AND FUEL PRODUCTS FROM WOOD p3; DESIGNING IMPROVED WOOD BURNING STOVES p55; GLOSSARY OF FERROUS METALLURGY p27
+ask,,Candle and lamp from fat and oil,NONE,
+ask,,Sewing and repairing clothes by hand,NONE,
+ask,,Make clothing from animal hides,WRONG,IMPROVISED CAMP EQUIPMENT p10
+solver,energy,Run a fridge on a small solar panel,NONE,
+solver,energy,Size a battery bank for a cabin,NONE,
+solver,energy,Charge phones with no electricity,NONE,
+solver,energy,Use a generator safely indoors,WRONG,COOKING OPTIONS IN REFUGEE SITUATIONS p17
+solver,energy,Wire a solar panel to a charge controller,NONE,
+solver,energy,Make a small wind turbine,PASS,BUILD A BIOGAS GENERATOR p11; DIY MINI ALTERNATE ENERGY PROJECTS p11; DIY PAPER WIND TURBINE p4
+solver,energy,Micro hydro from a creek,NONE,
+solver,energy,Inverter picks and what it can run,NONE,
+solver,energy,Connect a generator to the house panel safely,NONE,
+solver,energy,Test a battery with a multimeter,PASS,PICOTURBINE EDUCATIONAL WINDMILL PLANS p11; PERMANENT MAGNET GENERATOR CONSTRUCTION p42; PICOTURBINE EDUCATIONAL WINDMILL PLANS p5
+solver,energy,Convert watts to amps,NONE,
+solver,energy,Store fuel safely for years,PASS,A GUIDE TO RESIDENTIAL  WOOD HEATING p22
+solver,energy,Biogas or wood gas for fuel,PASS,BIOGAS3 p34; COOKING OPTIONS IN REFUGEE SITUATIONS p31; BIOGAS3 p18
+solver,energy,Solar oven cooking,PASS,COOKING OPTIONS IN REFUGEE SITUATIONS p6; COOKING OPTIONS IN REFUGEE SITUATIONS p36; BUILD A BIOGAS GENERATOR p21
+solver,energy,Lead acid vs lithium batteries,NONE,
+solver,mechanical,Repair a leaking pipe,PASS,"09 PUMPS, VALVES, AND PIPING p22; 09 PUMPS, VALVES, AND PIPING p40; 09 PUMPS, VALVES, AND PIPING p26"
+solver,mechanical,Why did the breaker trip,NONE,
+solver,mechanical,Fix a small engine that will not start,NONE,
+solver,mechanical,Replace a faucet washer,NONE,
+solver,mechanical,Basic electronics resistor capacitor,PASS,"06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p56; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p200; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p176"
+solver,mechanical,Join two pieces of metal without a welder,NONE,
+solver,mechanical,Use a lever or pulley to move something heavy,NONE,
+solver,mechanical,Hand pump a well,PASS,ELECTRICITY DEMOSTRATER HANDBOOK p24; ULTRA SIMPLE HOMEMADE GENERATOR p8; ALTERNATIVES TO FOSSIL FUELED ENGINES-GENERATORS p6
+solver,mechanical,Lubricate and maintain tools,NONE,
+solver,mechanical,Fix a bike or wheelbarrow tire,NONE,
+solver,mechanical,Soldering a wire connection,PASS,"04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p71; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p89; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p64"
+solver,mechanical,Read a schematic,PASS,"04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p1; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p118; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p2"
+solver,mechanical,Measure with a micrometer or caliper,NONE,
+solver,mechanical,Make a simple generator from a motor,PASS,ULTRA SIMPLE HOMEMADE GENERATOR p10; 02 ENGINEERING FUNDAMENTALS p3; ELECTRICITY DEMOSTRATER HANDBOOK p25
+solver,mechanical,Someone is electrocuted what do I do,NONE,
+solver,transport,Car will not start clicking sound,NONE,
+solver,transport,Jump start a dead battery,PASS,HEWB4 BATTERY SERVICE p26; H6 BATTERIES p16; AUTO REPAIR TIPS p20
+solver,transport,Engine overheating on the road,NONE,
+solver,transport,Change a flat tire,NONE,
+solver,transport,Brakes feel soft or spongy,NONE,
+solver,transport,Stuck in mud or snow,NONE,
+solver,transport,Run a vehicle on old gasoline,NONE,
+solver,transport,Siphon fuel safely,NONE,
+solver,transport,Fix a broken fan belt,NONE,
+solver,transport,Cold weather diesel won't start,NONE,
+solver,transport,Engine knocking noise,PASS,H24 ENGINE CONTROLS-INPUT SENSORS p32
+solver,transport,Change oil without a shop,NONE,
+solver,transport,Transmission slipping or won't shift,NONE,
+solver,transport,Fuel pump not working,PASS,AUTO REPAIR TIPS p2; AUTO REPAIR TIPS p4; H3 ELECTRICAL COMPONENTS p2
+solver,transport,Radiator leak temporary fix,NONE,
+solver,transport,Clean a carburetor,PASS,AUTO REPAIR TIPS p4; AUTO REPAIR TIPS p30
+solver,transport,Use a car alternator to power tools,NONE,
+solver,transport,Drive on a flooded road,PASS,AUTO REPAIR TIPS p30
+solver,comms,Signal for rescue from a mountain,NONE,
+solver,comms,Set up a ham radio for emergency contact,NONE,
+solver,comms,Build a simple antenna,PASS,SIMPLE CRYSTAL RADIO CONSTRUCTION p1; SIMPLE CRYSTAL RADIO CONSTRUCTION p2; US Army Tactical Radio Operations FM6-02.53 p114
+solver,comms,What are emergency radio frequencies,PASS,NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p6; US Army Tactical Radio Operations FM6-02.53 p49
+solver,comms,Send morse code with a flashlight,NONE,
+solver,comms,Use a map and compass to find my position,NONE,
+solver,comms,Read a topographic map,PASS,US Army Tactical Radio Operations FM6-02.53 p122
+solver,comms,CB or FRS radio range tips,NONE,
+solver,comms,Radio procedure words and phonetic alphabet,PASS,US Army Tactical Radio Operations FM6-02.53 p177; US Army Tactical Radio Operations FM6-02.53 p256; US Army Tactical Radio Operations FM6-02.53 p5
+solver,comms,Signal fire and ground to air signals,PASS,US Army Tactical Radio Operations FM6-02.53 p250; US Army Tactical Radio Operations FM6-02.53 p266; US Army Tactical Radio Operations FM6-02.53 p50
+solver,comms,Build a crystal radio receiver,PASS,CRYSTAL DETECTOR MATERIALS AVAILABLE RADIO RECEIVER SET TECHNOLOGY ARTICLE p2; SIMPLE CRYSTAL RADIO CONSTRUCTION p1; COIL DESIGN SELF INDUCTANCE FORMULA FOR CRYSTAL  DETECTOR RADIO RECIEVER p1
+solver,comms,Charge a radio battery with solar,NONE,
+solver,comms,Send an SOS with a whistle,NONE,
+solver,comms,Pace count to measure distance walking,NONE,
+solver,comms,Navigate by the stars at night,NONE,
+solver,comms,Antenna grounding and lightning protection,PASS,SIMPLE CRYSTAL RADIO CONSTRUCTION p1
+solver,longterm,Rebuild a community after a long collapse,NONE,
+solver,longterm,Medicine you can grow in a garden,NONE,
+solver,longterm,Make and use lye and ash,NONE,
+solver,longterm,Blacksmithing basics forge and anvil,NONE,
+solver,longterm,Making glass or pottery,NONE,
+solver,longterm,Teach children reading and math without school,NONE,
+solver,longterm,Spin thread and make cloth,NONE,
+solver,longterm,Brew vinegar or alcohol for disinfectant,NONE,
+solver,longterm,Beekeeping basics,NONE,
+solver,longterm,Save seeds from heirloom vegetables,NONE,
+solver,longterm,Make paper and ink,NONE,
+solver,longterm,Water mill or windmill,NONE,
+solver,longterm,Sanitation and disease prevention in a camp,NONE,
+solver,longterm,Raise goats or rabbits for meat and milk,NONE,
+solver,longterm,Make cheese and butter,NONE,
+ask,,What is the boiling time at high altitude,NONE,
+ask,,How many calories does a person need per day,NONE,
+ask,,How long can a person live without food,WRONG,HOW TO SURVIVE INFLATION p8
+ask,,What is the rule of threes in survival,PASS,SEED PROCESSING AND STORAGE-PRINCIPLES AND PRACTICES p22
+ask,,What is the first thing to do in a survival situation,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p12; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p104; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p97
+ask,,How do I know if a mushroom is poisonous,NONE,
+ask,,What temperature is safe for storing food,NONE,
+ask,,What are the symptoms of hypothermia,NONE,
+ask,,How far can I walk in a day,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p165
+ask,,What are the parts of a first aid kit,PASS,"SURVIVAL AND AUSTERE  MEDICE VERSION 2 p23; HAYNES TEXTBOOK  WELDING MANUAL p70; CONTROLLED HAND FORGING-SAFETY, ERGONOMICS, AND SHOP LAYOUT p1"
+ask,,What is the shelf life of canned food,PASS,FOOD STORAGE TIPS p6; FOOD STORAGE TIPS p3; FOOD STORAGE TIPS p7
+ask,,How do I treat a fever naturally,NONE,
+ask,,How do I purify water with bleach,NONE,
+ask,,What do the colors of a wire mean,NONE,
+ask,,How to tie a bowline knot,NONE,
+ask,,What is a fire triangle,NONE,
+ask,,How much food per person for 72 hours,NONE,
+ask,,What is the best way to stay warm in a sleeping bag,NONE,
+ask,,Is it safe to eat snow,PASS,FM 21-76 Survival 1957 p184; FM 21-76 Survival 1957 p301; SURVIVING ATOMIC WEAPONS p16
+ask,,How many pounds of pressure for canning,PASS,"RAINWATER CATCHMENT SYSTEMS p51; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p98; CRYSTAL SETS TO SIDEBAND p50"
+ask,,What's the difference between a hurricane watch and warning,NONE,
+ask,,How to treat a jellyfish sting,NONE,
+ask,,What is the Heimlich maneuver,NONE,
+ask,,What does SOS stand for and how do I signal it,NONE,
+ask,,How do I read a compass bearing,NONE,
+ask,,Which direction does moss grow,NONE,
+ask,,What fuel can I burn in a camp stove,NONE,
+ask,,How do I keep my feet dry and avoid trench foot,NONE,
+ask,,What is the correct CPR rate,NONE,
+ask,,What is Lyme disease,NONE,
+plan,,"Power out in winter, house is cold, no tap water",NONE,
+plan,,Hurricane coming in 48 hours,NONE,
+plan,,Lost on a hike with an injured friend,NONE,
+plan,,Earthquake damaged my house and gas smells,NONE,
+plan,,Flooding in the basement and power going out,NONE,
+plan,,Car broke down in desert heat with no cell service,NONE,
+plan,,Stranded in a snowstorm in my car,NONE,
+plan,,Grid down for a month in the city,NONE,
+plan,,Wildfire evacuation in 30 minutes,NONE,
+plan,,Tornado destroyed part of our home,NONE,
+plan,,Water main contaminated boil order for a week,NONE,
+plan,,Chemical plant accident shelter in place,NONE,
+plan,,Pandemic lockdown with sick family member,NONE,
+plan,,"Camping trip gone wrong, tent collapsed in storm",NONE,
+plan,,"Remote cabin, generator failed, winter",NONE,
+plan,,"Extended blackout in summer heat, elderly parent",NONE,
+plan,,"Ice storm, trees down, no road access",NONE,
+plan,,"Boat capsized, now on a deserted shore",NONE,
+plan,,Plane crash survivors in mountains,NONE,
+plan,,"Civil unrest, need to stay home safely",NONE,
+plan,,Nuclear detonation warning,NONE,
+plan,,"Drought, well running dry on the homestead",NONE,
+plan,,"Job loss and no money, food running low",NONE,
+plan,,"Alone in the wilderness, ankle sprained",NONE,
+plan,,Solar storm knocked out electronics,NONE,
