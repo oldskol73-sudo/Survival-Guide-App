@@ -26,7 +26,7 @@ class _PdfReaderScreenState extends State<PdfReaderScreen> {
   late final Future<bool> _ok = _check();
 
   Future<bool> _check() async {
-    if (!AppSettings.instance.verifyOnOpen) return true;
+    if (widget.item.isLocal || !AppSettings.instance.verifyOnOpen) return true;
     return DownloadEngine.instance.verifyBeforeOpen(widget.item);
   }
 

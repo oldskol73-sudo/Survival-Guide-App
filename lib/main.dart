@@ -10,6 +10,7 @@ import 'package:flutter/services.dart';
 import 'airgap/airgap_monitor.dart';
 import 'airgap/network_lockdown.dart';
 import 'catalog/catalog_models.dart';
+import 'catalog/local_library.dart';
 import 'core/services.dart';
 import 'core/settings.dart';
 import 'core/storage_paths.dart';
@@ -50,6 +51,8 @@ Future<void> main() async {
   for (final item in catalog.allItems.where((i) => i.index && (engine.jobs[i.id]?.isUsable ?? false))) {
     unawaited(Services.fts.indexItem(item, sha256: engine.jobs[item.id]!.sha256!));
   }
+
+  unawaited(LocalLibrary.scanAndIndex(catalog, paths)); // PDFs placed in the library folder by hand or by cable
 
   await Services.refreshTier();
   await Services.ensureEmbedder();

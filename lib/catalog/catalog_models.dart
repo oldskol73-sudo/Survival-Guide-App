@@ -46,6 +46,8 @@ class CatalogItem {
   final CategoryKind kind;
   final String? tier; // models only: "small" | "large"
 
+  /// True for a PDF found on disk by the local-library scan (not downloaded through the catalog).
+  bool get isLocal => id.startsWith('local-');
   bool get isPlaceholder => url.toString().startsWith('[') || url.toString().contains('YYYY-MM');
   bool get isPrivateModel => target.startsWith('@models/');
 
@@ -191,8 +193,14 @@ class Catalog {
 
   Iterable<CatalogItem> get allItems => categories.expand((c) => c.items);
 
+  /// PDFs found on disk by the local-library scan. Kept apart from [categories] so the download UI is unaffected.
+  final List<CatalogItem> localItems = [];
+
   CatalogItem? itemById(String id) {
     for (final i in allItems) {
+      if (i.id == id) return i;
+    }
+    for (final i in localItems) {
       if (i.id == id) return i;
     }
     return null;
