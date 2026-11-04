@@ -146,11 +146,23 @@
       "id": "maps", "code": "11", "title": "Offline Maps", "dir": "11_Maps",
       "kind": "map", "defaultEnabled": false,
       "subdirs": ["fonts"],
+      "mapSource": {
+        "regions": [
+          {
+            "id": "mid-atlantic",
+            "name": "Mid-Atlantic (VA, MD, DC, DE, WV, NC, PA)",
+            "bbox": [-84.45, 33.7, -74.55, 42.4],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/mid-atlantic.pmtiles"
+          }
+        ],
+        "urlTemplate": "https://build.protomaps.com/{yyyymmdd}.pmtiles",
+        "searchDays": 10
+      },
       "items": [
         {
           "id": "region-mbtiles",
-          "title": "Region vector tiles (OpenMapTiles schema MBTiles) - supply your own URL",
-          "url": "[YOUR_MBTILES_URL]",
+          "title": "Offline map of your area",
+          "url": "[DOWNLOADED_IN_APP]",
           "mirrors": [],
           "sha256": null, "sha256Url": null, "sizeBytes": null,
           "target": "11_Maps/region.mbtiles",

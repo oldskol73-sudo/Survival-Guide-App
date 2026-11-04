@@ -14,6 +14,7 @@ import '../family/family_screen.dart';
 import '../home/field_guide_screen.dart';
 import '../home/gear_screen.dart';
 import '../home/home_screen.dart';
+import '../maps/maps_screen.dart';
 import '../search/fts_index.dart';
 import '../viewers/viewer_screens.dart';
 
@@ -101,6 +102,8 @@ class LibraryScreen extends StatelessWidget {
                 trailing: TextButton(onPressed: engine.resumeAfterLowDisk, child: const Text('Resume')),
               ),
             ),
+          _LibraryShortcut(icon: Icons.map_rounded, label: 'Offline Maps', page: const MapsScreen()),
+          const SizedBox(height: 10),
           // Field Guide and Gear live here now that Home follows the new tile layout.
           Row(children: [
             Expanded(child: _LibraryShortcut(icon: Icons.menu_book_rounded, label: 'Field Guide', page: const FieldGuideScreen())),

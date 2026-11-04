@@ -87,6 +87,61 @@ class CatalogItem {
   }
 }
 
+/// A map file we host ourselves, covering a rectangle. The app reads just the part it needs with HTTP range requests.
+class MapRegion {
+  MapRegion({required this.id, required this.name, required this.url, required this.west, required this.south, required this.east, required this.north});
+  final String id;
+  final String name;
+
+  /// https URL of a PMTiles file, or a "[...]" placeholder until the file is published.
+  final String url;
+  final double west, south, east, north;
+
+  bool get isPublished => !url.startsWith('[');
+  bool contains(double lat, double lon) => lat >= south && lat <= north && lon >= west && lon <= east;
+
+  factory MapRegion.fromJson(Map<String, dynamic> j) {
+    final id = j['id'] as String? ?? '';
+    if (!_idRe.hasMatch(id)) throw CatalogException('bad map region id "$id"');
+    final url = j['url'] as String? ?? '';
+    if (!url.startsWith('[') && Uri.tryParse(url)?.scheme != 'https') throw CatalogException('map region $id: only https URLs are allowed');
+    final b = [for (final v in (j['bbox'] as List? ?? const [])) (v as num).toDouble()];
+    if (b.length != 4 || b[0] >= b[2] || b[1] >= b[3]) throw CatalogException('map region $id: bbox must be [west, south, east, north]');
+    return MapRegion(id: id, name: j['name'] as String? ?? id, url: url, west: b[0], south: b[1], east: b[2], north: b[3]);
+  }
+}
+
+/// Where region maps come from. [regions] are files we host, tried first. [urlTemplate] is a public fallback
+/// for places we do not cover: it must be https and contain {yyyymmdd}, because that source publishes a dated
+/// world file every day, so the app tries today and walks back up to [searchDays] days.
+class MapSource {
+  MapSource({required this.urlTemplate, required this.searchDays, this.regions = const []});
+  final String urlTemplate;
+  final int searchDays;
+  final List<MapRegion> regions;
+
+  /// Published hosted regions whose rectangle contains the point.
+  List<MapRegion> regionsFor(double lat, double lon) => [for (final r in regions) if (r.isPublished && r.contains(lat, lon)) r];
+
+  factory MapSource.fromJson(Map<String, dynamic> j) {
+    final t = j['urlTemplate'] as String? ?? '';
+    final u = Uri.tryParse(t.replaceAll('{yyyymmdd}', '20000101'));
+    if (u == null || u.scheme != 'https' || !t.contains('{yyyymmdd}')) {
+      throw CatalogException('mapSource.urlTemplate must be an https URL containing {yyyymmdd}');
+    }
+    return MapSource(
+      urlTemplate: t,
+      searchDays: ((j['searchDays'] as num?)?.toInt() ?? 7).clamp(1, 30),
+      regions: [for (final r in (j['regions'] as List? ?? const [])) MapRegion.fromJson(r as Map<String, dynamic>)],
+    );
+  }
+
+  Uri urlFor(DateTime utcDay) {
+    final d = '${utcDay.year.toString().padLeft(4, '0')}${utcDay.month.toString().padLeft(2, '0')}${utcDay.day.toString().padLeft(2, '0')}';
+    return Uri.parse(urlTemplate.replaceAll('{yyyymmdd}', d));
+  }
+}
+
 class Category {
   Category({
     required this.id,
@@ -97,6 +152,7 @@ class Category {
     required this.defaultEnabled,
     required this.subdirs,
     required this.items,
+    this.mapSource,
   });
 
   final String id;
@@ -107,6 +163,7 @@ class Category {
   final bool defaultEnabled;
   final List<String> subdirs;
   final List<CatalogItem> items;
+  final MapSource? mapSource; // map categories only
 
   factory Category.fromJson(Map<String, dynamic> j) {
     final id = j['id'] as String;
@@ -120,6 +177,7 @@ class Category {
       defaultEnabled: j['defaultEnabled'] as bool? ?? true,
       subdirs: [for (final s in (j['subdirs'] as List? ?? const [])) s as String],
       items: [for (final i in (j['items'] as List? ?? const [])) CatalogItem.fromJson(i as Map<String, dynamic>, id, kind)],
+      mapSource: j['mapSource'] == null ? null : MapSource.fromJson(j['mapSource'] as Map<String, dynamic>),
     );
   }
 }

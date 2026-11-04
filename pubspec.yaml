@@ -33,6 +33,7 @@ dependencies:
   flutter_secure_storage: ^11.2.0
   cryptography: ^2.9.0
   image_picker: ^1.2.4
+  geolocator: ^14.1.2
 
 dev_dependencies:
   flutter_test:
@@ -51,3 +52,4 @@ flutter:
     - assets/catalog/categories.json
     - assets/maps/style.json
     - assets/home/
+    - assets/maps/fonts/Noto Sans Regular/

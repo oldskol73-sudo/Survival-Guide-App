@@ -95,8 +95,17 @@ class LoopbackServer {
         final first = Uri.decodeComponent(stack).split(',').first.trim();
         final dir = p.join(StoragePaths.instance.libraryRoot, '11_Maps', 'fonts');
         final f = File(p.normalize(p.join(dir, first, '$range.pbf')));
-        if (!p.isWithin(dir, f.path) || !await f.exists()) return Response.notFound('');
-        return Response.ok(await f.readAsBytes(), headers: {'content-type': 'application/x-protobuf'});
+        if (p.isWithin(dir, f.path) && await f.exists()) {
+          return Response.ok(await f.readAsBytes(), headers: {'content-type': 'application/x-protobuf'});
+        }
+        // Fall back to the Latin ranges bundled in the app, so map labels work with nothing else downloaded.
+        if (!RegExp(r'^[0-9]+-[0-9]+$').hasMatch(range) || first.contains('/') || first.contains('..')) return Response.notFound('');
+        try {
+          final data = await rootBundle.load('assets/maps/fonts/$first/$range.pbf');
+          return Response.ok(data.buffer.asUint8List(data.offsetInBytes, data.lengthInBytes), headers: {'content-type': 'application/x-protobuf'});
+        } catch (_) {
+          return Response.notFound('');
+        }
       });
 
     Middleware security() => (inner) => (req) async {
@@ -124,6 +133,11 @@ class LoopbackServer {
     final path = StoragePaths.instance.resolve(i.target);
     if (!File(path).existsSync()) return null;
     return _mbtiles[i.id] ??= sqlite3.open(path, mode: OpenMode.readOnly);
+  }
+
+  /// Drops the cached database handle for a map so a replaced or deleted file is re-read (or released).
+  static void closeMap(String itemId) {
+    _mbtiles.remove(itemId)?.close();
   }
 
   Future<void> stop() async {

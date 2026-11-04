@@ -1,37 +1,916 @@
 {
-  "version": 8,
-  "name": "Survival Node OLED (OpenMapTiles schema, offline)",
-  "glyphs": "__GLYPHS__",
-  "sources": {
-    "omt": { "type": "vector", "tiles": ["__TILES__"], "minzoom": 0, "maxzoom": 14, "attribution": "© OpenStreetMap contributors" }
+ "version": 8,
+ "name": "Survival Node (Protomaps schema, offline)",
+ "glyphs": "__GLYPHS__",
+ "sources": {
+  "pm": {
+   "type": "vector",
+   "tiles": [
+    "__TILES__"
+   ],
+   "minzoom": 0,
+   "maxzoom": 14,
+   "attribution": "© OpenStreetMap contributors (ODbL), Natural Earth"
+  }
+ },
+ "layers": [
+  {
+   "id": "background",
+   "type": "background",
+   "paint": {
+    "background-color": "#0A1511"
+   }
   },
-  "layers": [
-    { "id": "background", "type": "background", "paint": { "background-color": "#000000" } },
-    { "id": "landcover-wood", "type": "fill", "source": "omt", "source-layer": "landcover",
-      "filter": ["==", ["get", "class"], "wood"], "paint": { "fill-color": "#0c1a0f" } },
-    { "id": "landuse", "type": "fill", "source": "omt", "source-layer": "landuse",
-      "paint": { "fill-color": "#0d0d0d" } },
-    { "id": "water", "type": "fill", "source": "omt", "source-layer": "water", "paint": { "fill-color": "#0b2a45" } },
-    { "id": "waterway", "type": "line", "source": "omt", "source-layer": "waterway",
-      "paint": { "line-color": "#2f6fa3", "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.5, 14, 2] } },
-    { "id": "building", "type": "fill", "source": "omt", "source-layer": "building", "minzoom": 13,
-      "paint": { "fill-color": "#1a1a1a", "fill-outline-color": "#2a2a2a" } },
-    { "id": "road-minor", "type": "line", "source": "omt", "source-layer": "transportation",
-      "filter": ["in", ["get", "class"], ["literal", ["minor", "service", "track", "path"]]], "minzoom": 12,
-      "paint": { "line-color": "#3a3a3a", "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 16, 3] } },
-    { "id": "road-major", "type": "line", "source": "omt", "source-layer": "transportation",
-      "filter": ["in", ["get", "class"], ["literal", ["motorway", "trunk", "primary", "secondary", "tertiary"]]],
-      "paint": { "line-color": "#8a6a2f", "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.6, 14, 4] } },
-    { "id": "water-sources", "type": "circle", "source": "omt", "source-layer": "poi", "minzoom": 11,
-      "filter": ["in", ["get", "subclass"], ["literal", ["drinking_water", "water_point", "spring", "water_well"]]],
-      "paint": { "circle-color": "#4fb3ff", "circle-radius": 5, "circle-stroke-color": "#000000", "circle-stroke-width": 1.5 } },
-    { "id": "water-sources-label", "type": "symbol", "source": "omt", "source-layer": "poi", "minzoom": 14,
-      "filter": ["in", ["get", "subclass"], ["literal", ["drinking_water", "water_point", "spring", "water_well"]]],
-      "layout": { "text-field": ["coalesce", ["get", "name"], ["get", "subclass"]], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-offset": [0, 1.2] },
-      "paint": { "text-color": "#9fd6ff", "text-halo-color": "#000000", "text-halo-width": 1.5 } },
-    { "id": "place-label", "type": "symbol", "source": "omt", "source-layer": "place",
-      "layout": { "text-field": ["coalesce", ["get", "name:latin"], ["get", "name"]], "text-font": ["Noto Sans Regular"],
-                  "text-size": ["interpolate", ["linear"], ["zoom"], 6, 11, 14, 15] },
-      "paint": { "text-color": "#e8e6e1", "text-halo-color": "#000000", "text-halo-width": 1.5 } }
-  ]
+  {
+   "id": "earth",
+   "type": "fill",
+   "source": "pm",
+   "source-layer": "earth",
+   "paint": {
+    "fill-color": "#0F2219"
+   }
+  },
+  {
+   "id": "landcover",
+   "type": "fill",
+   "source": "pm",
+   "source-layer": "landcover",
+   "paint": {
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     "forest",
+     "#133421",
+     "grassland",
+     "#12301f",
+     "scrub",
+     "#13301f",
+     "farmland",
+     "#11281c",
+     "barren",
+     "#1b2d25",
+     "glacier",
+     "#223d3a",
+     "urban_area",
+     "#0f2118",
+     "#0F2219"
+    ]
+   }
+  },
+  {
+   "id": "landuse",
+   "type": "fill",
+   "source": "pm",
+   "source-layer": "landuse",
+   "minzoom": 5,
+   "paint": {
+    "fill-opacity": 0.9,
+    "fill-color": [
+     "match",
+     [
+      "get",
+      "kind"
+     ],
+     [
+      "park",
+      "national_park",
+      "nature_reserve",
+      "forest",
+      "wood",
+      "grassland",
+      "garden",
+      "golf_course",
+      "recreation_ground",
+      "playground",
+      "pitch"
+     ],
+     "#173f27",
+     [
+      "hospital"
+     ],
+     "#3a1f22",
+     [
+      "industrial",
+      "railway",
+      "military"
+     ],
+     "#1a2823",
+     [
+      "school",
+      "university",
+      "college"
+     ],
+     "#1a3128",
+     [
+      "cemetery"
+     ],
+     "#16301f",
+     "#112a1d"
+    ]
+   }
+  },
+  {
+   "id": "water",
+   "type": "fill",
+   "source": "pm",
+   "source-layer": "water",
+   "filter": [
+    "==",
+    [
+     "geometry-type"
+    ],
+    "Polygon"
+   ],
+   "paint": {
+    "fill-color": "#0f4468",
+    "fill-outline-color": "#2a7fb5"
+   }
+  },
+  {
+   "id": "waterway",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "water",
+   "minzoom": 8,
+   "filter": [
+    "in",
+    [
+     "get",
+     "kind"
+    ],
+    [
+     "literal",
+     [
+      "river",
+      "stream",
+      "canal",
+      "drain",
+      "ditch"
+     ]
+    ]
+   ],
+   "paint": {
+    "line-color": "#2f7fb5",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     8,
+     0.4,
+     14,
+     2.2
+    ]
+   }
+  },
+  {
+   "id": "buildings",
+   "type": "fill",
+   "source": "pm",
+   "source-layer": "buildings",
+   "minzoom": 13,
+   "paint": {
+    "fill-color": "#21493a",
+    "fill-outline-color": "#33705a"
+   }
+  },
+  {
+   "id": "boundaries",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "boundaries",
+   "minzoom": 2,
+   "paint": {
+    "line-color": "#9b8f6a",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     2,
+     0.5,
+     10,
+     1.4
+    ],
+    "line-dasharray": [
+     3,
+     2
+    ],
+    "line-opacity": 0.8
+   }
+  },
+  {
+   "id": "rail",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 10,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "rail"
+   ],
+   "paint": {
+    "line-color": "#6b7b70",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     10,
+     0.5,
+     16,
+     1.6
+    ],
+    "line-dasharray": [
+     4,
+     3
+    ]
+   }
+  },
+  {
+   "id": "road-path",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 13,
+   "filter": [
+    "in",
+    [
+     "get",
+     "kind"
+    ],
+    [
+     "literal",
+     [
+      "path",
+      "other"
+     ]
+    ]
+   ],
+   "paint": {
+    "line-color": "#8fa592",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     13,
+     0.5,
+     17,
+     1.6
+    ],
+    "line-dasharray": [
+     2,
+     2
+    ]
+   }
+  },
+  {
+   "id": "road-minor",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 11,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "minor_road"
+   ],
+   "layout": {
+    "line-cap": "round"
+   },
+   "paint": {
+    "line-color": "#58806a",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     11,
+     0.4,
+     14,
+     1.6,
+     18,
+     8
+    ]
+   }
+  },
+  {
+   "id": "road-medium",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 9,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "medium_road"
+   ],
+   "layout": {
+    "line-cap": "round"
+   },
+   "paint": {
+    "line-color": "#a3a781",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     9,
+     0.5,
+     14,
+     2.4,
+     18,
+     12
+    ]
+   }
+  },
+  {
+   "id": "road-major",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 6,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "major_road"
+   ],
+   "layout": {
+    "line-cap": "round"
+   },
+   "paint": {
+    "line-color": "#d9c58a",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     6,
+     0.6,
+     14,
+     3.2,
+     18,
+     16
+    ]
+   }
+  },
+  {
+   "id": "road-highway",
+   "type": "line",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 4,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "highway"
+   ],
+   "layout": {
+    "line-cap": "round"
+   },
+   "paint": {
+    "line-color": "#f2b45a",
+    "line-width": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     4,
+     0.8,
+     14,
+     4,
+     18,
+     20
+    ]
+   }
+  },
+  {
+   "id": "road-labels",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "roads",
+   "minzoom": 12,
+   "filter": [
+    "in",
+    [
+     "get",
+     "kind"
+    ],
+    [
+     "literal",
+     [
+      "highway",
+      "major_road",
+      "medium_road",
+      "minor_road"
+     ]
+    ]
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     11,
+     10,
+     16,
+     12
+    ],
+    "text-max-width": 8,
+    "symbol-placement": "line",
+    "text-letter-spacing": 0.05
+   },
+   "paint": {
+    "text-color": "#cfc8ad",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  },
+  {
+   "id": "water-labels",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "water",
+   "minzoom": 8,
+   "filter": [
+    "all",
+    [
+     "has",
+     "name"
+    ],
+    [
+     "==",
+     [
+      "geometry-type"
+     ],
+     "Polygon"
+    ]
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     8,
+     10,
+     14,
+     13
+    ],
+    "text-max-width": 8
+   },
+   "paint": {
+    "text-color": "#7fb8e0",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  },
+  {
+   "id": "poi-water",
+   "type": "circle",
+   "source": "pm",
+   "source-layer": "pois",
+   "minzoom": 11,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "drinking_water"
+   ],
+   "paint": {
+    "circle-radius": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     11,
+     3,
+     16,
+     6
+    ],
+    "circle-color": "#3fa7e0",
+    "circle-stroke-color": "#EDE7DB",
+    "circle-stroke-width": 1.2
+   }
+  },
+  {
+   "id": "poi-hospital",
+   "type": "circle",
+   "source": "pm",
+   "source-layer": "pois",
+   "minzoom": 10,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "hospital"
+   ],
+   "paint": {
+    "circle-radius": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     10,
+     3,
+     16,
+     7
+    ],
+    "circle-color": "#e0524a",
+    "circle-stroke-color": "#EDE7DB",
+    "circle-stroke-width": 1.2
+   }
+  },
+  {
+   "id": "poi-peak",
+   "type": "circle",
+   "source": "pm",
+   "source-layer": "pois",
+   "minzoom": 11,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "peak"
+   ],
+   "paint": {
+    "circle-radius": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     11,
+     2.5,
+     16,
+     5
+    ],
+    "circle-color": "#EDE7DB",
+    "circle-stroke-color": "#0A1511",
+    "circle-stroke-width": 1
+   }
+  },
+  {
+   "id": "poi-labels",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "pois",
+   "minzoom": 12,
+   "filter": [
+    "in",
+    [
+     "get",
+     "kind"
+    ],
+    [
+     "literal",
+     [
+      "drinking_water",
+      "hospital",
+      "peak"
+     ]
+    ]
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": 11,
+    "text-max-width": 8,
+    "text-offset": [
+     0,
+     1.1
+    ],
+    "text-anchor": "top",
+    "text-optional": true
+   },
+   "paint": {
+    "text-color": "#EDE7DB",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  },
+  {
+   "id": "place-neighbourhood",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "places",
+   "minzoom": 12,
+   "filter": [
+    "in",
+    [
+     "get",
+     "kind"
+    ],
+    [
+     "literal",
+     [
+      "neighbourhood",
+      "macrohood"
+     ]
+    ]
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     10,
+     10,
+     16,
+     13
+    ],
+    "text-max-width": 8
+   },
+   "paint": {
+    "text-color": "#c9d8c9",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  },
+  {
+   "id": "place-locality",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "places",
+   "minzoom": 6,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "locality"
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     6,
+     11,
+     10,
+     15,
+     14,
+     20
+    ],
+    "text-max-width": 8,
+    "symbol-sort-key": [
+     "get",
+     "sort_key"
+    ]
+   },
+   "paint": {
+    "text-color": "#EDE7DB",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  },
+  {
+   "id": "place-region",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "places",
+   "minzoom": 4,
+   "maxzoom": 9,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "region"
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     3,
+     11,
+     8,
+     16
+    ],
+    "text-max-width": 8,
+    "text-transform": "uppercase",
+    "text-letter-spacing": 0.08
+   },
+   "paint": {
+    "text-color": "#e8dfc4",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  },
+  {
+   "id": "place-country",
+   "type": "symbol",
+   "source": "pm",
+   "source-layer": "places",
+   "minzoom": 2,
+   "maxzoom": 7,
+   "filter": [
+    "==",
+    [
+     "get",
+     "kind"
+    ],
+    "country"
+   ],
+   "layout": {
+    "text-field": [
+     "coalesce",
+     [
+      "get",
+      "name:en"
+     ],
+     [
+      "get",
+      "name"
+     ]
+    ],
+    "text-font": [
+     "Noto Sans Regular"
+    ],
+    "text-size": [
+     "interpolate",
+     [
+      "linear"
+     ],
+     [
+      "zoom"
+     ],
+     1,
+     11,
+     6,
+     18
+    ],
+    "text-max-width": 8,
+    "text-transform": "uppercase",
+    "text-letter-spacing": 0.1
+   },
+   "paint": {
+    "text-color": "#f2ecd8",
+    "text-halo-color": "#0A1511",
+    "text-halo-width": 1.4
+   }
+  }
+ ]
 }

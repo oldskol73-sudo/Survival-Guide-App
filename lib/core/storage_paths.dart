@@ -36,7 +36,7 @@ class StoragePaths {
       final dirs = await getExternalStorageDirectories() ?? const <Directory>[];
       return [
         for (var i = 0; i < dirs.length; i++)
-          StorageVolume(i == 0 ? 'Internal storage' : 'SD card / external ${i}', dirs[i].path, removable: i > 0),
+          StorageVolume(i == 0 ? 'Internal storage' : 'SD card / external $i', dirs[i].path, removable: i > 0),
       ];
     }
     final docs = await getApplicationDocumentsDirectory();
