@@ -19,6 +19,12 @@
     <!-- No READ/WRITE_EXTERNAL_STORAGE: the library lives in app-specific dirs (scoped storage),
          including on microSD via getExternalStorageDirectories(). -->
 
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+            <data android:scheme="https" />
+        </intent>
+    </queries>
     <application
         android:label="Survival Node"
         android:name="${applicationName}"

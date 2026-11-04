@@ -59,6 +59,10 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["First_Aid", "Field_Medicine", "Pharmacology", "Dental"],
       "items": [
+        { "id": "fm-4-25-11", "title": "FM 4-25.11 - First Aid (2002, Change 1 2004)", "url": "https://ciehub.info/ref/FM/4-25x11_2004.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/First_Aid/FM 4-25.11 First Aid (2002, Change 1 2004).pdf", "license": "US Government work (Department of the Army)", "index": true },
+        { "id": "fm-21-11", "title": "FM 21-11 - First Aid for Soldiers (1991)", "url": "https://ciehub.info/ref/FM/21-11_1991.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/First_Aid/FM 21-11 First Aid for Soldiers (1991).pdf", "license": "US Government work (Department of the Army)", "index": true },
+        { "id": "cdc-wound-care-public", "title": "CDC - Emergency Wound Care After a Natural Disaster", "url": "https://webarchive.library.unt.edu/web/20130222163741if_/http://www.bt.cdc.gov/disasters/pdf/woundcare.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/Emergency_Wound_Care/CDC Emergency Wound Care After a Natural Disaster.pdf", "license": "US Government work (CDC)", "index": true },
+        { "id": "cdc-wound-mgmt-hcp", "title": "CDC - Emergency Wound Management for Healthcare Professionals", "url": "https://webarchive.library.unt.edu/web/20090114230604if_/http://www.bt.cdc.gov/disasters/pdf/emergwoundhcp.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/Emergency_Wound_Care/CDC Emergency Wound Management for Healthcare Professionals.pdf", "license": "US Government work (CDC)", "index": true },
         {
           "id": "tc-4-02-1",
           "title": "TC 4-02.1 - First Aid",
@@ -174,7 +178,15 @@
       "id": "longterm", "code": "12", "title": "Long Term Survival", "dir": "12_Long_Term_Survival",
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": [],
-      "items": []
+      "items": [
+        { "id": "fema-are-you-ready", "title": "FEMA - Are You Ready? Citizen Preparedness Guide", "url": "https://bready.sd.gov/bReady/areyouready_full.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Are You Ready - Citizen Preparedness Guide.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "nws-tornado-safety", "title": "NWS - Tornado Safety", "url": "https://www.weather.gov/media/tbw/brochures/TornadoSafety.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/NWS Tornado Safety.pdf", "license": "US Government work (NOAA)", "index": true },
+        { "id": "usgs-earthquake-roots", "title": "USGS - Putting Down Roots in Earthquake Country", "url": "https://pubs.usgs.gov/gip/2005/15/gip-15.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/USGS Putting Down Roots in Earthquake Country.pdf", "license": "US Government work (USGS)", "index": true },
+        { "id": "ready-wildfire", "title": "Ready.gov - Wildfire Info Sheet", "url": "https://www.ready.gov/sites/default/files/2021-01/ready_wildfire_info-sheet.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/Ready.gov Wildfire Info Sheet.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "ready-extreme-heat", "title": "Ready.gov - Extreme Heat Info Sheet", "url": "https://www.ready.gov/sites/default/files/2021-01/ready_extreme-heat_info-sheet.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/Ready.gov Extreme Heat Info Sheet.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "fema-pet-toolkit", "title": "FEMA - Pet Preparedness Toolkit (2024)", "url": "https://content.govdelivery.com/attachments/USDHSFEMA/2024/05/15/file_attachments/2878877/Pet%20Preparedness%20Toolkit%202024.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Pet Preparedness Toolkit 2024.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "usda-bees-fb447", "title": "USDA Farmers Bulletin 447 - Bees (1911)", "url": "https://archive.org/download/beesusdept00phil/beesusdept00phil.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Homestead/USDA Farmers Bulletin 447 - Bees (1911).pdf", "license": "US Government work (USDA)", "index": true }
+      ]
     },
     {
       "id": "models", "code": "99", "title": "On-device AI models", "dir": "@models",

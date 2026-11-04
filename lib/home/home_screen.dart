@@ -7,14 +7,13 @@ import '../airgap/airgap_banner.dart';
 import '../core/theme.dart';
 import 'ask_screen.dart';
 import 'checklist_screen.dart';
-import 'mountain_logo.dart';
 import 'plan_screen.dart';
 import 'problem_solver_screen.dart';
 import 'sos_screen.dart';
 
 /// Bottom-bar positions, shared with HomeShell.
 class AppTab {
-  static const home = 0, library = 1, family = 2, search = 3, settings = 4;
+  static const home = 0, library = 1, videos = 2, family = 3, search = 4, settings = 5;
 }
 
 class HomeScreen extends StatelessWidget {
@@ -39,18 +38,46 @@ class HomeScreen extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.fromLTRB(14, 14, 14, 20),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Row(children: [
-          const Padding(padding: EdgeInsets.only(right: 10), child: MountainLogo(size: 30, color: AppTheme.accent)),
-          Expanded(child: Text('Survival Node', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800, color: AppTheme.accent))),
-          FilledButton.icon(
-            onPressed: () => _push(context, const SosScreen()),
-            style: FilledButton.styleFrom(backgroundColor: AppTheme.sos, foregroundColor: Colors.white, minimumSize: const Size(0, 44)),
-            icon: const Icon(Icons.sos),
-            label: const Text('SOS', style: TextStyle(fontWeight: FontWeight.w800)),
+        // Header: the lantern picture fills the card and is cropped from the right on narrow screens (the lantern stays
+        // visible); the title and SOS button are live widgets drawn over the quiet dark part of the picture.
+        SizedBox(
+          height: 150,
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(_tileRadius),
+            child: Stack(fit: StackFit.expand, children: [
+              Image.asset('assets/home/header_bg.jpg', fit: BoxFit.cover, alignment: Alignment.centerLeft, filterQuality: FilterQuality.medium),
+              DecoratedBox(decoration: BoxDecoration(borderRadius: BorderRadius.circular(_tileRadius), border: Border.all(color: _tileBorder))),
+              Positioned(
+                left: 104,
+                right: 96,
+                top: 0,
+                bottom: 0,
+                child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                  FittedBox(
+                    fit: BoxFit.scaleDown,
+                    alignment: Alignment.centerLeft,
+                    child: Text('Survival Node', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800, color: const Color(0xFFF6F1E7))),
+                  ),
+                  const SizedBox(height: 4),
+                  const Text('Your offline survival library', style: TextStyle(color: AppTheme.muted)),
+                ]),
+              ),
+              Positioned(
+                right: 10,
+                top: 0,
+                bottom: 0,
+                child: Center(
+                  child: FilledButton.icon(
+                    onPressed: () => _push(context, const SosScreen()),
+                    style: FilledButton.styleFrom(backgroundColor: AppTheme.sos, foregroundColor: Colors.white, minimumSize: const Size(0, 44)),
+                    icon: const Icon(Icons.sos),
+                    label: const Text('SOS', style: TextStyle(fontWeight: FontWeight.w800)),
+                  ),
+                ),
+              ),
+            ]),
           ),
-        ]),
-        const SizedBox(height: 4),
-        const Text('Your offline survival library', style: TextStyle(color: AppTheme.muted)),
+        ),
         const SizedBox(height: 14),
         for (var i = 0; i < tiles.length; i += 2)
           Padding(

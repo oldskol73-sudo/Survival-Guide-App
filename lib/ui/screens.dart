@@ -15,6 +15,7 @@ import '../home/field_guide_screen.dart';
 import '../home/gear_screen.dart';
 import '../home/home_screen.dart';
 import '../maps/maps_screen.dart';
+import '../videos/videos_screen.dart';
 import '../search/fts_index.dart';
 import '../viewers/viewer_screens.dart';
 
@@ -32,6 +33,7 @@ class _HomeShellState extends State<HomeShell> {
     final pages = [
       HomeScreen(onOpenTab: (i) => setState(() => _tab = i)),
       const LibraryScreen(),
+      const VideosScreen(),
       const FamilyScreen(),
       const AirGapGate(featureName: 'library search', child: SearchScreen()),
       const SettingsScreen(),
@@ -46,6 +48,7 @@ class _HomeShellState extends State<HomeShell> {
         destinations: const [
           NavigationDestination(icon: _NavThumb('home'), selectedIcon: _NavThumb('home', selected: true), label: 'Home'),
           NavigationDestination(icon: _NavThumb('library'), selectedIcon: _NavThumb('library', selected: true), label: 'Library'),
+          NavigationDestination(icon: _NavThumb('videos'), selectedIcon: _NavThumb('videos', selected: true), label: 'Videos'),
           NavigationDestination(icon: _NavThumb('family'), selectedIcon: _NavThumb('family', selected: true), label: 'Family'),
           NavigationDestination(icon: _NavThumb('search'), selectedIcon: _NavThumb('search', selected: true), label: 'Search'),
           NavigationDestination(icon: _NavThumb('settings'), selectedIcon: _NavThumb('settings', selected: true), label: 'Settings'),
