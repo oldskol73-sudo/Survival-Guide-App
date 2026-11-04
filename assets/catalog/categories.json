@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "catalogId": "survival-node-core",
+  "updated": "2026-11-03",
+  "notes": "sha256 null = trust-on-first-use (hash recorded at first download, shown as 'unverified'). Replace with pinned hashes after you have verified a copy. sha256Url = sidecar file holding the expected hash.",
+  "categories": [
+    {
+      "id": "water", "code": "01", "title": "Water & Sanitation", "dir": "01_Water_Sanitation",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Purification", "Wells_Pumps", "Waste_Latrines", "Testing"],
+      "items": [
+        {
+          "id": "epa-emergency-disinfection",
+          "title": "EPA - Emergency Disinfection of Drinking Water",
+          "url": "https://19january2021snapshot.epa.gov/sites/static/files/2017-09/documents/emergency_disinfection_of_drinking_water_sept2017.pdf",
+          "mirrors": [],
+          "sha256": null, "sha256Url": null, "sizeBytes": null,
+          "target": "01_Water_Sanitation/Purification/EPA_Emergency_Disinfection_Drinking_Water_2017.pdf",
+          "license": "US Government work", "index": true
+        },
+        {
+          "id": "fm-21-10",
+          "title": "FM 21-10 / MCRP 4-11.1D - Field Hygiene and Sanitation",
+          "url": "https://archive.org/download/FM21-10_2000/FM21-10_2000.pdf",
+          "mirrors": [],
+          "sha256": null, "sha256Url": null, "sizeBytes": null,
+          "target": "01_Water_Sanitation/Waste_Latrines/FM_21-10_Field_Hygiene_Sanitation_2000.pdf",
+          "license": "US Government work", "index": true
+        },
+        {
+          "id": "water-still",
+          "title": "Drinking Water Still Construction",
+          "url": "https://archive.org/download/MManuals/DrinkingWaterStillConstruction.pdf",
+          "mirrors": [],
+          "sha256": null, "sha256Url": null, "sizeBytes": null,
+          "target": "01_Water_Sanitation/Purification/Drinking_Water_Still_Construction.pdf",
+          "license": "US Government work", "index": true
+        }
+      ]
+    },
+    {
+      "id": "mechanical", "code": "02", "title": "Mechanical & Electrical", "dir": "02_Mechanical_Electrical",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Electrical_Theory", "Wiring_Codes", "Small_Engines", "Generators"],
+      "items": [
+        {
+          "id": "neets-01",
+          "title": "Navy NEETS Module 1 - Matter, Energy and Direct Current",
+          "url": "https://archive.org/download/NEETSModule01/NEETSModule01.pdf",
+          "mirrors": [],
+          "sha256": null, "sha256Url": null, "sizeBytes": null,
+          "target": "02_Mechanical_Electrical/Electrical_Theory/NEETS_Module_01_Matter_Energy_DC.pdf",
+          "license": "US Government work", "index": true
+        }
+      ]
+    },
+    {
+      "id": "medical", "code": "03", "title": "Medical", "dir": "03_Medical",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["First_Aid", "Field_Medicine", "Pharmacology", "Dental"],
+      "items": [
+        {
+          "id": "tc-4-02-1",
+          "title": "TC 4-02.1 - First Aid",
+          "url": "https://ciehub.info/ref/TC/4-02x1_2018.pdf",
+          "mirrors": [],
+          "sha256": null, "sha256Url": null, "sizeBytes": null,
+          "target": "03_Medical/First_Aid/TC_4-02.1_First_Aid_2018.pdf",
+          "license": "US Government work", "index": true
+        }
+      ]
+    },
+    {
+      "id": "food", "code": "04", "title": "Food & Agriculture", "dir": "04_Food_Agriculture",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Canning_Preservation", "Gardening_Seeds", "Livestock", "Foraging"],
+      "items": [
+        { "id": "usda-canning-00", "title": "USDA Home Canning - Introduction", "url": "https://nchfp.uga.edu/papers/guide/INTRO_HomeCanrev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_00_Introduction.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-01", "title": "USDA Guide 1 - Principles of Home Canning", "url": "https://nchfp.uga.edu/papers/guide/GUIDE01_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_01_Principles.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-02", "title": "USDA Guide 2 - Fruit and Fruit Products", "url": "https://nchfp.uga.edu/papers/guide/GUIDE02_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_02_Fruit.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-03", "title": "USDA Guide 3 - Tomatoes", "url": "https://nchfp.uga.edu/papers/guide/GUIDE03_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_03_Tomatoes.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-04", "title": "USDA Guide 4 - Vegetables", "url": "https://nchfp.uga.edu/papers/guide/GUIDE04_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_04_Vegetables.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-05", "title": "USDA Guide 5 - Poultry, Red Meats, Seafoods", "url": "https://nchfp.uga.edu/papers/guide/GUIDE05_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_05_Meat_Poultry_Seafood.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-06", "title": "USDA Guide 6 - Fermented and Pickled", "url": "https://nchfp.uga.edu/papers/guide/GUIDE06_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_06_Fermented_Pickled.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-07", "title": "USDA Guide 7 - Jams and Jellies", "url": "https://nchfp.uga.edu/papers/guide/GUIDE07_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_07_Jams_Jellies.pdf", "license": "US Government work", "index": true },
+        { "id": "fm-21-76-1957", "title": "FM 21-76 - Survival (1957)", "url": "https://archive.org/download/FM21-76Survival1957/FM21-76Survival1957.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Foraging/FM_21-76_Survival_1957.pdf", "license": "US Government work", "index": true }
+      ]
+    },
+    {
+      "id": "carpentry", "code": "05", "title": "Carpentry", "dir": "05_Carpentry",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Framing_Shelter", "Joinery", "Tools_Sharpening", "Plans"],
+      "items": [
+        { "id": "fm-5-426", "title": "FM 5-426 - Carpentry", "url": "https://archive.org/download/FM5-426/FM5-426.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "05_Carpentry/Framing_Shelter/FM_5-426_Carpentry.pdf", "license": "US Government work", "index": true }
+      ]
+    },
+    {
+      "id": "energy", "code": "06", "title": "Alternative Energy / Solar", "dir": "06_Alternative_Energy",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Solar_PV", "Batteries_Storage", "Wind_Micro_Hydro", "Load_Calcs"],
+      "items": []
+    },
+    {
+      "id": "transport", "code": "07", "title": "Auto / Transport", "dir": "07_Auto_Transport",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Engine_Principles", "Electrical_Systems", "Bicycles", "Vehicle_Manuals"],
+      "items": [
+        { "id": "tm-9-2700", "title": "TM 9-2700 - Principles of Automotive Vehicles", "url": "https://archive.org/download/military-automotive-manuals/TM_9-2700_1947_PRINCIPLES_OF_AUTOMOTIVE_VEHICLES.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "07_Auto_Transport/Engine_Principles/TM_9-2700_Principles_of_Automotive_Vehicles_1947.pdf", "license": "US Government work", "index": true }
+      ]
+    },
+    {
+      "id": "comms", "code": "08", "title": "Communications", "dir": "08_Communications",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Radio_Theory", "Antennas", "Frequencies_Plans", "Ham_Licensing"],
+      "items": [
+        { "id": "fm-24-18", "title": "FM 24-18 - Tactical Single-Channel Radio Communications Techniques", "url": "https://archive.org/download/MManuals/UsArmyTacticalSingleChannelRadioTechniques1987.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "08_Communications/Radio_Theory/FM_24-18_Tactical_Single_Channel_Radio_1987.pdf", "license": "US Government work", "index": true }
+      ]
+    },
+    {
+      "id": "metallurgy", "code": "09", "title": "Metallurgy", "dir": "09_Metallurgy",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": ["Machining", "Welding", "Blacksmithing_Forge", "Casting"],
+      "items": [
+        { "id": "tc-9-524", "title": "TC 9-524 - Fundamentals of Machine Tools", "url": "https://archive.org/download/MManuals/UsArmyMachinistFundamentals-machineTools1996.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "09_Metallurgy/Machining/TC_9-524_Fundamentals_of_Machine_Tools_1996.pdf", "license": "US Government work", "index": true }
+      ]
+    },
+    {
+      "id": "kiwix", "code": "10", "title": "Kiwix ZIM Archives", "dir": "10_Kiwix_ZIM",
+      "kind": "zim", "defaultEnabled": false,
+      "subdirs": [],
+      "items": [
+        {
+          "id": "wikipedia-en-nopic",
+          "title": "Wikipedia (English, no pictures) - set exact file name",
+          "url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_YYYY-MM.zim",
+          "mirrors": [],
+          "sha256": null,
+          "sha256Url": "https://download.kiwix.org/zim/wikipedia/wikipedia_en_all_nopic_YYYY-MM.zim.sha256",
+          "sizeBytes": null,
+          "target": "10_Kiwix_ZIM/wikipedia_en_all_nopic.zim",
+          "license": "CC BY-SA", "index": false
+        }
+      ]
+    },
+    {
+      "id": "maps", "code": "11", "title": "Offline Maps", "dir": "11_Maps",
+      "kind": "map", "defaultEnabled": false,
+      "subdirs": ["fonts"],
+      "items": [
+        {
+          "id": "region-mbtiles",
+          "title": "Region vector tiles (OpenMapTiles schema MBTiles) - supply your own URL",
+          "url": "[YOUR_MBTILES_URL]",
+          "mirrors": [],
+          "sha256": null, "sha256Url": null, "sizeBytes": null,
+          "target": "11_Maps/region.mbtiles",
+          "license": "ODbL (OpenStreetMap contributors)", "index": false
+        }
+      ]
+    },
+    {
+      "id": "longterm", "code": "12", "title": "Long Term Survival", "dir": "12_Long_Term_Survival",
+      "kind": "pdf", "defaultEnabled": true,
+      "subdirs": [],
+      "items": []
+    },
+    {
+      "id": "models", "code": "99", "title": "On-device AI models", "dir": "@models",
+      "kind": "model", "defaultEnabled": true,
+      "subdirs": ["embed", "llm"],
+      "items": [
+        { "id": "minilm-onnx", "title": "all-MiniLM-L6-v2 (ONNX, 384-d)", "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/onnx/model.onnx", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "@models/embed/all-MiniLM-L6-v2.onnx", "license": "Apache-2.0", "index": false },
+        { "id": "minilm-vocab", "title": "all-MiniLM-L6-v2 vocabulary", "url": "https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/main/vocab.txt", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "@models/embed/vocab.txt", "license": "Apache-2.0", "index": false },
+        { "id": "llama-3.2-1b-q4km", "title": "Llama-3.2-1B-Instruct Q4_K_M (GGUF)", "url": "https://huggingface.co/bartowski/Llama-3.2-1B-Instruct-GGUF/resolve/main/Llama-3.2-1B-Instruct-Q4_K_M.gguf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "@models/llm/Llama-3.2-1B-Instruct-Q4_K_M.gguf", "license": "Llama 3.2 Community License", "index": false, "tier": "small" },
+        { "id": "qwen2.5-1.5b-q4km", "title": "Qwen2.5-1.5B-Instruct Q4_K_M (GGUF)", "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct-GGUF/resolve/main/qwen2.5-1.5b-instruct-q4_k_m.gguf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "@models/llm/qwen2.5-1.5b-instruct-q4_k_m.gguf", "license": "Apache-2.0", "index": false, "tier": "large" }
+      ]
+    }
+  ]
+}

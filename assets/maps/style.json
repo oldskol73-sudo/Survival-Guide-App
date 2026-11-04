@@ -1,0 +1,37 @@
+{
+  "version": 8,
+  "name": "Survival Node OLED (OpenMapTiles schema, offline)",
+  "glyphs": "__GLYPHS__",
+  "sources": {
+    "omt": { "type": "vector", "tiles": ["__TILES__"], "minzoom": 0, "maxzoom": 14, "attribution": "© OpenStreetMap contributors" }
+  },
+  "layers": [
+    { "id": "background", "type": "background", "paint": { "background-color": "#000000" } },
+    { "id": "landcover-wood", "type": "fill", "source": "omt", "source-layer": "landcover",
+      "filter": ["==", ["get", "class"], "wood"], "paint": { "fill-color": "#0c1a0f" } },
+    { "id": "landuse", "type": "fill", "source": "omt", "source-layer": "landuse",
+      "paint": { "fill-color": "#0d0d0d" } },
+    { "id": "water", "type": "fill", "source": "omt", "source-layer": "water", "paint": { "fill-color": "#0b2a45" } },
+    { "id": "waterway", "type": "line", "source": "omt", "source-layer": "waterway",
+      "paint": { "line-color": "#2f6fa3", "line-width": ["interpolate", ["linear"], ["zoom"], 8, 0.5, 14, 2] } },
+    { "id": "building", "type": "fill", "source": "omt", "source-layer": "building", "minzoom": 13,
+      "paint": { "fill-color": "#1a1a1a", "fill-outline-color": "#2a2a2a" } },
+    { "id": "road-minor", "type": "line", "source": "omt", "source-layer": "transportation",
+      "filter": ["in", ["get", "class"], ["literal", ["minor", "service", "track", "path"]]], "minzoom": 12,
+      "paint": { "line-color": "#3a3a3a", "line-width": ["interpolate", ["linear"], ["zoom"], 12, 0.5, 16, 3] } },
+    { "id": "road-major", "type": "line", "source": "omt", "source-layer": "transportation",
+      "filter": ["in", ["get", "class"], ["literal", ["motorway", "trunk", "primary", "secondary", "tertiary"]]],
+      "paint": { "line-color": "#8a6a2f", "line-width": ["interpolate", ["linear"], ["zoom"], 6, 0.6, 14, 4] } },
+    { "id": "water-sources", "type": "circle", "source": "omt", "source-layer": "poi", "minzoom": 11,
+      "filter": ["in", ["get", "subclass"], ["literal", ["drinking_water", "water_point", "spring", "water_well"]]],
+      "paint": { "circle-color": "#4fb3ff", "circle-radius": 5, "circle-stroke-color": "#000000", "circle-stroke-width": 1.5 } },
+    { "id": "water-sources-label", "type": "symbol", "source": "omt", "source-layer": "poi", "minzoom": 14,
+      "filter": ["in", ["get", "subclass"], ["literal", ["drinking_water", "water_point", "spring", "water_well"]]],
+      "layout": { "text-field": ["coalesce", ["get", "name"], ["get", "subclass"]], "text-font": ["Noto Sans Regular"], "text-size": 11, "text-offset": [0, 1.2] },
+      "paint": { "text-color": "#9fd6ff", "text-halo-color": "#000000", "text-halo-width": 1.5 } },
+    { "id": "place-label", "type": "symbol", "source": "omt", "source-layer": "place",
+      "layout": { "text-field": ["coalesce", ["get", "name:latin"], ["get", "name"]], "text-font": ["Noto Sans Regular"],
+                  "text-size": ["interpolate", ["linear"], ["zoom"], 6, 11, 14, 15] },
+      "paint": { "text-color": "#e8e6e1", "text-halo-color": "#000000", "text-halo-width": 1.5 } }
+  ]
+}

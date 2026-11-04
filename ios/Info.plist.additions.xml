@@ -1,0 +1,33 @@
+<!-- Merge these keys into ios/Runner/Info.plist -->
+
+<!-- Library folder visible in the Files app (On My iPhone > Survival Node) -->
+<key>UIFileSharingEnabled</key>
+<true/>
+<key>LSSupportsOpeningDocumentsInPlace</key>
+<true/>
+
+<!-- flutter_blue_plus reads adapter on/off state only; it never scans or connects -->
+<key>NSBluetoothAlwaysUsageDescription</key>
+<string>Survival Node checks whether Bluetooth is switched on so it can warn you before you use the offline library. It never scans for or connects to devices.</string>
+
+<!-- Map location dot (GPS is receive-only and works in Airplane Mode) -->
+<key>NSLocationWhenInUseUsageDescription</key>
+<string>Shows your position on the offline map. Location never leaves the device.</string>
+
+<!-- Loopback server for the ZIM reader and map tiles; everything else stays HTTPS-only -->
+<key>NSAppTransportSecurity</key>
+<dict>
+  <key>NSAllowsLocalNetworking</key>
+  <true/>
+</dict>
+
+<!-- Background URLSession downloads (background_downloader) -->
+<key>UIBackgroundModes</key>
+<array>
+  <string>fetch</string>
+  <string>processing</string>
+</array>
+<key>BGTaskSchedulerPermittedIdentifiers</key>
+<array>
+  <string>com.bbflight.background_downloader.taskId</string>
+</array>
