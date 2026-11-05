@@ -26,7 +26,7 @@ Uninstalling the app deletes all of this. We cannot recover it, because we never
 
 The app connects to the internet only when you ask it to:
 
-- **Downloading maps, manuals or AI models.** The files come from servers run by us (for maps) or by public archives and agencies (for manuals and models), such as archive.org, FEMA, NOAA, USGS, USDA, the US Army publishing sites, the Wikipedia/Kiwix project and Hugging Face. Any server you download from can see your IP address and which file you asked for. For a map download it can also see which map tiles you requested, which reveals the area. We do not link this to you. The map files are hosted on Cloudflare R2 [confirm: no request logging is enabled on the bucket].
+- **Downloading maps, manuals or AI models.** The files come from servers run by us (for maps) or by public archives and agencies (for manuals and models), such as archive.org, FEMA, NOAA, USGS, USDA, the US Army publishing sites, the Wikipedia/Kiwix project and Hugging Face. Any server you download from can see your IP address and which file you asked for. For a map download it can also see which map tiles you requested, which reveals the area. We do not link this to you. The map files are hosted on Cloudflare R2.
 - **Playing a video.** The Videos tab lists links. Tapping Watch opens the video in the YouTube app or your browser, and YouTube's own privacy policy then applies. The app does not embed YouTube, load any Google code, or download videos.
 - **Checking the radios.** The app reads whether Wi-Fi, cellular and Bluetooth are on, to show the air-gap indicator. It does not scan for or connect to any device or network.
 

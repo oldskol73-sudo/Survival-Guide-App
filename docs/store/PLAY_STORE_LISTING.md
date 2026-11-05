@@ -37,8 +37,7 @@ Map data (c) OpenStreetMap contributors. Video tutorials belong to their creator
 
 **Tags:** survival, preparedness, offline, emergency, first aid, maps, off grid.
 
-**Contact:** publishing@twelvescentspub.com, [website](https://twelve12scents.com/), [privacy policy](https://twelve12scents.com/privacy-policy/). **CONFIRM** the website address: the old `twelvescentspub.com/About` link returned 404.
-
+**Contact:** publishing@twelvescentspub.com, [website](https://twelve12scents.com/), [privacy policy](https://twelve12scents.com/privacy-policy/).
 ## What a store user actually receives (keep the listing honest)
 
 The app ships **without** the manuals. The catalog offers **36 downloadable items**: about 30 manuals, one Wikipedia archive entry (its download address is still a placeholder: **CONFIRM** or remove it), 1 offline-map source with 10 hosted US regions, and 4 optional AI models. The 543-document library on the developer's phone is **not** part of the app. Do not describe "hundreds of manuals" in the listing unless you decide to host more, and every hosted document needs a clear licence.
