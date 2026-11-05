@@ -157,6 +157,60 @@
             "name": "Mid-Atlantic (VA, MD, DC, DE, WV, NC, PA)",
             "bbox": [-84.45, 33.7, -74.55, 42.4],
             "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/mid-atlantic.pmtiles"
+          },
+          {
+            "id": "northeast",
+            "name": "Northeast (NY, New England, northern PA)",
+            "bbox": [-80.6, 40.4, -66.9, 47.5],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/northeast.pmtiles"
+          },
+          {
+            "id": "southeast",
+            "name": "Southeast (FL, GA, SC, AL, MS, TN, LA east)",
+            "bbox": [-91.7, 24.4, -79.9, 35.2],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/southeast.pmtiles"
+          },
+          {
+            "id": "midwest",
+            "name": "Midwest (Great Lakes and Upper Midwest)",
+            "bbox": [-97.3, 36.4, -80.5, 49.4],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/midwest.pmtiles"
+          },
+          {
+            "id": "south-central",
+            "name": "South Central (TX, OK, AR, LA)",
+            "bbox": [-106.7, 25.8, -88.9, 37.1],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/south-central.pmtiles"
+          },
+          {
+            "id": "mountain",
+            "name": "Mountain West (MT, ID, WY, CO, UT, NM, AZ east)",
+            "bbox": [-117.1, 31.3, -102.0, 49.1],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/mountain.pmtiles"
+          },
+          {
+            "id": "west",
+            "name": "West Coast (CA, OR, WA, NV)",
+            "bbox": [-124.8, 32.5, -114.0, 49.1],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/west.pmtiles"
+          },
+          {
+            "id": "alaska-south",
+            "name": "Alaska south (Anchorage, Southcentral, Southeast, Aleutians)",
+            "bbox": [-170.0, 51.0, -129.0, 61.5],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/alaska-south.pmtiles"
+          },
+          {
+            "id": "alaska-north",
+            "name": "Alaska north (Fairbanks, Interior, North Slope)",
+            "bbox": [-170.0, 61.5, -129.0, 71.6],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/alaska-north.pmtiles"
+          },
+          {
+            "id": "hawaii",
+            "name": "Hawaii",
+            "bbox": [-160.4, 18.8, -154.7, 22.3],
+            "url": "https://pub-e9aea16fd13840b29a1fe7e734fedcab.r2.dev/hawaii.pmtiles"
           }
         ],
         "urlTemplate": "https://build.protomaps.com/{yyyymmdd}.pmtiles",

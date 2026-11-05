@@ -171,3 +171,67 @@ class _Checklist extends StatelessWidget {
     );
   }
 }
+
+/// Compact air-gap status for tight spaces (the Home header). Tap for the full detail and a re-check.
+class AirGapChip extends StatelessWidget {
+  const AirGapChip({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ValueListenableBuilder<AirGapStatus>(
+      valueListenable: AirGapMonitor.instance,
+      builder: (context, s, _) {
+        final (color, icon, short, long) = switch (s.level) {
+          AirGapLevel.sealed => (AppTheme.ok, Icons.shield_outlined, 'AIR-GAPPED', 'All reportable radios are off.'),
+          AirGapLevel.unconfirmed => (AppTheme.warn, Icons.help_outline, 'CHECK', 'Cannot confirm the radios are off. Turn on Airplane Mode and re-check.'),
+          AirGapLevel.exposed => (AppTheme.danger, Icons.wifi_tethering_error, 'EXPOSED', 'Radios are on: ${s.activeInterfaces.join(', ')}. Turn on Airplane Mode to air-gap this device.'),
+        };
+        return Semantics(
+          button: true,
+          liveRegion: true,
+          label: 'Air-gap status: $short. $long',
+          child: Material(
+            color: const Color(0xCC061410),
+            shape: StadiumBorder(side: BorderSide(color: color, width: 1.5)),
+            child: InkWell(
+              customBorder: const StadiumBorder(),
+              onTap: () => showModalBottomSheet<void>(
+                context: context,
+                backgroundColor: AppTheme.card,
+                shape: const RoundedRectangleBorder(borderRadius: BorderRadius.vertical(top: Radius.circular(20))),
+                builder: (ctx) => SafeArea(
+                  child: Padding(
+                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 16),
+                    child: Column(mainAxisSize: MainAxisSize.min, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Row(children: [
+                        Icon(icon, color: color),
+                        const SizedBox(width: 10),
+                        Text(short, style: TextStyle(color: color, fontWeight: FontWeight.w800, fontSize: 18, letterSpacing: 0.6)),
+                      ]),
+                      const SizedBox(height: 10),
+                      Text(long),
+                      const SizedBox(height: 14),
+                      OutlinedButton.icon(
+                        onPressed: AirGapMonitor.instance.refresh,
+                        icon: const Icon(Icons.refresh),
+                        label: const Text('Re-check radios'),
+                      ),
+                    ]),
+                  ),
+                ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                child: Row(mainAxisSize: MainAxisSize.min, children: [
+                  Icon(icon, color: color, size: 14),
+                  const SizedBox(width: 5),
+                  Text(short, style: TextStyle(color: color, fontSize: 11.5, fontWeight: FontWeight.w800, letterSpacing: 0.5)),
+                ]),
+              ),
+            ),
+          ),
+        );
+      },
+    );
+  }
+}

@@ -49,7 +49,7 @@ class HomeScreen extends StatelessWidget {
               DecoratedBox(decoration: BoxDecoration(borderRadius: BorderRadius.circular(_tileRadius), border: Border.all(color: _tileBorder))),
               Positioned(
                 left: 104,
-                right: 96,
+                right: 112,
                 top: 0,
                 bottom: 0,
                 child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
@@ -62,19 +62,19 @@ class HomeScreen extends StatelessWidget {
                   const Text('Your offline survival library', style: TextStyle(color: AppTheme.muted)),
                 ]),
               ),
+              // SOS sits in the top-right corner and the status pill in the bottom-right, well apart from each
+              // other and clear of the title.
               Positioned(
-                right: 10,
-                top: 0,
-                bottom: 0,
-                child: Center(
-                  child: FilledButton.icon(
-                    onPressed: () => _push(context, const SosScreen()),
-                    style: FilledButton.styleFrom(backgroundColor: AppTheme.sos, foregroundColor: Colors.white, minimumSize: const Size(0, 44)),
-                    icon: const Icon(Icons.sos),
-                    label: const Text('SOS', style: TextStyle(fontWeight: FontWeight.w800)),
-                  ),
+                right: 12,
+                top: 12,
+                child: FilledButton.icon(
+                  onPressed: () => _push(context, const SosScreen()),
+                  style: FilledButton.styleFrom(backgroundColor: AppTheme.sos, foregroundColor: Colors.white, minimumSize: const Size(0, 44)),
+                  icon: const Icon(Icons.sos),
+                  label: const Text('SOS', style: TextStyle(fontWeight: FontWeight.w800)),
                 ),
               ),
+              const Positioned(right: 12, bottom: 12, child: AirGapChip()),
             ]),
           ),
         ),

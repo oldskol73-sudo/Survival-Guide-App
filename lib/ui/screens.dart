@@ -16,6 +16,7 @@ import '../home/gear_screen.dart';
 import '../home/home_screen.dart';
 import '../maps/maps_screen.dart';
 import '../videos/videos_screen.dart';
+import 'masthead.dart';
 import '../search/fts_index.dart';
 import '../viewers/viewer_screens.dart';
 
@@ -39,7 +40,7 @@ class _HomeShellState extends State<HomeShell> {
       const SettingsScreen(),
     ];
     return Scaffold(
-      body: SafeArea(child: Column(children: [const AirGapBanner(), Expanded(child: pages[_tab])])),
+      body: SafeArea(child: Column(children: [const Masthead(), Expanded(child: pages[_tab])])),
       bottomNavigationBar: NavigationBar(
         selectedIndex: _tab,
         onDestinationSelected: (i) => setState(() => _tab = i),
