@@ -15,10 +15,12 @@ import '../home/field_guide_screen.dart';
 import '../home/gear_screen.dart';
 import '../home/home_screen.dart';
 import '../home/tour_screen.dart';
+import 'about_screen.dart';
 import '../maps/maps_screen.dart';
 import '../videos/videos_screen.dart';
 import 'masthead.dart';
 import '../search/fts_index.dart';
+import 'my_documents_screen.dart';
 import '../viewers/viewer_screens.dart';
 
 class HomeShell extends StatefulWidget {
@@ -119,6 +121,8 @@ class LibraryScreen extends StatelessWidget {
               ),
             ),
           _LibraryShortcut(icon: Icons.map_rounded, label: 'Offline Maps', page: const MapsScreen()),
+          const SizedBox(height: 10),
+          _LibraryShortcut(icon: Icons.note_add_rounded, label: 'My Documents: add your own PDFs', page: const MyDocumentsScreen()),
           const SizedBox(height: 10),
           // Field Guide and Gear live here now that Home follows the new tile layout.
           Row(children: [
@@ -336,6 +340,13 @@ class SettingsScreen extends StatelessWidget {
           subtitle: const Text('A quick picture tour of every part of the app'),
           trailing: const Icon(Icons.chevron_right, color: AppTheme.muted),
           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TourScreen())),
+        ),
+        ListTile(
+          leading: const Icon(Icons.info_outline, color: AppTheme.accent),
+          title: const Text('About, safety and credits', style: TextStyle(fontWeight: FontWeight.w800)),
+          subtitle: const Text('Emergency and medical notice, privacy, sources, licences'),
+          trailing: const Icon(Icons.chevron_right, color: AppTheme.muted),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AboutScreen())),
         ),
         const Divider(height: 1),
         SwitchListTile(

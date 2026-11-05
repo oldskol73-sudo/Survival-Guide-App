@@ -50,3 +50,10 @@ app.*.map.json
 
 # Map build tooling (portable JDK, Planetiler, downloaded sources, generated tiles)
 /tools/maps/
+
+# Release signing material: never commit
+*.jks
+*.keystore
+*.p12
+/android/key.properties
+upload-keystore*

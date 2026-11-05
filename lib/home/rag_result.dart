@@ -38,6 +38,14 @@ class RagResult extends StatelessWidget {
             ),
           ),
       ],
+      if (rag.answer.isNotEmpty || rag.sources.isNotEmpty)
+        const Padding(
+          padding: EdgeInsets.only(top: 16),
+          child: Text(
+            'Answers come from the offline library and can be wrong, out of date or not fit your situation. Check the cited page, and call emergency services in an emergency. This is not medical, legal or professional advice.',
+            style: TextStyle(fontSize: 12, height: 1.4, color: AppTheme.muted),
+          ),
+        ),
     ]);
   }
 }

@@ -43,7 +43,6 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["Electrical_Theory", "Wiring_Codes", "Small_Engines", "Generators"],
       "items": [
-        { "id": "tx-extension-faucet", "title": "Texas A&M Extension - Repair a Leaky Faucet", "url": "https://webarchive.library.unt.edu/eot2008/20090115211308if_/http://www.aces.edu/pubs/speng/faucets.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "02_Mechanical_Electrical/Plumbing/Texas Extension - Repair a Leaky Faucet.pdf", "license": "University extension archive copy - check reuse terms", "index": true },
         {
           "id": "neets-01",
           "title": "Navy NEETS Module 1 - Matter, Energy and Direct Current",
@@ -235,7 +234,6 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": [],
       "items": [
-        { "id": "msu-making-soap", "title": "MSU Extension - Making Soap at Home (archive)", "url": "https://archive.lib.msu.edu/DMC/extension_publications/F14/F14.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Homestead/MSU Extension - Making Soap at Home (archive).pdf", "license": "University extension archive copy - check reuse terms", "index": true },
         { "id": "fema-are-you-ready", "title": "FEMA - Are You Ready? Citizen Preparedness Guide", "url": "https://bready.sd.gov/bReady/areyouready_full.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Are You Ready - Citizen Preparedness Guide.pdf", "license": "US Government work (FEMA)", "index": true },
         { "id": "nws-tornado-safety", "title": "NWS - Tornado Safety", "url": "https://www.weather.gov/media/tbw/brochures/TornadoSafety.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/NWS Tornado Safety.pdf", "license": "US Government work (NOAA)", "index": true },
         { "id": "usgs-earthquake-roots", "title": "USGS - Putting Down Roots in Earthquake Country", "url": "https://pubs.usgs.gov/gip/2005/15/gip-15.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/USGS Putting Down Roots in Earthquake Country.pdf", "license": "US Government work (USGS)", "index": true },

@@ -7,7 +7,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleDisplayName</key>
-	<string>Survival Node Mobile</string>
+	<string>Survival Node</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -66,5 +66,33 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIFileSharingEnabled</key>
+	<true/>
+	<key>LSSupportsOpeningDocumentsInPlace</key>
+	<true/>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Survival Node checks whether Bluetooth is switched on so it can warn you before you use the offline library. It never scans for or connects to devices.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Used on this phone only, to centre an offline map download on where you are and to show your position on the map. Your location is never sent to us.</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsLocalNetworking</key>
+		<true/>
+	</dict>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>processing</string>
+	</array>
+	<key>BGTaskSchedulerPermittedIdentifiers</key>
+	<array>
+		<string>com.bbflight.background_downloader.taskId</string>
+	</array>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Unlocks your private documents vault. Nothing leaves this device.</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Photograph a document to store it in your private vault.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Choose a photo of a document to store it in your private vault.</string>
 </dict>
 </plist>

@@ -12,7 +12,7 @@ import 'catalog_models.dart';
 
 class LocalLibrary {
   /// Folders that are not a catalog category on their own, mapped to the category their PDFs belong to.
-  static const _extraDirs = {'Wildflower_Doomsday_Disks': 'longterm'};
+  static const _extraDirs = {'Wildflower_Doomsday_Disks': 'longterm', 'My_Documents': 'longterm'};
 
   /// Folders that hold copies, backups or unsorted material and must not be indexed.
   static bool _skip(String top) => top.startsWith('_') || top == '11_Maps' || top == '10_Kiwix_ZIM';
@@ -55,6 +55,15 @@ class LocalLibrary {
     // Size+modified time stands in for a hash: unchanged files are skipped without reading them again.
     for (final item in found) {
       await Services.fts.indexItem(item, sha256: stamps[item.id]!);
+    }
+    // Forget documents that were deleted from the folder, so search never offers a file that is not there.
+    final live = {for (final i in found) i.id};
+    final stale = [
+      for (final r in Services.fts.db.select("SELECT item_id FROM documents WHERE item_id LIKE 'local-%'"))
+        if (!live.contains(r['item_id'] as String)) r['item_id'] as String,
+    ];
+    for (final id in stale) {
+      await Services.fts.removeItem(id);
     }
   }
 
