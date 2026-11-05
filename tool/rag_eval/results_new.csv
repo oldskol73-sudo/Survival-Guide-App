@@ -1,23 +1,23 @@
 screen,area,scenario,result,top pages
-solver,water,My only water source is a muddy stream,PASS,WATERFAQ p3; EMERGENCY WATER FILTRATION MANUAL p2; DRILLING AND WELL CONSTRUCTION p12
+solver,water,My only water source is a muddy stream,WRONG,WATERFAQ p3; SELECTING A SOURCE OF SURFACE WATER p8; SELECTING A SOURCE OF SURFACE WATER p4
 solver,water,How long do I boil water to make it safe,PASS,WATER DISINFECTION STUDY p185; WATERFAQ p4; WATER DISINFECTION STUDY p27
 solver,water,How much bleach do I add to a gallon of water,PASS,EPA Emergency Disinfection Drinking Water 2017 p1; WATERFAQ p12; DRILLING AND WELL CONSTRUCTION p76
 solver,water,Water from a pond smells bad and has green algae,PASS,DESIGNING A GROUND LEVEL STORAGE TANK p1; WATER DISINFECTION STUDY p47; RAINWATER HARVESTING p13
 solver,water,Make a water filter from sand and charcoal,PASS,WATERFAQ p10; WATERFAQ p9; RAINWATER HARVESTING p7
-solver,water,Solar still to get drinking water in the desert,PASS,WATER DISINFECTION STUDY p33; WATER DISINFECTION STUDY p31; Drinking Water Still Construction p3
-solver,water,Collect rain water safely,PASS,RAINWATER HARVESTING p6; RAINWATER HARVESTING p4; RAINWATER CATCHMENT SYSTEMS p10
+solver,water,Solar still to get drinking water in the desert,PASS,WATER DISINFECTION STUDY p33; WATER DISINFECTION STUDY p31; WATER DISINFECTION STUDY p32
+solver,water,Collect rain water safely,PASS,RAINWATER HARVESTING p6; DESIGNING ROOF CATCHMENTS p2; RAINWATER HARVESTING p4
 solver,water,Is it safe to drink melted snow,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p7; EPA Emergency Disinfection Drinking Water 2017 p2; DRILLING AND WELL CONSTRUCTION p169
 solver,water,What are signs of dehydration,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p12; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p13; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p50
-solver,water,How much water does a person need per day,PASS,RAINWATER CATCHMENT SYSTEMS p10; PLANNING SIMPLE EXCRETA AND WASHWATER DISPOSAL SYSTEMS p6; EMERGENCY WATER FILTRATION MANUAL p4
+solver,water,How much water does a person need per day,PASS,SELECTING A SOURCE OF SURFACE WATER p5; RAINWATER CATCHMENT SYSTEMS p10; DESIGNING BASIC HOUSEHOLD WATER TREATMENT SYSTEMS p3
 solver,water,Find water in dry country,PASS,RAINWATER HARVESTING p14; RAINWATER HARVESTING p2; POTTERS FOR PEACE FILTER p3
 solver,water,Purify water with iodine tablets,PASS,Drinking Water Still Construction p3; WATERFAQ p12; WATERFAQ p11
-solver,water,Water tastes like chemicals after treating it,PASS,DRILLING AND WELL CONSTRUCTION p79; WATERFAQ p13; EPA Emergency Disinfection Drinking Water 2017 p2
+solver,water,Water tastes like chemicals after treating it,PASS,DRILLING AND WELL CONSTRUCTION p79; WATERFAQ p13; DETERMINING THE NEED FOR WATER TREATMENT p2
 solver,water,Store drinking water for emergencies,PASS,EPA Emergency Disinfection Drinking Water 2017 p1; EPA Emergency Disinfection Drinking Water 2017 p2; WATER DISINFECTION STUDY p70
 solver,water,Well water after a flood,PASS,DRILLING AND WELL CONSTRUCTION p122; DRILLING AND WELL CONSTRUCTION p10; EPA Emergency Disinfection Drinking Water 2017 p2
-solver,water,Pipes frozen and no water,PASS,HUMANURE COMPOSTING GUIDE p5; METHODS OF DEVELOPING SOURCES OF GROUND WATER p3; MANUAL ON ROPE WATER PUMPS p12
-solver,water,Build a latrine away from our water,WRONG,CONSTUCTING BUCKET LATRINES p6; CONSTUCTING BUCKET LATRINES p4; OPERATING AND MAINTAINING BUCKET LATRINES p2
-solver,water,Wash hands with no running water,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p14; MEANS OF DISEASE TRANSMISSION p3; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p15
-solver,water,Giardia from stream water what now,PASS,WATERFAQ p4; WATER DISINFECTION STUDY p140; RAINWATER CATCHMENT SYSTEMS p30
+solver,water,Pipes frozen and no water,PASS,HUMANURE COMPOSTING GUIDE p5; METHODS OF DEVELOPING SOURCES OF GROUND WATER p3; SELECTING PIPE MATERIALS p1
+solver,water,Build a latrine away from our water,WRONG,CONSTUCTING BUCKET LATRINES p6; CONSTUCTING BUCKET LATRINES p4; DESIGNING BUCKET LATRINES p1
+solver,water,Wash hands with no running water,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p14; MEANS OF DISEASE TRANSMISSION p2; METHODS OF STORING WATER p3
+solver,water,Giardia from stream water what now,PASS,WATERFAQ p4; SELECTING A SOURCE OF SURFACE WATER p3; WATER DISINFECTION STUDY p140
 solver,water,Can I drink seawater,PASS,WATER DISINFECTION STUDY p31; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p13; Drinking Water Still Construction p3
 solver,water,Distill water with a pot and lid,PASS,WATERFAQ p6; WATER DISINFECTION STUDY p30; POTTERS FOR PEACE FILTER p1
 solver,water,Cloudy water how to clear it,PASS,Drinking Water Still Construction p3; EPA Emergency Disinfection Drinking Water 2017 p1; WATER DISINFECTION STUDY p35
@@ -49,47 +49,47 @@ solver,food,Cooking food safely to avoid food poisoning,PASS,FM 21-76 Survival 1
 solver,food,Feed a family of four for a month on stored food,PASS,FOOD STORAGE TIPS p7; FOOD STORAGE TIPS p5; FOOD STORAGE TIPS p2
 solver,food,Insects as a food source,PASS,FM 21-76 Survival 1957 p17; DIY FOOD DRYER p10; USDA Canning 01 Principles p5
 solver,food,Fermenting food without special equipment,PASS,USDA Canning 01 Principles p3; USDA Canning 06 Fermented Pickled p4; USDA Canning 01 Principles p27
-solver,medical,Heavy bleeding from a deep cut on the arm,WRONG,SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p19; PRICIPLES AND PRACTICE OF CONSITUTIONAL PHYSIOLOGY FOR HERBA p37; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p171
-solver,medical,How do I apply a tourniquet,WRONG,TC 4-02.1 First Aid 2018 p36; TC 4-02.1 First Aid 2018 p35; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p278
+solver,medical,Heavy bleeding from a deep cut on the arm,PASS,"FM 21-11 First Aid for Soldiers (1991) p67; FM 4-25.11 First Aid (2002, Change 1 2004) p48; FM 4-25.11 First Aid (2002, Change 1 2004) p47"
+solver,medical,How do I apply a tourniquet,PASS,"FM 21-11 First Aid for Soldiers (1991) p67; FM 4-25.11 First Aid (2002, Change 1 2004) p48; TC 4-02.1 First Aid 2018 p36"
 solver,medical,Someone is not breathing and has no pulse,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p220; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p105; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p174
-solver,medical,Choking adult cannot speak,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p266; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p267; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p247
-solver,medical,Broken leg and no hospital nearby,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p205; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p21; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p147
-solver,medical,Severe burn on the hand,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p62; TC 4-02.1 First Aid 2018 p48; TC 4-02.1 First Aid 2018 p60
-solver,medical,Child has a high fever,PASS,SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p25; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p47; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p360
-solver,medical,Snake bite on the ankle,PASS,TC 4-02.1 First Aid 2018 p87; TC 4-02.1 First Aid 2018 p88; WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 1 p231
-solver,medical,Signs of hypothermia and how to treat,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p56; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p44; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p46
+solver,medical,Choking adult cannot speak,PASS,"FM 4-25.11 First Aid (2002, Change 1 2004) p33; FM 21-11 First Aid for Soldiers (1991) p50; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p266"
+solver,medical,Broken leg and no hospital nearby,PASS,"THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p205; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p21; FM 4-25.11 First Aid (2002, Change 1 2004) p54"
+solver,medical,Severe burn on the hand,PASS,ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p102; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p134; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p129
+solver,medical,Child has a high fever,PASS,ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p80; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p47; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p6
+solver,medical,Snake bite on the ankle,PASS,"FM 21-11 First Aid for Soldiers (1991) p174; FM 4-25.11 First Aid (2002, Change 1 2004) p142; FM 4-25.11 First Aid (2002, Change 1 2004) p136"
+solver,medical,Signs of hypothermia and how to treat,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p56; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p44; FM 21-11 First Aid for Soldiers (1991) p163
 solver,medical,Heat stroke vs heat exhaustion,PASS,TC 4-02.1 First Aid 2018 p53; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p48; PREVENTIVE MEDICINE FOR GROUND FORCES p36
-solver,medical,Deep puncture wound in the foot from a nail,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p60; PREVENTIVE MEDICINE FOR GROUND FORCES p24; RABIES GUIDE p44
-solver,medical,Infection spreading red streaks from a wound,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p62; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p272; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p30
+solver,medical,Deep puncture wound in the foot from a nail,PASS,"CDC Emergency Wound Care After a Natural Disaster p1; FM 4-25.11 First Aid (2002, Change 1 2004) p60; PREVENTIVE MEDICINE FOR GROUND FORCES p24"
+solver,medical,Infection spreading red streaks from a wound,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p62; CDC Emergency Wound Care After a Natural Disaster p1; FM 21-11 First Aid for Soldiers (1991) p34
 solver,medical,How to clean and close a wound without stitches,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p127; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p193; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p64
-solver,medical,Diarrhea for two days dehydration,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p361; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p374; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p367
-solver,medical,Make oral rehydration solution,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p41; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p42; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p175
-solver,medical,Allergic reaction swelling face,PASS,TC 4-02.1 First Aid 2018 p91; WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 2 p331; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p164
+solver,medical,Diarrhea for two days dehydration,WRONG,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p361; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p28; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p374
+solver,medical,Make oral rehydration solution,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p42; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p41; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p175
+solver,medical,Allergic reaction swelling face,PASS,"FM 21-11 First Aid for Soldiers (1991) p182; FM 21-11 First Aid for Soldiers (1991) p181; FM 4-25.11 First Aid (2002, Change 1 2004) p140"
 solver,medical,Dislocated shoulder,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p281; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p309; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p318
-solver,medical,Head injury after a fall confused,PASS,TC 4-02.1 First Aid 2018 p76; TC 4-02.1 First Aid 2018 p57; PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p54
-solver,medical,Frostbite on fingers and toes,PASS,TC 4-02.1 First Aid 2018 p58; PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p41; TC 4-02.1 First Aid 2018 p59
-solver,medical,Tooth abscess and severe tooth pain,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p125; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p133; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p117
-solver,medical,Childbirth with no doctor,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p109; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p5; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p311
+solver,medical,Head injury after a fall confused,PASS,"FM 4-25.11 First Aid (2002, Change 1 2004) p56; FM 21-11 First Aid for Soldiers (1991) p80; FM 4-25.11 First Aid (2002, Change 1 2004) p22"
+solver,medical,Frostbite on fingers and toes,PASS,"TC 4-02.1 First Aid 2018 p58; FM 4-25.11 First Aid (2002, Change 1 2004) p122; FM 21-11 First Aid for Soldiers (1991) p158"
+solver,medical,Tooth abscess and severe tooth pain,PASS,ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p152; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p125; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p126
+solver,medical,Childbirth with no doctor,PASS,EMERGENCY CHILDBIRTH p1; EMERGENCY CHILDBIRTH p6; EMERGENCY CHILDBIRTH p12
 solver,medical,Diabetic person with no insulin,PASS,HERBAL-MEDICAL DICTIONARY p16; SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p53; HERBAL-MEDICAL DICTIONARY p29
-solver,medical,Chest pain and left arm numb,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p30; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p119; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p103
-solver,medical,Bee sting swelling,PASS,TC 4-02.1 First Aid 2018 p48; TC 4-02.1 First Aid 2018 p50; TC 4-02.1 First Aid 2018 p47
-solver,medical,Tick bite how to remove,PASS,TC 4-02.1 First Aid 2018 p49; TC 4-02.1 First Aid 2018 p50; TC 4-02.1 First Aid 2018 p8
-solver,medical,Sprained ankle can't walk,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p319; TC 4-02.1 First Aid 2018 p83; WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 2 p150
-solver,medical,Eye chemical splash,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p194; TC 4-02.1 First Aid 2018 p35; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p193
-solver,medical,Carbon monoxide headache dizzy in the house,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p39; SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p45; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p121
+solver,medical,Chest pain and left arm numb,PASS,"THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p30; FM 21-11 First Aid for Soldiers (1991) p27; FM 4-25.11 First Aid (2002, Change 1 2004) p20"
+solver,medical,Bee sting swelling,PASS,"TC 4-02.1 First Aid 2018 p48; FM 21-11 First Aid for Soldiers (1991) p181; FM 4-25.11 First Aid (2002, Change 1 2004) p140"
+solver,medical,Tick bite how to remove,PASS,TC 4-02.1 First Aid 2018 p49; TC 4-02.1 First Aid 2018 p50; FM 21-11 First Aid for Soldiers (1991) p181
+solver,medical,Sprained ankle can't walk,PASS,"FM 21-11 First Aid for Soldiers (1991) p121; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p319; FM 4-25.11 First Aid (2002, Change 1 2004) p91"
+solver,medical,Eye chemical splash,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p194; TC 4-02.1 First Aid 2018 p35; FM 21-11 First Aid for Soldiers (1991) p93
+solver,medical,Carbon monoxide headache dizzy in the house,PASS,"PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p39; FM 4-25.11 First Aid (2002, Change 1 2004) p117; SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p45"
 solver,medical,Drowning victim pulled from water,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p220; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p223; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p221
-solver,medical,Treat shock after injury,PASS,TC 4-02.1 First Aid 2018 p82; TC 4-02.1 First Aid 2018 p77; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p309
+solver,medical,Treat shock after injury,PASS,FM 21-11 First Aid for Soldiers (1991) p73; TC 4-02.1 First Aid 2018 p82; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p106
 solver,medical,Make a splint for a broken arm,PASS,TC 4-02.1 First Aid 2018 p63; TC 4-02.1 First Aid 2018 p65; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p329
 solver,medical,Antibiotic alternatives in a long emergency,WRONG,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p181; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p32; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p33
 solver,medical,Pain relief without medicine,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p50; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p163; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p49
-solver,medical,Treat poison ivy rash,PASS,BLOODBORNE PATHOGEN EXPOSURE GUIDE p37; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p72; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p377
-solver,medical,Someone swallowed bleach or chemicals,WRONG,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p163; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p52; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p49
-solver,medical,Asthma attack no inhaler,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p98; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p25; SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p11
-solver,medical,Seizure what to do,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p107; RABIES GUIDE p52; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p185
-solver,medical,Stroke signs face drooping,WRONG,TC 4-02.1 First Aid 2018 p54; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p105; TC 4-02.1 First Aid 2018 p53
-solver,medical,Lice or scabies outbreak in a shelter,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p353; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p32; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p86
+solver,medical,Treat poison ivy rash,PASS,FM 21-11 First Aid for Soldiers (1991) p275; BLOODBORNE PATHOGEN EXPOSURE GUIDE p37; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p72
+solver,medical,Someone swallowed bleach or chemicals,PASS,"SURVIVAL AND AUSTERE  MEDICE VERSION 2 p163; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p52; FM 4-25.11 First Aid (2002, Change 1 2004) p146"
+solver,medical,Asthma attack no inhaler,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p98; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p20; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p17
+solver,medical,Seizure what to do,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p107; RABIES GUIDE p52; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p39
+solver,medical,Stroke signs face drooping,WRONG,TC 4-02.1 First Aid 2018 p54; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p105; FM 21-11 First Aid for Soldiers (1991) p289
+solver,medical,Lice or scabies outbreak in a shelter,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p353; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p8; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p32
 solver,medical,Infant not feeding and weak,PASS,SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p10; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p116; SPECIFIC INDICATORS FOR HERBS IN GENERAL USE p39
-solver,medical,Elderly parent dehydrated and confused,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p374; WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 1 p260; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p47
+solver,medical,Elderly parent dehydrated and confused,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p374; FM 21-11 First Aid for Soldiers (1991) p72; WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 1 p260
 solver,medical,Pandemic isolation mask and hygiene,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p92; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p176; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p9
 solver,medical,Radiation exposure what to do,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p191; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p196; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p189
 solver,carpentry,Build an emergency shelter in the woods tonight,WRONG,FM 5-426 Carpentry p62; THE FIRE BUCKET STOVE SYSTEM p31; STRAWBALE GUIDE p58
@@ -97,7 +97,7 @@ solver,carpentry,"Trees down on my roof, patch a hole",PASS,FM 5-426 Carpentry p
 solver,carpentry,Frame a small cabin wall,PASS,FM 5-426 Carpentry p89; FM 5-426 Carpentry p111; FM 5-426 Carpentry p17
 solver,carpentry,How do I build a door and hinge,PASS,FM 5-426 Carpentry p138; FM 5-426 Carpentry p133; FM 5-426 Carpentry p141
 solver,carpentry,Insulate a room to keep heat in,PASS,DIY CHEST REFRIGERATOR p1; FM 5-426 Carpentry p97; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p275
-solver,carpentry,Build a log cabin joint notch,PASS,CROSSCUT SAW MANUAL p27; FM 5-426 Carpentry p161; FM 5-426 Carpentry p75
+solver,carpentry,Build a log cabin joint notch,PASS,FM 5-426 Carpentry p161; CROSSCUT SAW MANUAL p27; FM 5-426 Carpentry p75
 solver,carpentry,Board up windows before a hurricane,PASS,FM 5-426 Carpentry p133; FM 5-426 Carpentry p206; FM 5-426 Carpentry p94
 solver,carpentry,Build a storage shed,PASS,ALTERNATIVE BUILDING TECHNOLOGIES p35; FM 5-426 Carpentry p103; HOW TO BUILD A MULTIMACHINE p14
 solver,carpentry,Sharpen an axe and a saw,PASS,HAND TOOLS p13; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p224; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p304
@@ -105,50 +105,50 @@ solver,carpentry,Make a simple table and bench,PASS,BUILDING A TRADITIONAL WORKB
 solver,carpentry,Waterproof a wood roof,PASS,FM 5-426 Carpentry p130; FM 5-426 Carpentry p50; HAND TOOLS p17
 solver,carpentry,Build a chimney or stove pipe through a wall,WRONG,THE FIRE BUCKET STOVE SYSTEM p39; THE FIRE BUCKET STOVE SYSTEM p4; THE FIRE BUCKET STOVE SYSTEM p22
 solver,carpentry,Dig a root cellar,PASS,CEMENT MIXER PSMAY53 p1; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p249; HOW TO MAKE A SELF WATERING CONTAINER OR EARTHBOX p33
-solver,carpentry,Estimate lumber needed to build a 12 by 16 shed,PASS,FM 5-426 Carpentry p42; FM 5-426 Carpentry p40; BUILDING A TRADITIONAL WORKBENCH p8
+solver,carpentry,Estimate lumber needed to build a 12 by 16 shed,PASS,FM 5-426 Carpentry p42; BUILDING A TRADITIONAL WORKBENCH p8; FM 5-426 Carpentry p40
 solver,carpentry,"Use hand tools: plane, chisel, drill",PASS,HAND TOOLS p9; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p145; USE AND CARE OF HAND TOOLS AND MEASURING TOOLS p304
-ask,,Start a fire in the rain,PASS,SURVIVING ATOMIC WEAPONS p7; THE FIRE BUCKET STOVE SYSTEM p32; TC 9-524 Fundamentals of Machine Tools 1996 p16
+ask,,Start a fire in the rain,WRONG,SURVIVING ATOMIC WEAPONS p7; THE FIRE BUCKET STOVE SYSTEM p32; FM 3-25.26 Map Reading and Land Navigation (2001) p143
 ask,,No matches how to make fire,PASS,THE FIRE BUCKET STOVE SYSTEM p35; THE FIRE BUCKET STOVE SYSTEM p44; THE FIRE BUCKET STOVE SYSTEM p34
-ask,,Keep warm at night without a heater,PASS,THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p25; THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p7; THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p36
+ask,,Keep warm at night without a heater,PASS,THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p25; THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p7; THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p9
 ask,,Heat a room safely with a wood stove,PASS,A GUIDE TO RESIDENTIAL  WOOD HEATING p23; DESIGNING IMPROVED WOOD BURNING STOVES p15; DESIGNING IMPROVED WOOD BURNING STOVES p16
-ask,,Stay cool in a heat wave with no power,PASS,CHAPT 8 HOW THE SUN CAN COOL p2; TC 9-524 Fundamentals of Machine Tools 1996 p31; CRYSTAL SETS TO SIDEBAND p6
+ask,,Stay cool in a heat wave with no power,PASS,Ready.gov Extreme Heat Info Sheet p2; CHAPT 8 HOW THE SUN CAN COOL p2; TC 9-524 Fundamentals of Machine Tools 1996 p31
 ask,,Lost in the forest what do I do first,PASS,BIOGAS3 p31; FM 21-76 Survival 1957 p173; A FLAME RF SIGNAL DETECTOR BASIC RADIO RECEIVER LEE DE FOREST CANDLE SET p3
-ask,,Find north without a compass,PASS,"BASICS OF ELECTRICITY p37; 03 INTRODUCTION TO CIRCUIT PROTECTION, CONTROL, AND MEASURMENT p193; NEETS Module 01 Matter Energy DC p28"
-ask,,Cross a fast river safely,PASS,DRILLING AND WELL CONSTRUCTION p105; FM 21-76 Survival 1957 p26; THE WILD FAST FOOD COOKBOOK p11
-ask,,Survive a blizzard in a car,PASS,FM 21-76 Survival 1957 p177; FM 21-76 Survival 1957 p250; SURVIVING ATOMIC WEAPONS p3
+ask,,Find north without a compass,PASS,FM 3-25.26 Map Reading and Land Navigation (2001) p126; FM 3-25.26 Map Reading and Land Navigation (2001) p87; FM 3-25.26 Map Reading and Land Navigation (2001) p96
+ask,,Cross a fast river safely,PASS,DRILLING AND WELL CONSTRUCTION p105; THE WILD FAST FOOD COOKBOOK p11; FM 21-76 Survival 1957 p26
+ask,,Survive a blizzard in a car,PASS,FEMA Are You Ready - Citizen Preparedness Guide p84; FM 21-76 Survival 1957 p177; FM 21-76 Survival 1957 p250
 ask,,Build a snow shelter,PASS,FM 21-76 Survival 1957 p179; FM 21-76 Survival 1957 p180; FM 21-76 Survival 1957 p182
-ask,,Tornado warning what to do at home,WRONG,PICOTURBINE EDUCATIONAL WINDMILL PLANS p1; HERB FORMULAS FOR CLINIC AND HOME p27; A FLAME RF SIGNAL DETECTOR BASIC RADIO RECEIVER LEE DE FOREST CANDLE SET p1
-ask,,Earthquake just happened now what,WRONG,GUIDELINES FOR BAMBOO REINFORCED MASONARY p19; GUIDELINES FOR BAMBOO REINFORCED MASONARY p17; GUIDELINES FOR BAMBOO REINFORCED MASONARY p22
-ask,,Flood waters rising,PASS,BIOGAS3 p32; PREVENTIVE MEDICINE FOR GROUND FORCES p28; FM 24-18 Tactical Single Channel Radio 1987 p100
-ask,,Wildfire approaching evacuation,PASS,TC 4-02.1 First Aid 2018 p98; TC 4-02.1 First Aid 2018 p99; PRICIPLES AND PRACTICE OF CONSITUTIONAL PHYSIOLOGY FOR HERBA p10
-ask,,Hurricane preparation checklist,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p275; BIOGAS2 p47; A GUIDE TO RESIDENTIAL  WOOD HEATING p3
-ask,,Lightning storm while hiking,PASS,DRILLING AND WELL CONSTRUCTION p60; CRYSTAL SETS TO SIDEBAND p135; CRYSTAL SETS TO SIDEBAND p136
+ask,,Tornado warning what to do at home,PASS,NWS Tornado Safety p1; NWS Tornado Safety p2; FEMA Are You Ready - Citizen Preparedness Guide p61
+ask,,Earthquake just happened now what,PASS,USGS Putting Down Roots in Earthquake Country p22; USGS Putting Down Roots in Earthquake Country p20; USGS Putting Down Roots in Earthquake Country p30
+ask,,Flood waters rising,PASS,FEMA Are You Ready - Citizen Preparedness Guide p54; BIOGAS3 p32; PREVENTIVE MEDICINE FOR GROUND FORCES p28
+ask,,Wildfire approaching evacuation,PASS,Ready.gov Wildfire Info Sheet p2; Ready.gov Wildfire Info Sheet p1; FEMA Are You Ready - Citizen Preparedness Guide p20
+ask,,Hurricane preparation checklist,PASS,FEMA Are You Ready - Citizen Preparedness Guide p6; FEMA Are You Ready - Citizen Preparedness Guide p11; FEMA Are You Ready - Citizen Preparedness Guide p70
+ask,,Lightning storm while hiking,PASS,FEMA Are You Ready - Citizen Preparedness Guide p76; FEMA Are You Ready - Citizen Preparedness Guide p17; FEMA Are You Ready - Citizen Preparedness Guide p11
 ask,,Power grid down for weeks,PASS,"06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p72; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p36; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p71"
-ask,,Defend my home from looters,WRONG,HOW TO MAKE ROADBLOCKS p7; 19- THE TECHNICIANS HANDBOOK p4; 08- INTRODUCTION TO AMPLIFIERS p4
-ask,,Stay hidden and quiet in an unsafe area,WRONG,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p114; SURVIVING ATOMIC WEAPONS p16; MACHINERY'S HANDBOOK 27TH EDITION p1182
+ask,,Defend my home from looters,WRONG,HOW TO MAKE ROADBLOCKS p7; FM 3-25.26 Map Reading and Land Navigation (2001) p111; 19- THE TECHNICIANS HANDBOOK p4
+ask,,Stay hidden and quiet in an unsafe area,WRONG,FEMA Are You Ready - Citizen Preparedness Guide p54; FEMA Are You Ready - Citizen Preparedness Guide p131; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p114
 ask,,Bug out bag what to pack,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p27; MAKE A BUG NET p1; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p30
-ask,,Emergency kit for a car,WRONG,EMERGENCY WATER FILTRATION MANUAL p6; EMERGENCY WATER FILTRATION MANUAL p1; EMERGENCY WATER FILTRATION MANUAL p26
-ask,,Nuclear fallout shelter basics,PASS,SURVIVING ATOMIC WEAPONS p15; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p117; SURVIVING ATOMIC WEAPONS p12
-ask,,Chemical spill or gas leak evacuate,PASS,"06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p171; SAFETY MANUAL FOR MACHINE SHOPS p39; HOME DISTILLATION HANDBOOK p71"
+ask,,Emergency kit for a car,PASS,FEMA Are You Ready - Citizen Preparedness Guide p33; FEMA Are You Ready - Citizen Preparedness Guide p21; FEMA Pet Preparedness Toolkit 2024 p3
+ask,,Nuclear fallout shelter basics,PASS,FEMA Are You Ready - Citizen Preparedness Guide p168; SURVIVING ATOMIC WEAPONS p15; FEMA Are You Ready - Citizen Preparedness Guide p167
+ask,,Chemical spill or gas leak evacuate,PASS,USGS Putting Down Roots in Earthquake Country p27; USGS Putting Down Roots in Earthquake Country p21; FEMA Are You Ready - Citizen Preparedness Guide p183
 ask,,Pandemic stockpile what do I need,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p176; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p92; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p6
 ask,,Economic collapse barter goods,PASS,HOW TO SURVIVE INFLATION p8; FOOD STORAGE TIPS p1; HOW TO SURVIVE INFLATION p5
-ask,,How to sharpen a knife in the field,PASS,SIMPLE IMPROVISED TOOLS p3; SPECIALTY SURVIVAL TOOLS p9; HAND TOOLS p20
-ask,,Tie knots for shelter and rescue,PASS,HOW TO MAKE ROPE RESTRAINTS p2; HOW TO MAKE FISH TIDAL TRAPS p5; HOW TO MAKE HOOP STYLE FISH TRAPS p1
+ask,,How to sharpen a knife in the field,PASS,SIMPLE IMPROVISED TOOLS p3; SPECIALTY SURVIVAL TOOLS p9; SIMPLE IMPROVISED TOOLS p1
+ask,,Tie knots for shelter and rescue,PASS,FM 21-11 First Aid for Soldiers (1991) p126; HOW TO MAKE ROPE RESTRAINTS p2; HOW TO MAKE FISH TIDAL TRAPS p5
 ask,,Make rope from natural fibers,PASS,SAFETY MANUAL FOR MACHINE SHOPS p35; MACHINERY'S HANDBOOK 27TH EDITION p3339; GLOSSARY OF FERROUS METALLURGY p56
-ask,,Hunting small game traps trapping laws and methods,PASS,HOW TO MAKE FISH TIDAL TRAPS p5; HOW TO MAKE LEVER TRAPS p8; HOW TO MAKE HOOP STYLE FISH TRAPS p1
-ask,,Teach kids what to do if lost,PASS,RABIES GUIDE p76; ELECTRICITY DEMOSTRATER HANDBOOK p2; HERB FORMULAS FOR CLINIC AND HOME p4
-ask,,Pets in an emergency,WRONG,FM 21-10 Field Hygiene Sanitation 2000 p15; FM 21-10 Field Hygiene Sanitation 2000 p96; FM 21-10 Field Hygiene Sanitation 2000 p2
-ask,,Mental stress and panic in a crisis,PASS,FM 21-76 Survival 1957 p10; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p147; A QUICK GUIDE TO BUGOUT AIRCRAFT p8
+ask,,Hunting small game traps trapping laws and methods,PASS,HOW TO MAKE FISH TIDAL TRAPS p5; HOW TO MAKE LEVER TRAPS p8; FM 21-76 Survival 1957 p144
+ask,,Teach kids what to do if lost,WRONG,RABIES GUIDE p76; ELECTRICITY DEMOSTRATER HANDBOOK p2; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p23
+ask,,Pets in an emergency,PASS,Ready.gov Prepare Your Pets for Disasters p1; FEMA Pet Preparedness Toolkit 2024 p3; FEMA Pet Preparedness Toolkit 2024 p5
+ask,,Mental stress and panic in a crisis,PASS,"FM 21-11 First Aid for Soldiers (1991) p215; FM 21-11 First Aid for Soldiers (1991) p220; FM 4-25.11 First Aid (2002, Change 1 2004) p176"
 ask,,Keep a group organized and make decisions,PASS,FM 21-76 Survival 1957 p11; HOW TO MAKE ROADBLOCKS p4; BIOGAS3 p38
 ask,,Long term food and seed saving plan for a year,PASS,FOOD STORAGE TIPS p7; HOME VEGETABLE GARDENING p13; FOOD STORAGE TIPS p3
-ask,,Soap making from ash and fat,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p16; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p17; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p14
+ask,,Soap making from ash and fat,PASS,MSU Extension - Making Soap at Home (archive) p3; MSU Extension - Making Soap at Home (archive) p4; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p16
 ask,,Make charcoal,PASS,WOOD FUEL PROPERTIES AND FUEL PRODUCTS FROM WOOD p3; DESIGNING IMPROVED WOOD BURNING STOVES p55; GLOSSARY OF FERROUS METALLURGY p24
 ask,,Candle and lamp from fat and oil,PASS,MAKE AN INSTANT IMPROVISED LAMP p1; CHEMISTRY OF BIODIESEL p5; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p16
 ask,,Sewing and repairing clothes by hand,PASS,MACHINERY'S HANDBOOK 27TH EDITION p1744; TC 9-524 Fundamentals of Machine Tools 1996 p83; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p197
 ask,,Make clothing from animal hides,PASS,IMPROVISED CAMP EQUIPMENT p10; BIG GAME FROM HUNT TO HOME p12; FM 21-76 Survival 1957 p259
 solver,energy,Run a fridge on a small solar panel,PASS,SMALL SCALE SOLAR ENERGY PROJECTS p19; SMALL SCALE SOLAR ENERGY PROJECTS p21; SolarHeating p8
 solver,energy,Size a battery bank for a cabin,PASS,WOOD 103 p2; THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p43; PERMANENT MAGNET GENERATOR CONSTRUCTION p45
-solver,energy,Charge phones with no electricity,PASS,PERMANENT MAGNET GENERATOR CONSTRUCTION p46; THE MOSSOURI DESIGNED MASONARY STOVE p22; SMALL SCALE SOLAR ENERGY PROJECTS p37
+solver,energy,Charge phones with no electricity,PASS,PERMANENT MAGNET GENERATOR CONSTRUCTION p46; SMALL SCALE SOLAR ENERGY PROJECTS p37; THE MOSSOURI DESIGNED MASONARY STOVE p22
 solver,energy,Use a generator safely indoors,PASS,COOKING OPTIONS IN REFUGEE SITUATIONS p17; A GUIDE TO RESIDENTIAL  WOOD HEATING p20; BUILD A BIOGAS GENERATOR p12
 solver,energy,Wire a solar panel to a charge controller,PASS,MAKE A WORKING SOLAR CELL p6; SMALL SCALE SOLAR ENERGY PROJECTS p3; SMALL SCALE SOLAR ENERGY PROJECTS p34
 solver,energy,Make a small wind turbine,PASS,BUILD A BIOGAS GENERATOR p11; DIY MINI ALTERNATE ENERGY PROJECTS p11; DIY PAPER WIND TURBINE p4
@@ -164,10 +164,10 @@ solver,energy,Lead acid vs lithium batteries,PASS,SECONDARY CELLS ACCUMULATORS L
 solver,mechanical,Repair a leaking pipe,PASS,"09 PUMPS, VALVES, AND PIPING p22; 09 PUMPS, VALVES, AND PIPING p40; 09 PUMPS, VALVES, AND PIPING p26"
 solver,mechanical,Why did the breaker trip,PASS,"03 INTRODUCTION TO CIRCUIT PROTECTION, CONTROL, AND MEASURMENT p111; 03 INTRODUCTION TO CIRCUIT PROTECTION, CONTROL, AND MEASURMENT p110; 03 INTRODUCTION TO CIRCUIT PROTECTION, CONTROL, AND MEASURMENT p114"
 solver,mechanical,Fix a small engine that will not start,PASS,MOWER PROPANE CONVERSION p13; ALTERNATIVES TO FOSSIL FUELED ENGINES-GENERATORS p8; 21- TEST METHODS AND PRACTICES p75
-solver,mechanical,Replace a faucet washer,WRONG,"09 PUMPS, VALVES, AND PIPING p47; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p142; SURPLUS RADIO CONVERSION 2 p120"
+solver,mechanical,Replace a faucet washer,PASS,"Texas Extension - Repair a Leaky Faucet p2; Texas Extension - Repair a Leaky Faucet p1; 09 PUMPS, VALVES, AND PIPING p47"
 solver,mechanical,Basic electronics resistor capacitor,PASS,"06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p56; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p200; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p176"
 solver,mechanical,Join two pieces of metal without a welder,PASS,"04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p74; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p121; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p145"
-solver,mechanical,Use a lever or pulley to move something heavy,PASS,"DIY 12VDC ENGINE GENERATOR p3; AC MOTORS p7; 06-INTRODUCTION  TO ELECTRONIC EMISSION,TUBES, AND POWER SUPPLIES p90"
+solver,mechanical,Use a lever or pulley to move something heavy,PASS,DIY 12VDC ENGINE GENERATOR p3; DELCO CRANKING MOTORS p13; DELCO CRANKING MOTORS p14
 solver,mechanical,Hand pump a well,PASS,ELECTRICITY DEMOSTRATER HANDBOOK p24; ULTRA SIMPLE HOMEMADE GENERATOR p8; ALTERNATIVES TO FOSSIL FUELED ENGINES-GENERATORS p6
 solver,mechanical,Lubricate and maintain tools,PASS,10 AUXILLARY MACHINERY AND EQUIPMENT p6; 19- THE TECHNICIANS HANDBOOK p132; 19- THE TECHNICIANS HANDBOOK p135
 solver,mechanical,Fix a bike or wheelbarrow tire,PASS,SURPLUS RADIO CONVERSION 1 p22; CRYSTAL SETS TO SIDEBAND p217; SURPLUS RADIO CONVERSION 2 p99
@@ -175,7 +175,7 @@ solver,mechanical,Soldering a wire connection,PASS,"04- INTRODUCTION TO ELECTRIC
 solver,mechanical,Read a schematic,PASS,"04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p150; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p149; 04- INTRODUCTION TO ELECTRICAL CONDUCTORS, WIRING TECHNIQUES, AND SCHEMATIC READING p125"
 solver,mechanical,Measure with a micrometer or caliper,PASS,"21- TEST METHODS AND PRACTICES p124; 16- INTRODUCTION TO TEST EQUIPMENT p64; 09 PUMPS, VALVES, AND PIPING p6"
 solver,mechanical,Make a simple generator from a motor,PASS,05- INTRODUCTION TO GENERATORS AND MOTORS p48; ULTRA SIMPLE HOMEMADE GENERATOR p2; ULTRA SIMPLE HOMEMADE GENERATOR p13
-solver,mechanical,Someone is electrocuted what do I do,PASS,"10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p213; BASICS OF CONTROL COMPONENTS p8; BASICS OF CONTROL COMPONENTS p5"
+solver,mechanical,Someone is electrocuted what do I do,PASS,"10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p213; BASICS OF CONTROL COMPONENTS p8; CIRCUITS FOR THE HOBBYIST p3"
 solver,transport,Car will not start clicking sound,PASS,COMMUNITY BIKE TRAILER DESIGN p3; AUTO REPAIR TIPS p2; AUTO REPAIR TIPS p35
 solver,transport,Jump start a dead battery,PASS,HEWB4 BATTERY SERVICE p26; H6 BATTERIES p16; AUTO REPAIR TIPS p20
 solver,transport,Engine overheating on the road,PASS,H40 IGNITION #2 ELECTRONIC SPARK ADVANCE p6; H25 ENGINE CONTROLS PART #2 ECU PROCESS AND OUTPUT FUNCTIONS p22; H58 EMISSION SUB SYSTEMS CLOSED LOOP FEEDBACK CONTROL SYSTEM p4
@@ -194,89 +194,89 @@ solver,transport,Radiator leak temporary fix,PASS,AUTO REPAIR TIPS p23; AUTO REP
 solver,transport,Clean a carburetor,PASS,AUTO REPAIR TIPS p4; H56 EMISSIONS #2 EMISSION ANALYSIS p6; H21 EFI #2 OVERVIEW p13
 solver,transport,Use a car alternator to power tools,PASS,AUTO REPAIR TIPS p15; H3 ELECTRICAL COMPONENTS p1; AUTO REPAIR TIPS p25
 solver,transport,Drive on a flooded road,PASS,FS21 FOOTSTEPS p15; AUTO REPAIR TIPS p30; AFRICAN OXCART DESIGN AND MANUFACTURE p27
-solver,comms,Signal for rescue from a mountain,PASS,FM 24-18 Tactical Single Channel Radio 1987 p157; US Army Tactical Radio Operations FM6-02.53 p104; US Army Tactical Radio Operations FM6-02.53 p202
-solver,comms,Set up a ham radio for emergency contact,PASS,FM 24-18 Tactical Single Channel Radio 1987 p115; FM 24-18 Tactical Single Channel Radio 1987 p37; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p18
-solver,comms,Build a simple antenna,PASS,SIMPLE CRYSTAL RADIO CONSTRUCTION p1; SIMPLE CRYSTAL RADIO CONSTRUCTION p2; US Army Tactical Radio Operations FM6-02.53 p114
-solver,comms,What are emergency radio frequencies,PASS,NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p11; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p5; US Army Tactical Radio Operations FM6-02.53 p119
-solver,comms,Send morse code with a flashlight,PASS,FM 24-18 Tactical Single Channel Radio 1987 p183; 50 555 CIRCUITS p47; FM 24-18 Tactical Single Channel Radio 1987 p19
-solver,comms,Use a map and compass to find my position,PASS,US Army Tactical Radio Operations FM6-02.53 p122; FM 24-18 Tactical Single Channel Radio 1987 p27; HEADPHONE SELECTION PROCEDURE FOR CRYSTAL DETECTOR RADIO RECIEVER p2
-solver,comms,Read a topographic map,PASS,US Army Tactical Radio Operations FM6-02.53 p122; HEADPHONE SELECTION PROCEDURE FOR CRYSTAL DETECTOR RADIO RECIEVER p2; US Army Tactical Radio Operations FM6-02.53 p213
+solver,comms,Signal for rescue from a mountain,PASS,FM 24-18 Tactical Single Channel Radio 1987 p157; US Army Tactical Radio Operations FM6-02.53 p202; US Army Tactical Radio Operations FM6-02.53 p104
+solver,comms,Set up a ham radio for emergency contact,PASS,FM 24-18 Tactical Single Channel Radio 1987 p115; SIMPLE CRYSTAL RADIO CONSTRUCTION p7; FM 24-18 Tactical Single Channel Radio 1987 p37
+solver,comms,Build a simple antenna,PASS,A SIMPLE CRYSTAL RADIO SET p1; SIMPLE CRYSTAL RADIO CONSTRUCTION p1; SIMPLE CRYSTAL RADIO CONSTRUCTION p2
+solver,comms,What are emergency radio frequencies,PASS,NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p11; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p5; US Army Tactical Radio Operations FM6-02.53 p52
+solver,comms,Send morse code with a flashlight,PASS,FM 24-18 Tactical Single Channel Radio 1987 p183; 50 555 CIRCUITS p47; CRYSTAL RECIEVERS FOR BROADCAST RECEPTION p28
+solver,comms,Use a map and compass to find my position,PASS,FM 3-25.26 Map Reading and Land Navigation (2001) p126; FM 3-25.26 Map Reading and Land Navigation (2001) p137; FM 3-25.26 Map Reading and Land Navigation (2001) p70
+solver,comms,Read a topographic map,PASS,FM 3-25.26 Map Reading and Land Navigation (2001) p12; FM 3-25.26 Map Reading and Land Navigation (2001) p169; FM 3-25.26 Map Reading and Land Navigation (2001) p21
 solver,comms,CB or FRS radio range tips,PASS,NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p25; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p5; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p63
 solver,comms,Radio procedure words and phonetic alphabet,PASS,US Army Tactical Radio Operations FM6-02.53 p177; US Army Tactical Radio Operations FM6-02.53 p256; US Army Tactical Radio Operations FM6-02.53 p5
-solver,comms,Signal fire and ground to air signals,PASS,US Army Tactical Radio Operations FM6-02.53 p250; US Army Tactical Radio Operations FM6-02.53 p266; US Army Tactical Radio Operations FM6-02.53 p50
-solver,comms,Build a crystal radio receiver,PASS,CRYSTAL DETECTOR MATERIALS AVAILABLE RADIO RECEIVER SET TECHNOLOGY ARTICLE p2; SIMPLE CRYSTAL RADIO CONSTRUCTION p1; COIL DESIGN SELF INDUCTANCE FORMULA FOR CRYSTAL  DETECTOR RADIO RECIEVER p1
+solver,comms,Signal fire and ground to air signals,PASS,US Army Tactical Radio Operations FM6-02.53 p250; GLOSS p7; FM 3-25.26 Map Reading and Land Navigation (2001) p194
+solver,comms,Build a crystal radio receiver,PASS,CRYSTAL DETECTOR MATERIALS AVAILABLE RADIO RECEIVER SET TECHNOLOGY ARTICLE p2; SIMPLE CRYSTAL RADIO CONSTRUCTION p1; BOYS BOOK OF CRYSTAL RADIOS p37
 solver,comms,Charge a radio battery with solar,PASS,FM 24-18 Tactical Single Channel Radio 1987 p97; FM 24-18 Tactical Single Channel Radio 1987 p106; FM 24-18 Tactical Single Channel Radio 1987 p75
 solver,comms,Send an SOS with a whistle,PASS,US Army Tactical Radio Operations FM6-02.53 p109; 101 TO 200 TRANSISTOR CIRCUITS p39; 1 TO 100 TRANSISTOR CIRCUITS p52
-solver,comms,Pace count to measure distance walking,PASS,101 TO 200 TRANSISTOR CIRCUITS p2; FM 24-18 Tactical Single Channel Radio 1987 p138; 50 555 CIRCUITS p61
-solver,comms,Navigate by the stars at night,WRONG,US Army Tactical Radio Operations FM6-02.53 p45; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p65; US Army Tactical Radio Operations FM6-02.53 p194
+solver,comms,Pace count to measure distance walking,PASS,FM 3-25.26 Map Reading and Land Navigation (2001) p53; FM 3-25.26 Map Reading and Land Navigation (2001) p52; FM 3-25.26 Map Reading and Land Navigation (2001) p154
+solver,comms,Navigate by the stars at night,PASS,FM 3-25.26 Map Reading and Land Navigation (2001) p103; FM 3-25.26 Map Reading and Land Navigation (2001) p141; FM 3-25.26 Map Reading and Land Navigation (2001) p149
 solver,comms,Antenna grounding and lightning protection,PASS,SIMPLE CRYSTAL RADIO CONSTRUCTION p1; SIMPLE CRYSTAL RADIO CONSTRUCTION p3; SIMPLE CRYSTAL RADIO CONSTRUCTION p2
-solver,longterm,Rebuild a community after a long collapse,WRONG,IMPROVISED CAMP EQUIPMENT p1; A QUICK GUIDE TO BUGOUT AIRCRAFT p1; HOW TO SURVIVE INFLATION p5
-solver,longterm,Medicine you can grow in a garden,WRONG,IMPROVISED BRIDGES p17; SURVIVAL VITAMIN C p2; HOW TO SURVIVE INFLATION p8
-solver,longterm,Make and use lye and ash,WRONG,SURVIVING ATOMIC WEAPONS p9; SURVIVING ATOMIC WEAPONS p7
+solver,longterm,Rebuild a community after a long collapse,WRONG,USGS Putting Down Roots in Earthquake Country p17; USGS Putting Down Roots in Earthquake Country p15; USGS Putting Down Roots in Earthquake Country p28
+solver,longterm,Medicine you can grow in a garden,WRONG,IMPROVISED BRIDGES p17; SURVIVAL VITAMIN C p2; FEMA Are You Ready - Citizen Preparedness Guide p194
+solver,longterm,Make and use lye and ash,PASS,MSU Extension - Making Soap at Home (archive) p3; MSU Extension - Making Soap at Home (archive) p4; MSU Extension - Making Soap at Home (archive) p2
 solver,longterm,Blacksmithing basics forge and anvil,WRONG,SCOUNGING METAL AND SURVIVAL BLACKSMITHING p19; SCOUNGING METAL AND SURVIVAL BLACKSMITHING p12; SCOUNGING METAL AND SURVIVAL BLACKSMITHING p42
-solver,longterm,Making glass or pottery,PASS,MAKE AN INSTANT IMPROVISED LAMP p1; SIMPLE IMPROVISED TOOLS p12; SURVIVAL MINI HEATERS p5
-solver,longterm,Teach children reading and math without school,WRONG,SURVIVING ATOMIC WEAPONS p8; TYPES OF COMBAT SHELTERS p2; SURVIVING ATOMIC WEAPONS p11
-solver,longterm,Spin thread and make cloth,PASS,SIMPLE IMPROVISED TOOLS p10; THINGS YOU CAN MAKE FROM BAMBOO p19; SIMPLE IMPROVISED TOOLS p6
-solver,longterm,Brew vinegar or alcohol for disinfectant,WRONG,SURVIVING ATOMIC WEAPONS p14
-solver,longterm,Beekeeping basics,WRONG,SCOUT ENGINEERING p3; THINGS YOU CAN MAKE FROM BAMBOO p5; SPECIALTY SURVIVAL TOOLS p23
-solver,longterm,Save seeds from heirloom vegetables,PASS,HOW TO SURVIVE INFLATION p11; SURVIVAL VITAMIN C p2; HOW TO MAKE ROADBLOCKS p5
-solver,longterm,Make paper and ink,PASS,SPECIALTY SURVIVAL TOOLS p8; SPECIALTY SURVIVAL TOOLS p11; HOW TO SURVIVE INFLATION p6
-solver,longterm,Water mill or windmill,PASS,HOW TO MAKE FISH TIDAL TRAPS p4; THINGS YOU CAN MAKE FROM BAMBOO p15; SURVIVING ATOMIC WEAPONS p16
-solver,longterm,Sanitation and disease prevention in a camp,WRONG,IMPROVISED CAMP EQUIPMENT p7; IMPROVISED CAMP EQUIPMENT p18; IMPROVISED CAMP EQUIPMENT p11
-solver,longterm,Raise goats or rabbits for meat and milk,PASS,HOW TO SURVIVE INFLATION p12; HOW TO SURVIVE INFLATION p11; SURVIVING ATOMIC WEAPONS p16
-solver,longterm,Make cheese and butter,PASS,HOW TO SURVIVE INFLATION p12; SURVIVING ATOMIC WEAPONS p14
+solver,longterm,Making glass or pottery,PASS,MAKE AN INSTANT IMPROVISED LAMP p1; FEMA Are You Ready - Citizen Preparedness Guide p72; SIMPLE IMPROVISED TOOLS p12
+solver,longterm,Teach children reading and math without school,PASS,FEMA Are You Ready - Citizen Preparedness Guide p5; FEMA Are You Ready - Citizen Preparedness Guide p22; FEMA Are You Ready - Citizen Preparedness Guide p189
+solver,longterm,Spin thread and make cloth,PASS,THINGS YOU CAN MAKE FROM BAMBOO p19; SIMPLE IMPROVISED TOOLS p10; SIMPLE IMPROVISED TOOLS p6
+solver,longterm,Brew vinegar or alcohol for disinfectant,WRONG,SURVIVING ATOMIC WEAPONS p14; FEMA Are You Ready - Citizen Preparedness Guide p197; FEMA Are You Ready - Citizen Preparedness Guide p43
+solver,longterm,Beekeeping basics,PASS,USDA Farmers Bulletin 447 - Bees (1911) p5; USDA Farmers Bulletin 447 - Bees (1911) p7; USDA Farmers Bulletin 447 - Bees (1911) p50
+solver,longterm,Save seeds from heirloom vegetables,PASS,HOW TO SURVIVE INFLATION p11; USGS Putting Down Roots in Earthquake Country p29; FEMA Are You Ready - Citizen Preparedness Guide p194
+solver,longterm,Make paper and ink,PASS,SPECIALTY SURVIVAL TOOLS p8; SPECIALTY SURVIVAL TOOLS p11; USDA Farmers Bulletin 447 - Bees (1911) p4
+solver,longterm,Water mill or windmill,PASS,HOW TO MAKE FISH TIDAL TRAPS p4; FEMA Are You Ready - Citizen Preparedness Guide p40; FEMA Are You Ready - Citizen Preparedness Guide p192
+solver,longterm,Sanitation and disease prevention in a camp,WRONG,FEMA Are You Ready - Citizen Preparedness Guide p34; IMPROVISED CAMP EQUIPMENT p7; IMPROVISED CAMP EQUIPMENT p18
+solver,longterm,Raise goats or rabbits for meat and milk,PASS,HOW TO SURVIVE INFLATION p12; HOW TO SURVIVE INFLATION p11; FEMA Are You Ready - Citizen Preparedness Guide p199
+solver,longterm,Make cheese and butter,PASS,HOW TO SURVIVE INFLATION p12; SURVIVING ATOMIC WEAPONS p14; FEMA Are You Ready - Citizen Preparedness Guide p199
 ask,,What is the boiling time at high altitude,PASS,USDA Canning 01 Principles p10; USDA Canning 07 Jams Jellies p9; USDA Canning 00 Introduction p6
-ask,,How many calories does a person need per day,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p143; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p165; PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p44
-ask,,How long can a person live without food,WRONG,FOOD STORAGE TIPS p3; MEANS OF DISEASE TRANSMISSION p4; WATERFAQ p1
+ask,,How many calories does a person need per day,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p143; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p78; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p165
+ask,,How long can a person live without food,PASS,USGS Putting Down Roots in Earthquake Country p15; WATERFAQ p1; HOW TO SURVIVE INFLATION p8
 ask,,What is the rule of threes in survival,PASS,FM 21-76 Survival 1957 p277; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p190; HOME VEGETABLE GARDENING p109
 ask,,What is the first thing to do in a survival situation,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p27; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p104; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p19
 ask,,How do I know if a mushroom is poisonous,PASS,FM 21-76 Survival 1957 p112; FM 21-76 Survival 1957 p280; FM 21-76 Survival 1957 p114
-ask,,What temperature is safe for storing food,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p90; USDA Canning 01 Principles p6; SUPER CAT ALCOHOL STOVE p11
-ask,,What are the symptoms of hypothermia,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p56; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p44; TC 4-02.1 First Aid 2018 p57
-ask,,How far can I walk in a day,PASS,"GUIDELINES FOR THE HUMANE HANDLING, TRANSPORT, AND SLAUGHTER p51; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p165; HERBAL-MEDICAL DICTIONARY p38"
-ask,,What are the parts of a first aid kit,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p23; DBF1 BOTTOM FISHING BASICS p10; WATERFAQ p12
-ask,,What is the shelf life of canned food,PASS,FOOD STORAGE TIPS p6; FOOD STORAGE TIPS p8; USDA Canning 01 Principles p12
+ask,,What temperature is safe for storing food,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p90; FEMA Are You Ready - Citizen Preparedness Guide p37; USDA Canning 01 Principles p6
+ask,,What are the symptoms of hypothermia,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p56; TC 4-02.1 First Aid 2018 p57; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p44
+ask,,How far can I walk in a day,PASS,"GUIDELINES FOR THE HUMANE HANDLING, TRANSPORT, AND SLAUGHTER p51; FEMA Are You Ready - Citizen Preparedness Guide p84; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p165"
+ask,,What are the parts of a first aid kit,PASS,"FM 21-11 First Aid for Soldiers (1991) p232; FM 4-25.11 First Aid (2002, Change 1 2004) p184; FM 21-11 First Aid for Soldiers (1991) p191"
+ask,,What is the shelf life of canned food,PASS,FOOD STORAGE TIPS p6; FOOD STORAGE TIPS p8; FEMA Are You Ready - Citizen Preparedness Guide p37
 ask,,How do I treat a fever naturally,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p46; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p10; TC 4-02.1 First Aid 2018 p49
 ask,,How do I purify water with bleach,PASS,WATERFAQ p11; WATERFAQ p12; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p95
 ask,,What do the colors of a wire mean,PASS,H5 WIRE TERMINAL AND CONNECTOR REPAIR p14; CRYSTAL SETS TO SIDEBAND p164; HAYNES TEXTBOOK  WELDING MANUAL p100
-ask,,How to tie a bowline knot,PASS,HOW TO MAKE ROPE RESTRAINTS p2; HOW TO MAKE FISH TIDAL TRAPS p5; HOW TO MAKE HOOP STYLE FISH TRAPS p1
+ask,,How to tie a bowline knot,PASS,FARM BLACKSMITHING 1901 p74; COMMUNITY BIKE TRAILER DESIGN p16; ST 31-91B SPECIAL FORCES MEDICAL HANDBOOK COMPLETE p174
 ask,,What is a fire triangle,PASS,OUTDOOR COOKING p17; TYPES OF COMBAT SHELTERS p4; MACHINERY'S HANDBOOK 27TH EDITION p92
 ask,,How much food per person for 72 hours,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p146; USDA Canning 01 Principles p32; MACHINERY'S HANDBOOK 27TH EDITION p291
-ask,,What is the best way to stay warm in a sleeping bag,PASS,BIG GAME FROM HUNT TO HOME p11; FM 21-76 Survival 1957 p210; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p152
+ask,,What is the best way to stay warm in a sleeping bag,PASS,"BIG GAME FROM HUNT TO HOME p11; FM 4-25.11 First Aid (2002, Change 1 2004) p127; FM 21-76 Survival 1957 p210"
 ask,,Is it safe to eat snow,PASS,FM 21-76 Survival 1957 p184; FM 21-76 Survival 1957 p301; SURVIVING ATOMIC WEAPONS p16
 ask,,How many pounds of pressure for canning,PASS,USDA Canning 01 Principles p20; 02 ENGINEERING FUNDAMENTALS p18; RAINWATER CATCHMENT SYSTEMS p51
-ask,,What's the difference between a hurricane watch and warning,PASS,FOOD STORAGE TIPS p6; TC 4-02.1 First Aid 2018 p47; FM 21-76 Survival 1957 p266
-ask,,How to treat a jellyfish sting,WRONG,TC 4-02.1 First Aid 2018 p50; FM 21-76 Survival 1957 p274; TC 4-02.1 First Aid 2018 p51
-ask,,What is the Heimlich maneuver,WRONG,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p221; US Army Tactical Radio Operations FM6-02.53 p108; MACHINE SHOP CACULATION p46
+ask,,What's the difference between a hurricane watch and warning,PASS,FEMA Are You Ready - Citizen Preparedness Guide p69; FEMA Are You Ready - Citizen Preparedness Guide p60; NWS Tornado Safety p1
+ask,,How to treat a jellyfish sting,PASS,"FM 21-11 First Aid for Soldiers (1991) p178; FM 4-25.11 First Aid (2002, Change 1 2004) p138; TC 4-02.1 First Aid 2018 p50"
+ask,,What is the Heimlich maneuver,PASS,"THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p221; FM 21-11 First Aid for Soldiers (1991) p51; FM 4-25.11 First Aid (2002, Change 1 2004) p34"
 ask,,What does SOS stand for and how do I signal it,WRONG,FM 24-18 Tactical Single Channel Radio 1987 p164; CRYSTAL SETS TO SIDEBAND p114; FM 24-18 Tactical Single Channel Radio 1987 p175
-ask,,How do I read a compass bearing,PASS,DBF1 BOTTOM FISHING BASICS p8; PERMANENT MAGNET GENERATOR CONSTRUCTION p11; DBF1 BOTTOM FISHING BASICS p9
-ask,,Which direction does moss grow,PASS,FM 21-76 Survival 1957 p196; CONTAINER VEGTABLE GARDENING p5; CONTAINER VEGTABLE GARDENING p3
+ask,,How do I read a compass bearing,PASS,DBF1 BOTTOM FISHING BASICS p8; FM 3-25.26 Map Reading and Land Navigation (2001) p187; FM 3-25.26 Map Reading and Land Navigation (2001) p96
+ask,,Which direction does moss grow,PASS,FM 21-76 Survival 1957 p196; CONTAINER VEGTABLE GARDENING p3; CONTAINER VEGTABLE GARDENING p5
 ask,,What fuel can I burn in a camp stove,PASS,THE FIRE BUCKET STOVE SYSTEM p32; COOKING OPTIONS IN REFUGEE SITUATIONS p28; COOKING OPTIONS IN REFUGEE SITUATIONS p25
 ask,,How do I keep my feet dry and avoid trench foot,PASS,PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p39; PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p66; PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES p32
 ask,,What is the correct CPR rate,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p246; TC 4-02.1 First Aid 2018 p72; 19- THE TECHNICIANS HANDBOOK p16
 ask,,What is Lyme disease,PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p74; TC 4-02.1 First Aid 2018 p49; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p76
 plan,,"Power out in winter, house is cold, no tap water",PASS,A GUIDE TO RESIDENTIAL  WOOD HEATING p21; CHAPT 9 HOME DESIGN BASED ON CLIMATE p6; CHAPT 7 SOLAR ROOMS p7
-plan,,Hurricane coming in 48 hours,PASS,FM 21-76 Survival 1957 p173; FOOD STORAGE TIPS p1; NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE p10
-plan,,Lost on a hike with an injured friend,WRONG,METHANE 2 p1; RABIES GUIDE p5; METHANE 2 p3
-plan,,Earthquake damaged my house and gas smells,WRONG,GUIDELINES FOR BAMBOO REINFORCED MASONARY p13; RAINWATER CATCHMENT SYSTEMS p24; GUIDELINES FOR BAMBOO REINFORCED MASONARY p22
-plan,,Flooding in the basement and power going out,PASS,DRILLING AND WELL CONSTRUCTION p110; A GUIDE TO RESIDENTIAL  WOOD HEATING p42; DRILLING AND WELL CONSTRUCTION p112
-plan,,Car broke down in desert heat with no cell service,PASS,HP PV-POWERED BIKE p2; CHAPT 2 SOLAR BUILDING DESIGN BASICS p19; FM 24-18 Tactical Single Channel Radio 1987 p98
-plan,,Stranded in a snowstorm in my car,PASS,"10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p89; AUTO REPAIR TIPS p20; MACHINERY'S HANDBOOK 27TH EDITION p3340"
-plan,,Grid down for a month in the city,PASS,CHAPT 3 SOLAR WINDOWS p3; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p48; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p391
-plan,,Wildfire evacuation in 30 minutes,WRONG,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p52; TC 4-02.1 First Aid 2018 p92; TC 4-02.1 First Aid 2018 p80
-plan,,Tornado destroyed part of our home,WRONG,BIG GAME FROM HUNT TO HOME p31; HOME VEGETABLE GARDENING p88; USDA Canning 01 Principles p19
-plan,,Water main contaminated boil order for a week,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p48; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p50; USDA Canning 01 Principles p27
-plan,,Chemical plant accident shelter in place,PASS,SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p37; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p29; OPERATING AND MAINTAINING PRIVIES p3
-plan,,Pandemic lockdown with sick family member,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p176; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p143; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p148
+plan,,Hurricane coming in 48 hours,PASS,FEMA Are You Ready - Citizen Preparedness Guide p69; FEMA Are You Ready - Citizen Preparedness Guide p67; FEMA Are You Ready - Citizen Preparedness Guide p73
+plan,,Lost on a hike with an injured friend,PASS,METHANE 2 p1; FM 21-11 First Aid for Soldiers (1991) p176; FM 3-25.26 Map Reading and Land Navigation (2001) p106
+plan,,Earthquake damaged my house and gas smells,PASS,USGS Putting Down Roots in Earthquake Country p21; USGS Putting Down Roots in Earthquake Country p28; USGS Putting Down Roots in Earthquake Country p22
+plan,,Flooding in the basement and power going out,PASS,FEMA Pet Preparedness Toolkit 2024 p2; FEMA Are You Ready - Citizen Preparedness Guide p53; A GUIDE TO RESIDENTIAL  WOOD HEATING p42
+plan,,Car broke down in desert heat with no cell service,PASS,BATTERY SERVICE MANUAL p41; BATTERY SERVICE MANUAL p27; HP PV-POWERED BIKE p2
+plan,,Stranded in a snowstorm in my car,PASS,"AUTO REPAIR TIPS p20; 10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p89; FEMA Are You Ready - Citizen Preparedness Guide p84"
+plan,,Grid down for a month in the city,WRONG,CHAPT 3 SOLAR WINDOWS p3; FM 3-25.26 Map Reading and Land Navigation (2001) p30; FM 3-25.26 Map Reading and Land Navigation (2001) p22
+plan,,Wildfire evacuation in 30 minutes,PASS,Ready.gov Wildfire Info Sheet p2; Ready.gov Wildfire Info Sheet p1; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p52
+plan,,Tornado destroyed part of our home,PASS,FEMA Are You Ready - Citizen Preparedness Guide p67; FEMA Are You Ready - Citizen Preparedness Guide p62; NWS Tornado Safety p1
+plan,,Water main contaminated boil order for a week,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p48; TAKING A WATER SAMPLE p7; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p50
+plan,,Chemical plant accident shelter in place,PASS,FEMA Are You Ready - Citizen Preparedness Guide p144; FEMA Are You Ready - Citizen Preparedness Guide p161; SANITATION AND CLEANLINESS FOR A HEALTHY ENVIORMENT p37
+plan,,Pandemic lockdown with sick family member,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p176; FEMA Are You Ready - Citizen Preparedness Guide p26; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p143
 plan,,"Camping trip gone wrong, tent collapsed in storm",WRONG,"IMPROVISED CAMP EQUIPMENT p1; DRILLING AND WELL CONSTRUCTION p171; 10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p91"
 plan,,"Remote cabin, generator failed, winter",PASS,THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p43; CRYSTAL SETS TO SIDEBAND p14; IMPROVISED CAMP EQUIPMENT p8
 plan,,"Extended blackout in summer heat, elderly parent",PASS,THE INTERGAL PASSIVE SOLAR WATER HEATER BOOK p53; CHAPT 7 SOLAR ROOMS p10; CONTROLLED HAND FORGING-FORGE WELDING p6
-plan,,"Ice storm, trees down, no road access",PASS,HOW TO MAKE ROADBLOCKS p10; SURVIVAL AND AUSTERE  MEDICE VERSION 2 p201; SIMPLE IMPROVISED TOOLS p3
+plan,,"Ice storm, trees down, no road access",PASS,FEMA Are You Ready - Citizen Preparedness Guide p81; FEMA Are You Ready - Citizen Preparedness Guide p67; HOW TO MAKE ROADBLOCKS p10
 plan,,"Boat capsized, now on a deserted shore",PASS,DBF1 BOTTOM FISHING BASICS p4; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p221; FM 21-76 Survival 1957 p242
 plan,,Plane crash survivors in mountains,PASS,SURVIVAL AND AUSTERE  MEDICE VERSION 2 p200; FM 21-76 Survival 1957 p224; CRYSTAL SETS TO SIDEBAND p70
-plan,,"Civil unrest, need to stay home safely",PASS,HOW TO SURVIVE INFLATION p3; HOW TO SURVIVE INFLATION p8; HOW TO MAKE ROADBLOCKS p1
-plan,,Nuclear detonation warning,PASS,US Army Tactical Radio Operations FM6-02.53 p222; FM 24-18 Tactical Single Channel Radio 1987 p143; SURVIVING ATOMIC WEAPONS p2
-plan,,"Drought, well running dry on the homestead",PASS,ORGANIC GARDENING TECNOLOGY p28; HERBAL-MEDICAL DICTIONARY p59; DRILLING AND WELL CONSTRUCTION p39
+plan,,"Civil unrest, need to stay home safely",PASS,HOW TO SURVIVE INFLATION p3; NWS Tornado Safety p2; FEMA Are You Ready - Citizen Preparedness Guide p54
+plan,,Nuclear detonation warning,PASS,"FEMA Are You Ready - Citizen Preparedness Guide p165; FEMA Are You Ready - Citizen Preparedness Guide p166; FM 4-25.11 First Aid (2002, Change 1 2004) p171"
+plan,,"Drought, well running dry on the homestead",PASS,ORGANIC GARDENING TECNOLOGY p28; HERBAL-MEDICAL DICTIONARY p59; FEMA Are You Ready - Citizen Preparedness Guide p193
 plan,,"Job loss and no money, food running low",PASS,HOW TO SURVIVE INFLATION p4; FOOD STORAGE TIPS p5; HOW TO SURVIVE INFLATION p2
-plan,,"Alone in the wilderness, ankle sprained",PASS,THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p319; TC 4-02.1 First Aid 2018 p83; WHO MONOGRAPHS ON SELECTED MEDICAL PLANTS VOL 2 p150
-plan,,Solar storm knocked out electronics,PASS,"10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p91; H40 IGNITION #2 ELECTRONIC SPARK ADVANCE p8; H40 IGNITION #2 ELECTRONIC SPARK ADVANCE p9"
+plan,,"Alone in the wilderness, ankle sprained",PASS,"FM 21-11 First Aid for Soldiers (1991) p121; THE SHIPS MEDICINE CHEST AND MEDICAL AID AT SEA p319; FM 4-25.11 First Aid (2002, Change 1 2004) p91"
+plan,,Solar storm knocked out electronics,PASS,"H40 IGNITION #2 ELECTRONIC SPARK ADVANCE p9; H40 IGNITION #2 ELECTRONIC SPARK ADVANCE p8; 10- INTODUCTION TO WAVE PROPAGATION, TRANSMISSION LINES, AND ANTENNAS p91"

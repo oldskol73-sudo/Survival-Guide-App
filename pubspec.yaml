@@ -54,4 +54,5 @@ flutter:
     - assets/catalog/videos.json
     - assets/maps/style.json
     - assets/home/
+    - assets/tour/
     - assets/maps/fonts/Noto Sans Regular/

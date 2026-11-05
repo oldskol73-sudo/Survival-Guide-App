@@ -266,6 +266,8 @@ class _MapsScreenState extends State<MapsScreen> {
               title: const Text('Or type coordinates'),
               initiallyExpanded: _latV != null,
               children: [
+                // Headroom: the section clips anything above its first child, which cut off the floating labels.
+                const SizedBox(height: 14),
                 Row(children: [
                   Expanded(child: TextField(controller: _lat, enabled: !_busy, keyboardType: const TextInputType.numberWithOptions(decimal: true, signed: true), decoration: const InputDecoration(labelText: 'Latitude'), onChanged: (_) => _typedCoords())),
                   const SizedBox(width: 12),

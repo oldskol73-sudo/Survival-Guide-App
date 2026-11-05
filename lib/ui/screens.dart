@@ -14,6 +14,7 @@ import '../family/family_screen.dart';
 import '../home/field_guide_screen.dart';
 import '../home/gear_screen.dart';
 import '../home/home_screen.dart';
+import '../home/tour_screen.dart';
 import '../maps/maps_screen.dart';
 import '../videos/videos_screen.dart';
 import 'masthead.dart';
@@ -28,6 +29,17 @@ class HomeShell extends StatefulWidget {
 
 class _HomeShellState extends State<HomeShell> {
   int _tab = 0;
+
+  @override
+  void initState() {
+    super.initState();
+    // First launch only: walk the user through the app once. Replayable from Settings.
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      if (mounted && !AppSettings.instance.tourSeen) {
+        Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TourScreen()));
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -318,6 +330,14 @@ class SettingsScreen extends StatelessWidget {
     return ListenableBuilder(
       listenable: s,
       builder: (context, _) => ListView(children: [
+        ListTile(
+          leading: const Icon(Icons.explore_outlined, color: AppTheme.accent),
+          title: const Text('How to use Survival Node', style: TextStyle(fontWeight: FontWeight.w800)),
+          subtitle: const Text('A quick picture tour of every part of the app'),
+          trailing: const Icon(Icons.chevron_right, color: AppTheme.muted),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TourScreen())),
+        ),
+        const Divider(height: 1),
         SwitchListTile(
           title: const Text('Low-power mode'),
           subtitle: const Text('Fewer AI threads, shorter answers, no background embedding, no map GPS dot'),

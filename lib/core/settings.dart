@@ -14,6 +14,7 @@ class AppSettings extends ChangeNotifier {
   bool backgroundEmbedding = true; // embed new documents automatically after indexing
   bool sealed = false; // Stage B: NetworkLockdown active
   bool verifyOnOpen = true; // re-hash a library file before opening it
+  bool tourSeen = false; // the first-launch "How to use" tour has been shown
   int volumeIndex = 0; // index into StoragePaths.availableVolumes()
   Set<String> enabledCategories = {};
 
@@ -28,6 +29,7 @@ class AppSettings extends ChangeNotifier {
       s.backgroundEmbedding = j['backgroundEmbedding'] as bool? ?? true;
       s.sealed = j['sealed'] as bool? ?? false;
       s.verifyOnOpen = j['verifyOnOpen'] as bool? ?? true;
+      s.tourSeen = j['tourSeen'] as bool? ?? false;
       s.volumeIndex = j['volumeIndex'] as int? ?? 0;
       s.enabledCategories = {...(j['enabledCategories'] as List? ?? defaultCategories.toList()).cast<String>()};
     } catch (_) {
@@ -45,6 +47,7 @@ class AppSettings extends ChangeNotifier {
       'backgroundEmbedding': backgroundEmbedding,
       'sealed': sealed,
       'verifyOnOpen': verifyOnOpen,
+      'tourSeen': tourSeen,
       'volumeIndex': volumeIndex,
       'enabledCategories': enabledCategories.toList(),
     }), flush: true);
