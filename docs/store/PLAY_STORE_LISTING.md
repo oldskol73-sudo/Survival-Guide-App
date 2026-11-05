@@ -37,7 +37,7 @@ Map data (c) OpenStreetMap contributors. Video tutorials belong to their creator
 
 **Tags:** survival, preparedness, offline, emergency, first aid, maps, off grid.
 
-**Contact:** publishing@twelvescentspub.com, [\[website\]](https://twelvescentspub.com/About), [\[privacy policy URL\]](https://twelvescentspub.com/Privacy). **CONFIRM**
+**Contact:** publishing@twelvescentspub.com, [website](https://twelve12scents.com/), [privacy policy](https://twelve12scents.com/privacy-policy/). **CONFIRM** the website address: the old `twelvescentspub.com/About` link returned 404.
 
 ## What a store user actually receives (keep the listing honest)
 
