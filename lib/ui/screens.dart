@@ -15,6 +15,7 @@ import '../home/field_guide_screen.dart';
 import '../home/gear_screen.dart';
 import '../home/home_screen.dart';
 import '../home/tour_screen.dart';
+import 'about_screen.dart';
 import '../maps/maps_screen.dart';
 import '../videos/videos_screen.dart';
 import 'masthead.dart';
@@ -336,6 +337,13 @@ class SettingsScreen extends StatelessWidget {
           subtitle: const Text('A quick picture tour of every part of the app'),
           trailing: const Icon(Icons.chevron_right, color: AppTheme.muted),
           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TourScreen())),
+        ),
+        ListTile(
+          leading: const Icon(Icons.info_outline, color: AppTheme.accent),
+          title: const Text('About, safety and credits', style: TextStyle(fontWeight: FontWeight.w800)),
+          subtitle: const Text('Emergency and medical notice, privacy, sources, licences'),
+          trailing: const Icon(Icons.chevron_right, color: AppTheme.muted),
+          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const AboutScreen())),
         ),
         const Divider(height: 1),
         SwitchListTile(

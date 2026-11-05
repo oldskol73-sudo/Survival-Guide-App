@@ -25,7 +25,7 @@ class SosScreen extends StatelessWidget {
             child: const Row(children: [
               Icon(Icons.phone_in_talk, color: AppTheme.danger),
               SizedBox(width: 12),
-              Expanded(child: Text('If you have any signal, call your local emergency number (911 in the US) first.', style: TextStyle(fontWeight: FontWeight.w700))),
+              Expanded(child: Text('This app cannot call or alert anyone for you. If you have any signal, call your local emergency number (911 in the US) first.', style: TextStyle(fontWeight: FontWeight.w700))),
             ]),
           ),
           const SizedBox(height: 12),

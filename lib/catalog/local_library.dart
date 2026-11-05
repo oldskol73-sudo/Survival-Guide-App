@@ -56,6 +56,15 @@ class LocalLibrary {
     for (final item in found) {
       await Services.fts.indexItem(item, sha256: stamps[item.id]!);
     }
+    // Forget documents that were deleted from the folder, so search never offers a file that is not there.
+    final live = {for (final i in found) i.id};
+    final stale = [
+      for (final r in Services.fts.db.select("SELECT item_id FROM documents WHERE item_id LIKE 'local-%'"))
+        if (!live.contains(r['item_id'] as String)) r['item_id'] as String,
+    ];
+    for (final id in stale) {
+      await Services.fts.removeItem(id);
+    }
   }
 
   /// Two 32-bit FNV-1a hashes with different seeds, hex. Stable across launches, so a file keeps its id (and its
