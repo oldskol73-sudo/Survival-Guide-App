@@ -114,7 +114,20 @@ class _Checklist extends StatelessWidget {
             Icon(exposed ? Icons.warning_amber_rounded : Icons.help_outline, color: exposed ? AppTheme.danger : AppTheme.warn, size: 40),
             const SizedBox(height: 12),
             Text(exposed ? 'Radios are active' : 'Air gap not confirmed', style: Theme.of(context).textTheme.headlineSmall?.copyWith(color: AppTheme.text)),
-            const SizedBox(height: 8),
+            const SizedBox(height: 14),
+            // Right under the heading so it is obvious how to carry on without going offline.
+            OutlinedButton.icon(
+              onPressed: onProceed,
+              icon: const Icon(Icons.arrow_forward_rounded),
+              label: const Text('Proceed anyway (not air-gapped)'),
+              style: OutlinedButton.styleFrom(
+                minimumSize: const Size.fromHeight(52),
+                shape: const StadiumBorder(),
+                foregroundColor: AppTheme.accent,
+                side: const BorderSide(color: AppTheme.accent, width: 1.5),
+              ),
+            ),
+            const SizedBox(height: 14),
             Text('Disable every network interface before opening $featureName.', style: const TextStyle(color: AppTheme.muted, fontSize: 16)),
             if (exposed) ...[
               const SizedBox(height: 20),
@@ -149,7 +162,7 @@ class _Checklist extends StatelessWidget {
               onPressed: AirGapMonitor.instance.refresh,
               icon: const Icon(Icons.refresh),
               label: const Text('Check again'),
-              style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
+              style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52), shape: const StadiumBorder()),
             ),
             if (Platform.isIOS && !exposed) ...[
               const SizedBox(height: 12),
@@ -159,12 +172,6 @@ class _Checklist extends StatelessWidget {
                 child: const Text('Airplane Mode is on, Wi-Fi and Bluetooth are grey'),
               ),
             ],
-            const SizedBox(height: 12),
-            TextButton(
-              onPressed: onProceed,
-              style: TextButton.styleFrom(minimumSize: const Size.fromHeight(48), foregroundColor: AppTheme.muted),
-              child: const Text('Proceed anyway (not air-gapped)'),
-            ),
           ],
         ),
       ),

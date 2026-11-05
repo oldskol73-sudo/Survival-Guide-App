@@ -9,7 +9,7 @@ folder,file,class,signals,pages
 01_Water_Sanitation,01_Water_Sanitation\Purification\DESIGNING BASIC HOUSEHOLD WATER TREATMENT SYSTEMS.pdf,unknown,,5
 01_Water_Sanitation,01_Water_Sanitation\Purification\DETERMINING THE NEED FOR WATER TREATMENT.pdf,unknown,,4
 01_Water_Sanitation,01_Water_Sanitation\Purification\Drinking_Water_Still_Construction.pdf,unknown,,3
-01_Water_Sanitation,01_Water_Sanitation\Purification\EMERGENCY WATER FILTRATION MANUAL.pdf,unknown,,26
+01_Water_Sanitation,01_Water_Sanitation\Purification\EMERGENCY WATER FILTRATION MANUAL.pdf,amber,PASS2_COLLEGE:university,26
 01_Water_Sanitation,01_Water_Sanitation\Purification\EPA_Emergency_Disinfection_Drinking_Water_2017.pdf,green,US_AGENCY,2
 01_Water_Sanitation,01_Water_Sanitation\Purification\MAKE A SILVER CLAY POT WATER FILTER.pdf,red,COPYRIGHT_LINE,2
 01_Water_Sanitation,01_Water_Sanitation\Purification\METHODS OF WATER TREATMENT.pdf,unknown,,9
@@ -51,7 +51,7 @@ folder,file,class,signals,pages
 01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OPERATING AND MAINTAINING COMPOST TOILETS.pdf,unknown,,3
 01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OPERATING AND MAINTAINING PRIVIES.pdf,amber,USAID,4
 01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OPERATING AND MAINTAINING SEPTIC TANKS.pdf,unknown,,10
-01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OVERVIEW OF RURAL WATER SUPPLY.pdf,unknown,,6
+01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OVERVIEW OF RURAL WATER SUPPLY.pdf,red,PASS2_INDUSTRY:ltd.,6
 01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OVERVIEW OF SANITATION.pdf,unknown,,4
 01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\OVERVIEW OF WATER AND SANITATION.pdf,unknown,,4
 01_Water_Sanitation,01_Water_Sanitation\Waste_Latrines\PLANNING SIMPLE EXCRETA AND WASHWATER DISPOSAL SYSTEMS.pdf,unknown,,10
@@ -64,7 +64,7 @@ folder,file,class,signals,pages
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\CHOOSING BETWEEN GRAVITY FLOW AND PUMPS.pdf,unknown,,4
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\DESIGNING A HYDRAULIC RAM PUMP.pdf,unknown,,4
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\DESIGNING A SYSTEM OF GRAVITY FLOW.pdf,unknown,,5
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\DETECTING AND CORRECTING LEAKY PIPES.pdf,unknown,,4
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\DETECTING AND CORRECTING LEAKY PIPES.pdf,red,PASS2_INDUSTRY:corporation,4
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\DTU D90 RAM PUMP.pdf,unknown,,34
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\HOW RAM PUMPS WORK.pdf,unknown,,17
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\INSTALLING HAND PUMPS.pdf,unknown,,3
@@ -76,7 +76,7 @@ folder,file,class,signals,pages
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\SELECTING PIPE MATERIALS.pdf,unknown,,4
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\SELECTING PUMPS.pdf,unknown,,7
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Pumps_Distribution\THE TREADLE PUMP.pdf,amber,USAID;NGO_SERIES,37
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\BRICK JARS INSTRUCTIONS FOR MANUFACTURING.pdf,unknown,,14
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\BRICK JARS INSTRUCTIONS FOR MANUFACTURING.pdf,amber,PASS2_COLLEGE:school of engineering,14
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\CONSTRUCTING A GROUND LEVEL STORAGE TANK.pdf,unknown,,5
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\CONSTRUCTING A HOUSEHOLD CISTRERN.pdf,unknown,,7
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\CONSTRUCTING AN ELEVATED STORAGE TANK.pdf,unknown,,5
@@ -85,18 +85,18 @@ folder,file,class,signals,pages
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DESIGNING A GROUND LEVEL STORAGE TANK.pdf,amber,USAID,8
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DESIGNING A HOUSEHOLD CISERN.pdf,unknown,,7
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DESIGNING AN ELEVATED STORAGE TANK.pdf,unknown,,7
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DESIGNING ROOF CATCHMENTS.pdf,unknown,,4
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DESIGNING ROOF CATCHMENTS.pdf,amber,PASS2_COLLEGE:university,4
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DESIGNING STRUCTURES FOR SPRINGS.pdf,unknown,,10
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\DETERMINING THE NEED FOR WATER STORAGE.pdf,unknown,,8
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\EVALUATING RAINFALL CATCHMENTS.pdf,unknown,,6
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\FERRO-CEMENT JAR INSTRUCTIONS FOR MANUFACTURE.pdf,unknown,,14
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\HOW TO BUILD AND INSTALL A RAIN BARREL.pdf,unknown,,2
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\FERRO-CEMENT JAR INSTRUCTIONS FOR MANUFACTURE.pdf,amber,PASS2_COLLEGE:school of engineering,14
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\HOW TO BUILD AND INSTALL A RAIN BARREL.pdf,amber,PASS2_COLLEGE:university,2
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\MAINTAINING A WATER STORAGE TANKS.pdf,unknown,,3
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\MAINTAINING STRUCTURES FOR SPRINGS.pdf,unknown,,3
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\MAKE A RAIN BARREL.pdf,unknown,,1
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\METHODS OF STORING WATER.pdf,unknown,,6
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\RAINWATER CATCHMENT SYSTEMS.pdf,amber,US_AGENCY;COPYRIGHT_LINE;ISBN,52
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\RAINWATER HARVESTING.pdf,unknown,,24
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\RAINWATER HARVESTING.pdf,amber,PASS2_COLLEGE:university,24
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\SELECTING A SOURCE OF SURFACE WATER.pdf,unknown,,8
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Storage_Catchment\dup_CONSTRUCTING AN ELEVATED STORAGE TANK.pdf,unknown,,5
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\CONSTRUCTING BORED OR AURGERED WELLS.pdf,unknown,,6
@@ -111,7 +111,7 @@ folder,file,class,signals,pages
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\DESIGNING JETTED WELLS.pdf,unknown,,2
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\DISINFECTING WELLS.pdf,unknown,,5
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\DRILLING AND WELL CONSTRUCTION.pdf,amber,ISBN;USAID,176
-01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\FINISHING WELLS.pdf,unknown,,7
+01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\FINISHING WELLS.pdf,red,PASS2_INDUSTRY:llc,7
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\MAINTAINING WELL LOGS.pdf,unknown,,3
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\METHODS OF DEVELOPING SOURCES OF GROUND WATER.pdf,unknown,,5
 01_Water_Sanitation,01_Water_Sanitation\Wells_Pumps\Wells\PLANNING HOW TO USE SOURCES OF GROUND WATER.pdf,unknown,,5
@@ -135,23 +135,23 @@ folder,file,class,signals,pages
 02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\CRYSTAL SETS TO SIDEBAND.pdf,red,COPYRIGHT_LINE,382
 02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\HIGH SENSITIVITY CRYSTAL SET.pdf,red,COPYRIGHT_LINE,3
 02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\NEETS_Module_01_Matter_Energy_DC.pdf,green,MILITARY,283
-02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\NS TEMPERATURE SENSOR HANDBOOK.pdf,unknown,,40
+02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\NS TEMPERATURE SENSOR HANDBOOK.pdf,red,PASS2_INDUSTRY:corporation,40
 02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\SURPLUS RADIO CONVERSION 1.pdf,red,COPYRIGHT_LINE,122
 02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\SURPLUS RADIO CONVERSION 2.pdf,red,COPYRIGHT_LINE,127
 02_Mechanical_Electrical,02_Mechanical_Electrical\Electrical_Theory\SURPLUS RADIO CONVERSION 3.pdf,green,NOT_COPYRIGHTED,89
-02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\AC MOTORS.pdf,unknown,,92
-02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\BASICS OF CONTROL COMPONENTS.pdf,unknown,,120
+02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\AC MOTORS.pdf,red,PASS2_INDUSTRY:inc.,92
+02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\BASICS OF CONTROL COMPONENTS.pdf,red,PASS2_INDUSTRY:inc.,120
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\BASICS OF ELECTRICITY.pdf,unknown,,88
-02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\BATTERY SERVICE MANUAL.pdf,unknown,,42
+02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\BATTERY SERVICE MANUAL.pdf,red,PASS2_INDUSTRY:inc.,42
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DELCO CRANKING MOTORS.pdf,unknown,,23
-02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DELCO DOUBLE CONTACT REGULATORS.pdf,unknown,,16
+02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DELCO DOUBLE CONTACT REGULATORS.pdf,red,PASS2_INDUSTRY:manufactured by,16
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DIY 12VDC ENGINE GENERATOR.pdf,red,COPYRIGHT_LINE,5
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DIY BATTERY DESULFATOR.pdf,red,COPYRIGHT_LINE,5
-02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DIY TIN CAN STIRLING HEAT ENGINE.pdf,unknown,,16
+02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\DIY TIN CAN STIRLING HEAT ENGINE.pdf,red,PASS2_INDUSTRY:publisher,16
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\ELECTRICITY DEMOSTRATER HANDBOOK.pdf,unknown,,37
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\FUNDAMENTALS OF DELCO GENERATORS.pdf,unknown,,21
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\MOWER PROPANE CONVERSION.pdf,unknown,,14
-02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\SFA STIRLING TEMPLATES.pdf,unknown,,4
+02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\SFA STIRLING TEMPLATES.pdf,amber,PASS2_COLLEGE:university,4
 02_Mechanical_Electrical,02_Mechanical_Electrical\Generators\ULTRA SIMPLE HOMEMADE GENERATOR.pdf,red,COPYRIGHT_LINE,14
 02_Mechanical_Electrical,02_Mechanical_Electrical\Plumbing\USDA Farmers Bulletin 1460 - Simple Plumbing Repairs in the Home.pdf,green,PUBLIC_DOMAIN;US_AGENCY;TITLE_GOV_SERIES,11
 02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\02 ENGINEERING FUNDAMENTALS.pdf,green,MILITARY,20
@@ -163,12 +163,12 @@ folder,file,class,signals,pages
 02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\ALTERNATIVES TO FOSSIL FUELED ENGINES-GENERATORS.pdf,red,COPYRIGHT_LINE,9
 02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\DIY FEMA WOOD GAS GENERATOR.pdf,green,TITLE_GOV_SERIES,0
 02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\MISSOURI WOOD GASIFIER.pdf,unknown,,89
-02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\WOOD BIOMASS TRUCK.pdf,unknown,,2
-02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\WOOD FUEL PROPERTIES AND FUEL PRODUCTS FROM WOOD.pdf,unknown,,12
+02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\WOOD BIOMASS TRUCK.pdf,amber,PASS2_COLLEGE:university,2
+02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\WOOD FUEL PROPERTIES AND FUEL PRODUCTS FROM WOOD.pdf,amber,PASS2_COLLEGE:university,12
 02_Mechanical_Electrical,02_Mechanical_Electrical\Small_Engines\WOODGAS STOVE.pdf,amber,NGO_SERIES,9
-03_Medical,03_Medical\Emergency_Wound_Care\CDC Emergency Wound Care After a Natural Disaster.pdf,unknown,,2
+03_Medical,03_Medical\Emergency_Wound_Care\CDC Emergency Wound Care After a Natural Disaster.pdf,amber,PASS2_COLLEGE:college,2
 03_Medical,03_Medical\Emergency_Wound_Care\CDC Emergency Wound Management for Healthcare Professionals.pdf,unknown,,2
-03_Medical,03_Medical\Field_Medicine\BLOODBORNE PATHOGEN EXPOSURE GUIDE.pdf,unknown,,38
+03_Medical,03_Medical\Field_Medicine\BLOODBORNE PATHOGEN EXPOSURE GUIDE.pdf,amber,PASS2_COLLEGE:university,38
 03_Medical,03_Medical\Field_Medicine\EMERGENCY CHILDBIRTH.pdf,unknown,,13
 03_Medical,03_Medical\Field_Medicine\PREVENTION AND MANAGMENT OF COLD WEATHER INJURIES.pdf,green,MILITARY,94
 03_Medical,03_Medical\Field_Medicine\PREVENTIVE MEDICINE FOR GROUND FORCES.pdf,unknown,,49
@@ -223,7 +223,7 @@ folder,file,class,signals,pages
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\AMARANTH.pdf,green,US_AGENCY,2
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\BAMBARA.pdf,unknown,,16
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\BASIC SEED SAVING GUIDE.pdf,unknown,,4
-04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\BUILD A FLOATING HYDROPONIC GARDEN.pdf,unknown,,4
+04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\BUILD A FLOATING HYDROPONIC GARDEN.pdf,green,PASS2_COLLEGE:university,4
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\CONTAINER VEGTABLE GARDENING.pdf,green,US_AGENCY,8
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\DISEASE AND ANTROPOD MANAGEMENT IN GREENHOUSES.pdf,amber,US_AGENCY;COPYRIGHT_LINE,100
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\DIY COMPOSTING BINS.pdf,unknown,,7
@@ -240,9 +240,9 @@ folder,file,class,signals,pages
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\HOME VEGETABLE GARDENING IN KENTUCKY.pdf,amber,US_AGENCY;COPYRIGHT_LINE;FREE_TO_COPY,56
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\HOME VEGETABLE GARDENING.pdf,unknown,,136
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\ORGANIC GARDENING TECNOLOGY.pdf,amber,US_AGENCY;ISBN,33
-04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\POTATOE DISEASES.pdf,unknown,,29
+04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\POTATOE DISEASES.pdf,amber,PASS2_COLLEGE:college,29
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\SEED PROCESSING AND STORAGE-PRINCIPLES AND PRACTICES.pdf,amber,CREATIVE_COMMONS;US_AGENCY;COPYRIGHT_LINE;FREE_TO_COPY;NON_COMMERCIAL,28
-04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\THE UNDERGROUND GREENHOUSE.pdf,unknown,,29
+04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\THE UNDERGROUND GREENHOUSE.pdf,amber,PASS2_COLLEGE:university,29
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\TOMATOES.pdf,unknown,,12
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\VACUUM PACKING SEED.pdf,green,PUBLIC_DOMAIN,2
 04_Food_Agriculture,04_Food_Agriculture\Gardening_Seeds\WORMOLOGY 101.pdf,amber,US_AGENCY;ALL_RIGHTS_RESERVED;COPYRIGHT_LINE;PERMISSION_TO_COPY;FREE_TO_COPY,97
@@ -266,7 +266,7 @@ folder,file,class,signals,pages
 05_Carpentry,05_Carpentry\Joinery\BUILDING A TRADITIONAL WORKBENCH.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE;FREE_TO_COPY,60
 05_Carpentry,05_Carpentry\Joinery\CROSSCUT SAW MANUAL.pdf,green,US_AGENCY,35
 05_Carpentry,05_Carpentry\Joinery\GARAGE WORKBENCH PLANS.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,49
-05_Carpentry,05_Carpentry\Joinery\HAND TOOLS IN INDUSTRY BEFORE 1870.pdf,unknown,,64
+05_Carpentry,05_Carpentry\Joinery\HAND TOOLS IN INDUSTRY BEFORE 1870.pdf,red,PASS2_INDUSTRY:ltd.,64
 05_Carpentry,05_Carpentry\Plans\DIY CHEST REFRIGERATOR.pdf,unknown,,7
 05_Carpentry,05_Carpentry\Plans\HOW TO MAKE A SELF WATERING CONTAINER OR EARTHBOX.pdf,unknown,,37
 05_Carpentry,05_Carpentry\Plans\SUPER CAT ALCOHOL STOVE.pdf,amber,PUBLIC_DOMAIN;ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,52
@@ -288,12 +288,12 @@ folder,file,class,signals,pages
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\DRUM WINCH.pdf,unknown,,1
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\ENGINEERS LEVEL.pdf,unknown,,3
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\HOW TO BUILD A MULTIMACHINE.pdf,unknown,,80
-05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\JACKSTAND.pdf,unknown,,1
+05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\JACKSTAND.pdf,red,PASS2_INDUSTRY:produced by comweld group pty.ltd,1
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\METAL WELDING TABLE.pdf,unknown,,5
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\MINI TUBING BENDER.pdf,unknown,,4
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\MINIBENDING BRAKE PMSEPT54.pdf,unknown,,4
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\MULCH MAKER.pdf,unknown,,5
-05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\POST HOLE AUGER PMFM47.pdf,unknown,,1
+05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\POST HOLE AUGER PMFM47.pdf,amber,PASS2_COLLEGE:college,1
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\THE VERTICAL VISE.pdf,unknown,,4
 05_Carpentry,05_Carpentry\Tools_Sharpening\Shop_Builds\WORK SUPPORT STAND.pdf,unknown,,1
 05_Carpentry,05_Carpentry\Tools_Sharpening\USE AND CARE OF HAND TOOLS AND MEASURING TOOLS.pdf,green,MILITARY,312
@@ -301,7 +301,7 @@ folder,file,class,signals,pages
 06_Alternative_Energy,06_Alternative_Energy\Batteries_Storage\SECONDARY CELLS ACCUMULATORS LEAD-ACID AUTOMOTIVE BATTERY INFORMATION.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\HOW PHOTOVALIC CELLS WORK.pdf,red,COPYRIGHT_LINE,3
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\MAKE A WORKING SOLAR CELL.pdf,unknown,,6
-06_Alternative_Energy,06_Alternative_Energy\Solar_PV\PV IN SCHOOLS.pdf,unknown,,5
+06_Alternative_Energy,06_Alternative_Energy\Solar_PV\PV IN SCHOOLS.pdf,amber,PASS2_COLLEGE:university,5
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\APPENDIX 1.pdf,unknown,,3
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\APPENDIX 2.pdf,unknown,,4
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\APPENDIX 3.pdf,unknown,,5
@@ -312,10 +312,10 @@ folder,file,class,signals,pages
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 2 SOLAR BUILDING DESIGN BASICS.pdf,unknown,,21
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 3 SOLAR WINDOWS.pdf,unknown,,11
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 4 SOLAR CHIMNEYS.pdf,unknown,,8
-06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 5 SOLAR WALLS.pdf,unknown,,10
+06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 5 SOLAR WALLS.pdf,red,PASS2_INDUSTRY:corporation,10
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 6 SOLAR ROOFS.pdf,unknown,,3
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 7 SOLAR ROOMS.pdf,unknown,,11
-06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 8 HOW THE SUN CAN COOL.pdf,unknown,,12
+06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 8 HOW THE SUN CAN COOL.pdf,amber,PASS2_COLLEGE:university,12
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CHAPT 9 HOME DESIGN BASED ON CLIMATE.pdf,unknown,,9
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\Passive_Solar_Design\CONSTRUCTION.pdf,green,US_AGENCY,13
 06_Alternative_Energy,06_Alternative_Energy\Solar_PV\SMALL SCALE SOLAR ENERGY PROJECTS.pdf,red,ALL_RIGHTS_RESERVED;ISBN,40
@@ -338,7 +338,7 @@ folder,file,class,signals,pages
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\BIOGAS3.pdf,amber,NGO_SERIES,61
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\BIOGAS4.pdf,amber,NGO_SERIES,50
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\BUILD A BIOGAS GENERATOR.pdf,unknown,,29
-06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\DIY BIOGAS GENERATOR.pdf,unknown,,5
+06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\DIY BIOGAS GENERATOR.pdf,amber,PASS2_COLLEGE:university,5
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\GAS BIODIGESTER INFORMATION AND CONSTRUCTION MANUAL.pdf,unknown,,8
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\LETS TRY TO MAKE A METHANE GAS FACILITY.pdf,unknown,,6
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\METHANE 1.pdf,unknown,,3
@@ -348,7 +348,7 @@ folder,file,class,signals,pages
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\METHANE 5.pdf,red,COPYRIGHT_LINE,3
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\METHANE 6.pdf,red,COPYRIGHT_LINE,1
 06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\METHANE 7.pdf,red,COPYRIGHT_LINE,3
-06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\POLYPROPYLENE COVERS FOR BIOGAS GENERATION.pdf,unknown,,2
+06_Alternative_Energy,06_Alternative_Energy\_General\Biogas_Methane\POLYPROPYLENE COVERS FOR BIOGAS GENERATION.pdf,red,PASS2_INDUSTRY:inc.,2
 06_Alternative_Energy,06_Alternative_Energy\_General\Fuel_Misc\BIOMASS INSTRUCTIONS.pdf,unknown,,16
 06_Alternative_Energy,06_Alternative_Energy\_General\Fuel_Misc\DIY DIESEL TO VEGETABLE OIL CONVERSION.pdf,unknown,,3
 06_Alternative_Energy,06_Alternative_Energy\_General\Fuel_Misc\DIY MINI ALTERNATE ENERGY PROJECTS.pdf,unknown,,29
@@ -418,16 +418,16 @@ folder,file,class,signals,pages
 07_Auto_Transport,07_Auto_Transport\Engine_Principles\H64 EMISION SUB SYSTEMS CATALYTIC CONVERTER.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,10
 07_Auto_Transport,07_Auto_Transport\Engine_Principles\H65 EMISSION SUB SYSTEMS SECONDARY AIR INJECTION.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,4
 07_Auto_Transport,07_Auto_Transport\Engine_Principles\TM_9-2700_Principles_of_Automotive_Vehicles_1947.pdf,green,TITLE_GOV_SERIES,0
-07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\AFRICAN OXCART DESIGN AND MANUFACTURE.pdf,unknown,,62
+07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\AFRICAN OXCART DESIGN AND MANUFACTURE.pdf,amber,PASS2_COLLEGE:university,62
 07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\AUTO REPAIR TIPS.pdf,unknown,,37
 07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\COMMUNITY BIKE TRAILER DESIGN.pdf,green,CREATIVE_COMMONS,22
-07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\FS21 FOOTSTEPS.pdf,unknown,,16
+07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\FS21 FOOTSTEPS.pdf,red,PASS2_INDUSTRY:publisher,16
 07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\IDTG_TRAILERPLANS.pdf,red,COPYRIGHT_LINE;NGO_SERIES,5
 07_Auto_Transport,07_Auto_Transport\Vehicle_Manuals\RECYCLE TRAILER RECIPE.pdf,red,COPYRIGHT_LINE,7
 08_Communications,08_Communications\Frequencies_Plans\NATIONAL INTEROPERABILITY FIELD OPERATIONS GUIDE.pdf,unknown,,76
 08_Communications,08_Communications\Navigation\FM 3-25.26 Map Reading and Land Navigation (2001).pdf,green,MILITARY;TITLE_GOV_SERIES,209
 08_Communications,08_Communications\Radio_Theory\1 TO 100 TRANSISTOR CIRCUITS.pdf,unknown,,69
-08_Communications,08_Communications\Radio_Theory\101 TO 200 TRANSISTOR CIRCUITS.pdf,unknown,,76
+08_Communications,08_Communications\Radio_Theory\101 TO 200 TRANSISTOR CIRCUITS.pdf,amber,PASS2_COLLEGE:university,76
 08_Communications,08_Communications\Radio_Theory\40 USES FOR GERMANIUM DIODES.pdf,unknown,,25
 08_Communications,08_Communications\Radio_Theory\50 555 CIRCUITS.pdf,unknown,,89
 08_Communications,08_Communications\Radio_Theory\A BASIC TRANSISTOR  DC BETA FUNCTION TESTER DESIGN DESCRIPTION.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
@@ -437,13 +437,13 @@ folder,file,class,signals,pages
 08_Communications,08_Communications\Radio_Theory\A SIMPLE CRYSTAL RADIO SET.pdf,unknown,,2
 08_Communications,08_Communications\Radio_Theory\ALL ABOUT COILS AND TRANSFORMERS.pdf,unknown,,4
 08_Communications,08_Communications\Radio_Theory\BATTERY-LESS ONE TRANSISTOR AMPLIFIED CRYSTAL DETECTOR RADIO RECIEVER.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
-08_Communications,08_Communications\Radio_Theory\BOYS BOOK OF CRYSTAL RADIOS.pdf,unknown,,37
-08_Communications,08_Communications\Radio_Theory\BUILD AN ACCURATE BATTERY VOLTMETER.pdf,unknown,,4
+08_Communications,08_Communications\Radio_Theory\BOYS BOOK OF CRYSTAL RADIOS.pdf,red,PASS2_INDUSTRY:ltd.,37
+08_Communications,08_Communications\Radio_Theory\BUILD AN ACCURATE BATTERY VOLTMETER.pdf,red,PASS2_INDUSTRY:ltd.,4
 08_Communications,08_Communications\Radio_Theory\COIL DESIGN SELF INDUCTANCE FORMULA FOR CRYSTAL  DETECTOR RADIO RECIEVER.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
 08_Communications,08_Communications\Radio_Theory\CRYSTAL DETECTOR MATERIALS AVAILABLE RADIO RECEIVER SET TECHNOLOGY ARTICLE.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
 08_Communications,08_Communications\Radio_Theory\CRYSTAL RADIO PROJECT.pdf,unknown,,3
-08_Communications,08_Communications\Radio_Theory\CRYSTAL RECIEVERS FOR BROADCAST RECEPTION.pdf,unknown,,41
-08_Communications,08_Communications\Radio_Theory\DX CRYSTAL RADIO.pdf,unknown,,3
+08_Communications,08_Communications\Radio_Theory\CRYSTAL RECIEVERS FOR BROADCAST RECEPTION.pdf,red,PASS2_INDUSTRY:inc.,41
+08_Communications,08_Communications\Radio_Theory\DX CRYSTAL RADIO.pdf,red,PASS2_INDUSTRY:inc.,3
 08_Communications,08_Communications\Radio_Theory\ELEMENTS OF RADIOTELEGRAPHY- 1919.pdf,green,PUBLIC_DOMAIN;NON_COMMERCIAL,329
 08_Communications,08_Communications\Radio_Theory\FM_11-1_SINCGARS\APPA.PDF,unknown,,7
 08_Communications,08_Communications\Radio_Theory\FM_11-1_SINCGARS\APPB.PDF,unknown,,7
@@ -466,7 +466,7 @@ folder,file,class,signals,pages
 08_Communications,08_Communications\Radio_Theory\ONE TRANSISTOR AUDIO AMPLIFIER USABLE FOR CRYSTAL DETECTOR RADIO.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
 08_Communications,08_Communications\Radio_Theory\PROJECT CRYSTAL RADIO.pdf,unknown,,7
 08_Communications,08_Communications\Radio_Theory\PROJECT XTAL RADIO.pdf,unknown,,7
-08_Communications,08_Communications\Radio_Theory\PW CRYSTAL EXPERIMENTERS HANDBOOK.pdf,unknown,,36
+08_Communications,08_Communications\Radio_Theory\PW CRYSTAL EXPERIMENTERS HANDBOOK.pdf,red,PASS2_INDUSTRY:ltd.,36
 08_Communications,08_Communications\Radio_Theory\RADIO HOOKUPS- 1922.pdf,green,PUBLIC_DOMAIN;NON_COMMERCIAL,109
 08_Communications,08_Communications\Radio_Theory\SIMPLE CRYSTAL RADIO CONSTRUCTION.pdf,green,US_AGENCY,12
 08_Communications,08_Communications\Radio_Theory\SOLAR POWERED ONE TRANSISTOR  AMPLIFIED AUDIO CRYSTAL DETECTOR RADIO RECIEVER SET.pdf,red,ALL_RIGHTS_RESERVED;COPYRIGHT_LINE,2
@@ -482,10 +482,10 @@ folder,file,class,signals,pages
 09_Metallurgy,"09_Metallurgy\Blacksmithing_Forge\CONTROLLED HAND FORGING-SAFETY, ERGONOMICS, AND SHOP LAYOUT.pdf",unknown,,4
 09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\CONTROLLED HAND FORGING-SPLITTING.pdf,unknown,,5
 09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\CONTROLLED HAND FORGING-UPSETTING.pdf,unknown,,3
-09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\FARM BLACKSMITHING 1901.pdf,unknown,,99
+09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\FARM BLACKSMITHING 1901.pdf,amber,PASS2_COLLEGE:school of agriculture,99
 09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\HARDENING OF STEEL MIJUN51.pdf,unknown,,2
-09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\MODERN BLACKSMITHING.pdf,unknown,,87
-09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\PART 1 BLACKSMITH'S MANUAL ILLUSTRATED.pdf,unknown,,20
+09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\MODERN BLACKSMITHING.pdf,red,"PASS2_INDUSTRY:co., ",87
+09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\PART 1 BLACKSMITH'S MANUAL ILLUSTRATED.pdf,red,PASS2_INDUSTRY:ltd.,20
 09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\PART 2 FORGE OR HEARTHS.pdf,unknown,,20
 09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\PART 3 HAND TOOLS.pdf,unknown,,20
 09_Metallurgy,09_Metallurgy\Blacksmithing_Forge\PART 4 POWER TOOLS.pdf,unknown,,20

@@ -20,6 +20,7 @@ import '../maps/maps_screen.dart';
 import '../videos/videos_screen.dart';
 import 'masthead.dart';
 import '../search/fts_index.dart';
+import 'my_documents_screen.dart';
 import '../viewers/viewer_screens.dart';
 
 class HomeShell extends StatefulWidget {
@@ -120,6 +121,8 @@ class LibraryScreen extends StatelessWidget {
               ),
             ),
           _LibraryShortcut(icon: Icons.map_rounded, label: 'Offline Maps', page: const MapsScreen()),
+          const SizedBox(height: 10),
+          _LibraryShortcut(icon: Icons.note_add_rounded, label: 'My Documents: add your own PDFs', page: const MyDocumentsScreen()),
           const SizedBox(height: 10),
           // Field Guide and Gear live here now that Home follows the new tile layout.
           Row(children: [
