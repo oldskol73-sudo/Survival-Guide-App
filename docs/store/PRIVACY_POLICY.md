@@ -3,8 +3,8 @@
 **DRAFT for review.** Fill in the three `[...]` placeholders, have it read by whoever advises you on legal matters, host it at a public web address, and put that address in `lib/ui/about_screen.dart` (`kPrivacyPolicyUrl`) and in both store listings.
 
 - Publisher: Twelve Scents Publishing
-- Contact: [support email address]
-- Effective date: [date]
+- Contact: publishing@twelvescentspub.com
+- Effective date: 11/05/2026
 
 ## The short version
 
@@ -56,4 +56,4 @@ Maps use OpenStreetMap data (ODbL). Manuals are mainly US Government works and o
 
 ## Changes and contact
 
-If this policy changes in a way that matters, the new version will be published at the same address with a new effective date. Questions: [support email address].
+If this policy changes in a way that matters, the new version will be published at the same address with a new effective date. Questions: publishing@twelvescentspub.com.

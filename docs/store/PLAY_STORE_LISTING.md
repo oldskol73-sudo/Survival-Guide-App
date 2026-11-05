@@ -4,7 +4,7 @@
 
 ## Listing text
 
-**App name** (30 max): `Survival Node`
+**App name** (30 max): `Offline Survival Node`
 
 **Short description** (80 max, this is exactly 80):
 `Offline survival library: manuals, maps, checklists and a locked document vault.`
@@ -12,7 +12,7 @@
 **Full description** (4000 max):
 
 ```
-Survival Node keeps practical survival knowledge on your phone, so it works when the network does not.
+Offline Survival Node keeps practical survival knowledge on your phone, so it works when the network does not.
 
 WHAT YOU GET
 - A library of free manuals and guides on water, food, first aid, shelter, power and more. Mainly US Government publications (FEMA, CDC, NOAA, USGS, USDA, US Army) and older public-domain titles. Download the ones you want; they stay on the phone.
@@ -37,7 +37,7 @@ Map data (c) OpenStreetMap contributors. Video tutorials belong to their creator
 
 **Tags:** survival, preparedness, offline, emergency, first aid, maps, off grid.
 
-**Contact:** [support email], [website], [privacy policy URL]. **CONFIRM**
+**Contact:** publishing@twelvescentspub.com, [\[website\]](https://twelvescentspub.com/About), [\[privacy policy URL\]](https://twelvescentspub.com/Privacy). **CONFIRM**
 
 ## What a store user actually receives (keep the listing honest)
 

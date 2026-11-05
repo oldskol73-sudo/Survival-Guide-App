@@ -7,7 +7,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../core/theme.dart';
 
 /// Public address of the hosted privacy policy. Fill this in before release; the button hides while it is empty.
-const kPrivacyPolicyUrl = '';
+const kPrivacyPolicyUrl = 'https://twelvescentspub.com/Privacy';
 
 /// Shown on this screen. Keep in step with `version:` in pubspec.yaml.
 const kAppVersionLabel = 'Version 1.0.0';
