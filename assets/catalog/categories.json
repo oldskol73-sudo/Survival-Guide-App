@@ -244,6 +244,62 @@
       ]
     },
     {
+      "id": "plants", "code": "13", "title": "Wild Medicinal Plants", "dir": "13_Wild_Medicinal_Plants",
+      "kind": "pdf", "defaultEnabled": false,
+      "subdirs": ["Identification_and_Uses", "Names_and_Reference", "Poisonous_Plants", "Traditional_Uses"],
+      "items": [
+        {
+          "id": "millspaugh-medicinal-plants-v1-1892", "title": "Millspaugh - Medicinal Plants Vol. 1: plates 1-99 (1892)",
+          "url": "https://archive.org/download/mobot31753000788411/mobot31753000788411.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Identification_and_Uses/Millspaugh_Medicinal_Plants_Vol_1_plates_1-99.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 30239266,
+          "license": "Public domain (published 1892)", "index": true
+        },
+        {
+          "id": "millspaugh-medicinal-plants-v2-1892", "title": "Millspaugh - Medicinal Plants Vol. 2: plates 100-180 (1892)",
+          "url": "https://archive.org/download/mobot31753000788429/mobot31753000788429.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Identification_and_Uses/Millspaugh_Medicinal_Plants_Vol_2_plates_100-180.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 35930984,
+          "license": "Public domain (published 1892)", "index": true
+        },
+        {
+          "id": "henkel-wild-medicinal-1906", "title": "Henkel - Wild Medicinal Plants of the United States, USDA Bulletin 89 (1906)",
+          "url": "https://archive.org/download/wildmedicinalpla89henk/wildmedicinalpla89henk.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Names_and_Reference/Henkel_Wild_Medicinal_Plants_of_the_United_States_USDA_Bulletin_89.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 8970968,
+          "license": "US Government work (USDA), public domain", "index": true
+        },
+        {
+          "id": "henkel-weeds-medicine-1904", "title": "Henkel - Weeds Used in Medicine, USDA Farmers Bulletin 188 (1904)",
+          "url": "https://archive.org/download/CAT87202292/farmbul0188.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Identification_and_Uses/Henkel_Weeds_Used_in_Medicine_USDA_Farmers_Bulletin_188.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 2028906,
+          "license": "US Government work (USDA), public domain", "index": true
+        },
+        {
+          "id": "chesnut-poisonous-1898", "title": "Chesnut - Thirty Poisonous Plants of the United States, USDA Farmers Bulletin 86 (1898)",
+          "url": "https://archive.org/download/CAT87202204/farmbul0086.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Poisonous_Plants/Chesnut_Thirty_Poisonous_Plants_of_the_United_States_USDA_Farmers_Bulletin_86.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 2259109,
+          "license": "US Government work (USDA), public domain", "index": true
+        },
+        {
+          "id": "marsh-stock-poisoning-1924", "title": "Marsh - Stock-Poisoning Plants of the Range, USDA Bulletin 1245 (1924)",
+          "url": "https://archive.org/download/stockpoisoningpl1245mars_0/stockpoisoningpl1245mars_0.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Poisonous_Plants/Marsh_Stock-Poisoning_Plants_of_the_Range_USDA_Bulletin_1245.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 10666768,
+          "license": "US Government work (USDA), public domain", "index": true
+        },
+        {
+          "id": "densmore-chippewa-plants-1928", "title": "Densmore - Uses of Plants by the Chippewa Indians, Smithsonian BAE (1928)",
+          "url": "https://archive.org/download/usesofplantsbych00dens/usesofplantsbych00dens.pdf", "mirrors": [],
+          "target": "13_Wild_Medicinal_Plants/Traditional_Uses/Densmore_Uses_of_Plants_by_the_Chippewa_Indians_Smithsonian_BAE.pdf",
+          "sha256": null, "sha256Url": null, "sizeBytes": 18051788,
+          "license": "Public domain (US Government publication, 1928)", "index": true
+        }
+      ]
+    },
+    {
       "id": "models", "code": "99", "title": "On-device AI models", "dir": "@models",
       "kind": "model", "defaultEnabled": true,
       "subdirs": ["embed", "llm"],
