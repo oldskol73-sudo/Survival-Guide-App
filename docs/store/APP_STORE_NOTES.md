@@ -9,7 +9,7 @@
 
 ## Still to do on a Mac
 
-1. Open `ios/Runner.xcworkspace`, set the signing team and the bundle identifier (the Android id is `org.survivalnode.mobile`; pick the iOS one and keep it).
+1. Open `ios/Runner.xcworkspace`, set the signing team and the bundle identifier (the Android id is `com.twelvescentspub.blackoutiq`; pick the iOS one and keep it).
 2. The native pieces (sqlite-vec, llama.cpp, the ZIM reader) have not been built for iOS. llama.cpp is not pinned to a fixed version. Decide whether the first iOS release ships without on-device AI, which is the quickest route.
 3. Add the app icon set and launch screen artwork.
 4. `flutter build ipa --release`, upload with Transporter, test through TestFlight.

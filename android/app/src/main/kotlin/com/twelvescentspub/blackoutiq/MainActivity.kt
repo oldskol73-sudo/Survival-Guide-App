@@ -1,4 +1,4 @@
-package org.survivalnode.mobile
+package com.twelvescentspub.blackoutiq
 
 import android.app.ActivityManager
 import android.bluetooth.BluetoothManager
