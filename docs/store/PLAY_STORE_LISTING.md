@@ -4,10 +4,12 @@
 
 ## Listing text
 
-**App name** (30 max): `Blackout IQ: Offline Survival`
+**App name** (30 max): `Blackout IQ: Griddown Resilience` is 32 characters, so Play will reject it. Use `Blackout IQ` (or `Blackout IQ: Griddown`, 21) as the Play name. The full title and tagline show in the app and in the first line of the short description.
 
-**Short description** (80 max, this is exactly 80):
-`Offline survival library: manuals, maps, checklists and a locked document vault.`
+**Tagline:** Knowledge When Everything Goes Dark.
+
+**Short description** (80 max, this is 78):
+`Knowledge when everything goes dark: offline manuals, maps, checklists, vault.`
 
 **Full description** (4000 max):
 

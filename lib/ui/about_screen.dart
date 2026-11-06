@@ -29,7 +29,8 @@ class AboutScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: const Text('About, safety and credits')),
       body: ListView(padding: const EdgeInsets.fromLTRB(20, 16, 20, 32), children: [
-        const Text('Blackout IQ', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800)),
+        const Text('Blackout IQ: Griddown Resilience', style: TextStyle(fontSize: 24, fontWeight: FontWeight.w800)),
+        const Text('Knowledge When Everything Goes Dark.', style: TextStyle(color: AppTheme.muted)),
         const Text('Published by Twelve Scents Publishing', style: TextStyle(color: AppTheme.muted)),
         const Text(kAppVersionLabel, style: TextStyle(color: AppTheme.muted)),
         const SizedBox(height: 22),
@@ -52,7 +53,7 @@ class AboutScreen extends StatelessWidget {
         bullet('Video tutorials belong to their creators and play on YouTube. The list links to videos from The Prepping Team, City Prepping, Canadian Prepper, Lead Farmer and FEMA. Nothing is copied or downloaded.'),
         const SizedBox(height: 24),
         OutlinedButton.icon(
-          onPressed: () => showLicensePage(context: context, applicationName: 'Blackout IQ', applicationVersion: kAppVersionLabel.replaceFirst('Version ', '')),
+          onPressed: () => showLicensePage(context: context, applicationName: 'Blackout IQ: Griddown Resilience', applicationVersion: kAppVersionLabel.replaceFirst('Version ', '')),
           icon: const Icon(Icons.description_outlined),
           label: const Text('Open-source licences'),
         ),

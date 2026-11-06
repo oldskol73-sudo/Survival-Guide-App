@@ -15,7 +15,7 @@ class _TourPage {
 }
 
 const _pages = <_TourPage>[
-  _TourPage('assets/tour/01_welcome.jpg', 'Welcome to Blackout IQ',
+  _TourPage('assets/tour/01_welcome.jpg', 'Welcome to Blackout IQ: Griddown Resilience',
       'A survival library that lives on this device. The manuals, checklists and maps work with no signal at all, so they are there when the network is not. Swipe to see how everything fits together.'),
   _TourPage('assets/tour/02_tiles.jpg', 'Six tiles, six ways to get help',
       'Survival Kit Checklist: pack and check your kit.\nStep By Step Problem Solver: describe a problem and get the best steps from the manuals.\nAnswer Questions: ask in plain words.\nGenerate Priority Plan: say what is happening and what you have, and get a ranked plan.\nLibrary and Family sit below them.\n\nWith the on-device AI model installed, answers are written out as steps. Without it, you get the exact manual passages that answer the question.',

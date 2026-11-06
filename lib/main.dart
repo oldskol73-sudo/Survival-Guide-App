@@ -104,7 +104,7 @@ class _SurvivalNodeAppState extends State<SurvivalNodeApp> {
 
   @override
   Widget build(BuildContext context) => MaterialApp(
-        title: 'Blackout IQ',
+        title: 'Blackout IQ: Griddown Resilience',
         debugShowCheckedModeBanner: false,
         theme: AppTheme.build(),
         themeMode: ThemeMode.dark,
