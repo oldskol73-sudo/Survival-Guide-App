@@ -26,7 +26,7 @@
         </intent>
     </queries>
     <application
-        android:label="Survival Node"
+        android:label="Blackout IQ"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:allowBackup="false"

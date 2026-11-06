@@ -111,10 +111,10 @@ class DownloadEngine extends ChangeNotifier {
     // those cycles; foreground mode for files > 200 MB additionally keeps the transfer alive and visible.
     await FileDownloader().configure(androidConfig: [(Config.runInForegroundIfFileLargerThan, 200)]);
     FileDownloader().configureNotification(
-      running: const TaskNotification('Survival Node', 'Downloading {displayName}'),
-      complete: const TaskNotification('Survival Node', '{displayName} downloaded, verifying'),
-      error: const TaskNotification('Survival Node', '{displayName} failed'),
-      paused: const TaskNotification('Survival Node', '{displayName} paused'),
+      running: const TaskNotification('Blackout IQ', 'Downloading {displayName}'),
+      complete: const TaskNotification('Blackout IQ', '{displayName} downloaded, verifying'),
+      error: const TaskNotification('Blackout IQ', '{displayName} failed'),
+      paused: const TaskNotification('Blackout IQ', '{displayName} paused'),
       progressBar: true,
     );
 

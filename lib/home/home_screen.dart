@@ -56,10 +56,10 @@ class HomeScreen extends StatelessWidget {
                   FittedBox(
                     fit: BoxFit.scaleDown,
                     alignment: Alignment.centerLeft,
-                    child: Text('Survival Node', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800, color: const Color(0xFFF6F1E7))),
+                    child: Text('Blackout IQ', style: Theme.of(context).textTheme.headlineSmall?.copyWith(fontWeight: FontWeight.w800, color: const Color(0xFFF6F1E7))),
                   ),
                   const SizedBox(height: 4),
-                  const Text('Your offline survival library', style: TextStyle(color: AppTheme.muted)),
+                  const Text('Knowledge when everything goes dark', style: TextStyle(color: AppTheme.muted)),
                 ]),
               ),
               // SOS sits in the top-right corner and the status pill in the bottom-right, well apart from each

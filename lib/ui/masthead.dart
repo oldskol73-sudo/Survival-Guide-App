@@ -11,7 +11,7 @@ class Masthead extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: 'Twelve Scents Publishing',
+      label: 'Blackout IQ by Twelve Scents Publishing',
       image: true,
       child: Container(
         height: 92,

@@ -1,11 +1,11 @@
-# Apple App Store notes: Survival Node
+# Apple App Store notes: Blackout IQ
 
 **DRAFT for review.** iOS cannot be built on the Windows PC. You need a Mac with Xcode (or a cloud Mac build service such as Codemagic or GitHub Actions macOS runners) and an Apple Developer Program membership (USD 99 a year).
 
 ## Already done in the project
 
 - `ios/Runner/Info.plist` now carries the permission texts that used to sit in a side file: camera, photo library, Face ID, location when in use, Bluetooth (status only), local networking for the on-device map server, Files-app sharing, and the background download modes.
-- Display name is "Survival Node".
+- Display name is "Blackout IQ".
 
 ## Still to do on a Mac
 

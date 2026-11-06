@@ -1,4 +1,4 @@
-# Survival Node: Privacy Policy
+# Blackout IQ: Privacy Policy
 
 **DRAFT for review.** Fill in the three `[...]` placeholders, have it read by whoever advises you on legal matters, host it at a public web address, and put that address in `lib/ui/about_screen.dart` (`kPrivacyPolicyUrl`) and in both store listings.
 
@@ -8,7 +8,7 @@
 
 ## The short version
 
-Survival Node has no accounts, no advertising, no analytics and no tracking. The information you enter, your photos of documents, your family details, your checklist and your settings stay on your device. We do not receive any of it, and we cannot read it.
+Blackout IQ has no accounts, no advertising, no analytics and no tracking. The information you enter, your photos of documents, your family details, your checklist and your settings stay on your device. We do not receive any of it, and we cannot read it.
 
 ## What stays on your device
 

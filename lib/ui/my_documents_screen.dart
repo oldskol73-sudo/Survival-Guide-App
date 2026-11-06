@@ -67,7 +67,7 @@ class _MyDocumentsScreenState extends State<MyDocumentsScreen> {
       context: context,
       builder: (c) => AlertDialog(
         title: const Text('Remove this PDF?'),
-        content: Text('${p.basenameWithoutExtension(f.path)}\n\nThis deletes the copy inside Survival Node. Your original file is not touched.'),
+        content: Text('${p.basenameWithoutExtension(f.path)}\n\nThis deletes the copy inside Blackout IQ. Your original file is not touched.'),
         actions: [
           TextButton(onPressed: () => Navigator.pop(c, false), child: const Text('Keep')),
           TextButton(onPressed: () => Navigator.pop(c, true), child: const Text('Remove')),

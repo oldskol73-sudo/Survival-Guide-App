@@ -1,10 +1,10 @@
-# Google Play listing: Survival Node
+# Google Play listing: Blackout IQ
 
 **DRAFT for review.** Everything here is written from what the app actually does today. Items marked **CONFIRM** need your decision or a fact only you know.
 
 ## Listing text
 
-**App name** (30 max): `Offline Survival Node`
+**App name** (30 max): `Blackout IQ: Offline Survival`
 
 **Short description** (80 max, this is exactly 80):
 `Offline survival library: manuals, maps, checklists and a locked document vault.`
@@ -12,7 +12,7 @@
 **Full description** (4000 max):
 
 ```
-Offline Survival Node keeps practical survival knowledge on your phone, so it works when the network does not.
+Blackout IQ keeps practical survival knowledge on your phone, so it works when the network does not.
 
 WHAT YOU GET
 - A library of free manuals and guides on water, food, first aid, shelter, power and more. Mainly US Government publications (FEMA, CDC, NOAA, USGS, USDA, US Army) and older public-domain titles. Download the ones you want; they stay on the phone.
@@ -28,7 +28,7 @@ BUILT FOR WHEN THINGS GO WRONG
 - Air-gap indicator shows whether Wi-Fi, cellular and Bluetooth are off. "Sealed" mode blocks the app's own network use.
 
 IMPORTANT
-Survival Node is reference material. Information can be wrong, out of date or not fit your situation, and AI-written answers can contain mistakes. It is not medical, legal or professional advice, and the app cannot call or alert emergency services. In an emergency, call your local emergency number (911 in the US).
+Blackout IQ is reference material. Information can be wrong, out of date or not fit your situation, and AI-written answers can contain mistakes. It is not medical, legal or professional advice, and the app cannot call or alert emergency services. In an emergency, call your local emergency number (911 in the US).
 
 Map data (c) OpenStreetMap contributors. Video tutorials belong to their creators and play on YouTube.
 ```

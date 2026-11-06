@@ -336,7 +336,7 @@ class SettingsScreen extends StatelessWidget {
       builder: (context, _) => ListView(children: [
         ListTile(
           leading: const Icon(Icons.explore_outlined, color: AppTheme.accent),
-          title: const Text('How to use Survival Node', style: TextStyle(fontWeight: FontWeight.w800)),
+          title: const Text('How to use Blackout IQ', style: TextStyle(fontWeight: FontWeight.w800)),
           subtitle: const Text('A quick picture tour of every part of the app'),
           trailing: const Icon(Icons.chevron_right, color: AppTheme.muted),
           onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => const TourScreen())),
