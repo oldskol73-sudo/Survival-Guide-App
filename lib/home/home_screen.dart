@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
       _ArtTile('assets/home/problem_solver.png', 'Step By Step Problem Solver, find solutions', 1.0, () => _push(context, const AirGapGate(featureName: 'the Problem Solver', child: ProblemSolverScreen()))),
       _ArtTile('assets/home/answer.png', 'Answer Questions, get the facts', 0.8, () => _push(context, const AirGapGate(featureName: 'AI questions', child: AskScreen()))),
       _ArtTile('assets/home/plan.png', 'Generate Priority Plan, stay focused', 0.4, () => _push(context, const AirGapGate(featureName: 'the Priority Plan', child: PlanScreen()))),
-      _ArtTile('assets/home/library.png', 'Library, learn and grow', 0.7, () => onOpenTab(AppTab.library)),
+      _ArtTile('assets/home/library.png', 'Library, learn and grow', 0.0, () => onOpenTab(AppTab.library)),
       _ArtTile('assets/home/family.png', 'Family, prepare together', 1.0, () => onOpenTab(AppTab.family)),
     ];
     return SingleChildScrollView(
