@@ -35,6 +35,7 @@ Thank you. Real use and honest feedback is what I am after.
 2. **Open the test link on your phone:** [OPT-IN LINK]
 3. Tap **Become a tester** (or **Join**). Wait a moment for it to confirm.
 4. Tap **Download it on Google Play** (or open the Play Store and search for Blackout IQ). Tap **Install**.
+   **If the download does not start, or the page is blank:** search Google for **com.twelvescentspub.blackoutiq** (or open the Play Store app and search for that name), and open the Google Play result on your phone. Make sure the Play Store is signed in with the same Google account you gave me. A brand-new app can take a little while to appear, so if it still does not show, wait an hour and try again.
 5. Open the app. The first launch shows a short tour. Allow notifications if asked: they only show download progress.
 
 **What to try over the 14 days**

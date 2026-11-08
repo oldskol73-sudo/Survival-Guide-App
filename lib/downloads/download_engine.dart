@@ -139,8 +139,28 @@ class DownloadEngine extends ChangeNotifier {
 
   // ---------------------------------------------------------------- enqueue
 
+  bool _askedForNotifications = false;
+
+  /// Android 13+ keeps notifications off until the app asks. Ask once per run, just before a download starts,
+  /// so the progress notification (and the foreground service notification for large files) is visible.
+  /// A refusal is fine: downloads still run, silently.
+  Future<void> _ensureNotificationPermission() async {
+    if (_askedForNotifications || !Platform.isAndroid) return;
+    _askedForNotifications = true;
+    try {
+      final perms = FileDownloader().permissions;
+      final status = await perms.status(PermissionType.notifications);
+      if (status == PermissionStatus.undetermined || status == PermissionStatus.denied) {
+        await perms.request(PermissionType.notifications);
+      }
+    } catch (_) {
+      // Never block a download on the permission prompt.
+    }
+  }
+
   Future<EnqueueResult> enqueue(CatalogItem item, {int mirrorIndex = 0}) async {
     if (item.isPlaceholder) return EnqueueResult.placeholder;
+    await _ensureNotificationPermission();
     final job = jobFor(item.id);
     if (job.isUsable && await File(_paths.resolve(item.target)).exists()) return EnqueueResult.alreadyUsable;
 

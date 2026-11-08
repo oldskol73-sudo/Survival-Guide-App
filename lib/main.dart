@@ -32,7 +32,7 @@ Future<void> main() async {
   Services.catalog = catalog;
 
   var paths = await StoragePaths.init();
-  final settings = await AppSettings.load(paths.stateDir, catalog.categories.where((c) => c.defaultEnabled).map((c) => c.id));
+  final settings = await AppSettings.load(paths.stateDir, const <String>[]); // every category starts off; the user picks what to sync
   if (settings.volumeIndex != 0) paths = await StoragePaths.init(volumeIndex: settings.volumeIndex);
   await ChecklistStore.load(paths.stateDir);
   await FamilyStore.load(paths.stateDir);

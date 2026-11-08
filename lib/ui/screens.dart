@@ -137,9 +137,9 @@ class LibraryScreen extends StatelessWidget {
           if (!settings.sealed)
             FilledButton.icon(
               icon: const Icon(Icons.cloud_download_outlined),
-              label: const Text('Sync selected categories'),
+              label: Text(settings.enabledCategories.isEmpty ? 'Switch on a category below to sync it' : 'Sync selected categories'),
               style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
-              onPressed: () => engine.enqueueCategories(settings.enabledCategories),
+              onPressed: settings.enabledCategories.isEmpty ? null : () => engine.enqueueCategories(settings.enabledCategories),
             ),
           const SizedBox(height: 12),
           for (final c in Services.catalog.categories) _CategoryTile(category: c),
