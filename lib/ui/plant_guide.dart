@@ -91,9 +91,10 @@ class PlantGrid extends StatelessWidget {
   @override
   Widget build(BuildContext context) => LayoutBuilder(builder: (context, box) {
         final tile = (box.maxWidth - _gap * (_columns - 1)) / _columns;
-        // Cap text scaling so two-line names always fit under their photo.
+        // The names sit under 66pt-wide photos, so they stay at normal size; a larger system text size would clip
+        // them (tap a plant for the full-size text).
         return MediaQuery.withClampedTextScaling(
-          maxScaleFactor: 1.15,
+          maxScaleFactor: 1.0,
           child: GridView.builder(
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
@@ -157,7 +158,7 @@ class _PlantTile extends StatelessWidget {
             maxLines: 2,
             overflow: TextOverflow.ellipsis,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: 11, height: 1.1, fontWeight: FontWeight.w700),
+            style: const TextStyle(fontSize: 10.5, height: 1.1, fontWeight: FontWeight.w700),
           ),
         ]),
       ),
@@ -219,7 +220,7 @@ class PlantDetailScreen extends StatelessWidget {
           const SizedBox(height: 10),
           // The photos are Creative Commons licensed; this credit is required by those licences.
           Text(
-            'Photo: ${plant.creditAuthor}, ${plant.creditLicense}, via ${'Wikimedia Commons'} (${plant.creditFile}). Resized and cropped.',
+            'Photo: ${plant.creditAuthor}, ${plant.creditLicense}, via Wikimedia Commons (${plant.creditFile}). Resized and cropped.',
             style: const TextStyle(color: AppTheme.muted, fontSize: 11, height: 1.35),
           ),
         ],

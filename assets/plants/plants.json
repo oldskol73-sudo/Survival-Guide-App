@@ -1,0 +1,652 @@
+[
+ {
+  "id": "echinacea",
+  "name": "Purple coneflower",
+  "latin": "Echinacea purpurea",
+  "family": "Daisy family (Asteraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0.3
+  ],
+  "parts": "Root, flowers and leaves",
+  "uses": [
+   "Plains peoples chewed or poulticed the root for wounds, toothache, sore throat and snakebite.",
+   "Nineteenth-century American physicians sold it as a 'blood purifier' and for infections.",
+   "Today it is mostly taken as a tea or extract at the first sign of a cold; studies give mixed results."
+  ],
+  "cautions": "Can trigger allergic reactions in people allergic to ragweed, daisies or chrysanthemums. Ask a doctor first if you have an autoimmune condition or take immune-suppressing medicine.",
+  "lookalikes": "Other coneflowers and black-eyed Susans look similar; only Echinacea has been used this way.",
+  "image": "assets/plants/echinacea.jpg",
+  "credit": {
+   "author": "Eric Hunt",
+   "license": "CC BY-SA 4.0",
+   "file": "Echinacea_purpurea_Grandview_Prairie.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "chamomile",
+  "name": "German chamomile",
+  "latin": "Matricaria chamomilla",
+  "family": "Daisy family (Asteraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   -0.4
+  ],
+  "parts": "Flower heads",
+  "uses": [
+   "A warm tea for upset stomach, gas and cramps.",
+   "Taken in the evening for restlessness and to help sleep.",
+   "A cooled tea used as a wash or compress on minor skin irritation."
+  ],
+  "cautions": "People allergic to ragweed or daisies can react, sometimes seriously. Keep it away from the eyes.",
+  "lookalikes": "Mayweed and pineapple weed look similar. True chamomile has a hollow, cone-shaped yellow centre and a sweet apple scent.",
+  "image": "assets/plants/chamomile.jpg",
+  "credit": {
+   "author": "Alvesgaspar",
+   "license": "CC BY-SA 3.0",
+   "file": "Matricaria_February_2008-1.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "dandelion",
+  "name": "Dandelion",
+  "latin": "Taraxacum officinale",
+  "family": "Daisy family (Asteraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   -0.2
+  ],
+  "parts": "Leaves, root and flowers",
+  "uses": [
+   "Young leaves eaten as a bitter spring green and tonic.",
+   "Roasted root brewed as a coffee substitute and bitter digestive tonic.",
+   "Flowers used for wine, syrup and fritters; the leaf tea was used as a gentle diuretic."
+  ],
+  "cautions": "Never pick from lawns, roadsides or fields that may be sprayed or polluted. Allergic reactions occur in people allergic to daisies. Ask a doctor first if you have gallbladder or bile duct problems.",
+  "lookalikes": "Cat's ear, hawkweed and sow thistle look similar and are not known to be dangerous, but dandelion has hollow, leafless flower stems and a single flower per stem.",
+  "image": "assets/plants/dandelion.jpg",
+  "credit": {
+   "author": "Sapna Sony",
+   "license": "CC BY-SA 4.0",
+   "file": "Flowering Dandelion (Taraxacum officinale) in Shimla.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "yarrow",
+  "name": "Yarrow",
+  "latin": "Achillea millefolium",
+  "family": "Daisy family (Asteraceae)",
+  "level": "caution",
+  "align": [
+   0,
+   -0.7
+  ],
+  "parts": "Leaves and flowering tops",
+  "uses": [
+   "Crushed leaves pressed on cuts to help stop bleeding; the name comes from Achilles.",
+   "A hot tea to bring on a sweat during colds and fevers.",
+   "Used as a bitter tea for poor digestion."
+  ],
+  "cautions": "Avoid in pregnancy. Can cause skin sensitivity and allergic reactions in people allergic to daisies. It may interact with blood thinners.",
+  "lookalikes": "DEADLY LOOK-ALIKES: poison hemlock and water hemlock have similar flat white flower clusters. Yarrow has feathery, fern-like leaves and a hairy, grooved stem. Hemlock has smooth, hairless stems, often with purple blotches. If you are not certain, do not touch or eat it.",
+  "image": "assets/plants/yarrow.jpg",
+  "credit": {
+   "author": "SAplants",
+   "license": "CC BY-SA 4.0",
+   "file": "Achillea_millefolium_(bright).jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "calendula",
+  "name": "Pot marigold",
+  "latin": "Calendula officinalis",
+  "family": "Daisy family (Asteraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Petals and flower heads",
+  "uses": [
+   "Petals steeped in oil to make a salve for minor burns, scrapes and dry or chapped skin.",
+   "A cooled tea used as a wash for minor skin irritation.",
+   "Petals eaten in salads and used as a yellow dye and saffron substitute."
+  ],
+  "cautions": "People allergic to daisies or ragweed can react. Avoid during pregnancy. Not the same as French or African marigolds (Tagetes), which are not used this way.",
+  "lookalikes": "Garden marigolds (Tagetes) look similar but are a different plant; use only Calendula.",
+  "image": "assets/plants/calendula.jpg",
+  "credit": {
+   "author": "Betty Cai",
+   "license": "CC BY-SA 4.0",
+   "file": "Calendula_officinalis,_pot_marigold.JPG",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "red_clover",
+  "name": "Red clover",
+  "latin": "Trifolium pratense",
+  "family": "Pea family (Fabaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   -0.3
+  ],
+  "parts": "Flower heads",
+  "uses": [
+   "A tea of the flower heads as a 'blood purifier' and for coughs and skin complaints.",
+   "Flowers used in salves for skin sores.",
+   "Blossoms eaten raw or dried in teas and baking."
+  ],
+  "cautions": "Contains plant oestrogens: avoid in pregnancy, breastfeeding and hormone-sensitive conditions. May interact with blood thinners. Never use clover that is moulded or spoiled; it can cause dangerous bleeding.",
+  "lookalikes": "White and alsike clover are similar. Red clover has pink-purple heads and leaves with a pale V-shaped mark.",
+  "image": "assets/plants/red_clover.jpg",
+  "credit": {
+   "author": "Ivar Leidus",
+   "license": "CC BY-SA 4.0",
+   "file": "Trifolium_pratense_-_Keila2.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "elder",
+  "name": "Elder",
+  "latin": "Sambucus nigra",
+  "family": "Elderberry family (Adoxaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Flowers and cooked ripe berries only",
+  "uses": [
+   "Flower tea taken hot to sweat out colds and fevers.",
+   "Cooked berries made into syrup for coughs and colds.",
+   "Flowers made into cordial and fritters."
+  ],
+  "cautions": "Raw berries, leaves, bark, stems and roots contain compounds that release cyanide and cause nausea and vomiting. Berries must be fully ripe and cooked. Red elderberry (Sambucus racemosa) is more toxic.",
+  "lookalikes": "DEADLY LOOK-ALIKES: water hemlock and poison hemlock have similar flat white flower clusters but are not woody. Elder is a shrub with woody stems and pithy centres.",
+  "image": "assets/plants/elder.jpg",
+  "credit": {
+   "author": "Ввласенко",
+   "license": "CC BY-SA 3.0",
+   "file": "Inflorescence of Sambucus nigra.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "lavender",
+  "name": "Lavender",
+  "latin": "Lavandula angustifolia",
+  "family": "Mint family (Lamiaceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0.2
+  ],
+  "parts": "Flowers",
+  "uses": [
+   "Dried flowers in sachets and teas for nervousness, headache and sleep.",
+   "Flowers steeped in water or oil as an antiseptic wash for minor skin problems.",
+   "Hung in cupboards to deter moths."
+  ],
+  "cautions": "Do not swallow the essential oil. May cause skin irritation or allergic reactions. May add to the effect of sedatives.",
+  "lookalikes": "Several lavender species exist; use only the kind you have confirmed.",
+  "image": "assets/plants/lavender.jpg",
+  "credit": {
+   "author": "Laslovarga",
+   "license": "CC BY-SA 4.0",
+   "file": "Lavandula angustifolia (11).jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "st_johns_wort",
+  "name": "St John's wort",
+  "latin": "Hypericum perforatum",
+  "family": "St John's wort family (Hypericaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   -0.2
+  ],
+  "parts": "Flowering tops",
+  "uses": [
+   "Flowers steeped in oil, turning it red, to make a salve for wounds, burns and nerve pain.",
+   "A tea or extract used in European herbal medicine for low mood.",
+   "Traditionally gathered around midsummer."
+  ],
+  "cautions": "Interacts with many medicines and can make them fail, including birth control pills, antidepressants, blood thinners, HIV and transplant drugs. Makes skin sensitive to sunlight. Poisonous to livestock.",
+  "lookalikes": "Other Hypericum species look similar. Held to the light, true St John's wort leaves show tiny see-through dots.",
+  "image": "assets/plants/st_johns_wort.jpg",
+  "credit": {
+   "author": "Didier Descouens",
+   "license": "CC BY-SA 4.0",
+   "file": "(MHNT)_Hypericum_perforatum_flower_and_buttons.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "goldenrod",
+  "name": "Goldenrod",
+  "latin": "Solidago canadensis",
+  "family": "Daisy family (Asteraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   -0.5
+  ],
+  "parts": "Flowering tops and leaves",
+  "uses": [
+   "A tea of the flowering tops used for sore throat, colds and urinary complaints.",
+   "Used as a diuretic and wound wash.",
+   "Leaves made into a mild tea; the plant has been used as a dye."
+  ],
+  "cautions": "People allergic to daisies or ragweed can react. Goldenrod is often blamed for hay fever, but ragweed, which blooms at the same time, is the usual cause. Ask a doctor first if you have kidney or heart disease.",
+  "lookalikes": "Over 100 goldenrod species look alike. Ragweed is a different plant with inconspicuous green flowers.",
+  "image": "assets/plants/goldenrod.jpg",
+  "credit": {
+   "author": "Georg Slickers",
+   "license": "CC BY-SA 4.0",
+   "file": "Solidago_canadensis_20050815_248.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "mullein",
+  "name": "Common mullein",
+  "latin": "Verbascum thapsus",
+  "family": "Figwort family (Scrophulariaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Leaves and flowers",
+  "uses": [
+   "Leaf or flower tea for coughs, chest colds and sore throat.",
+   "Flowers steeped in oil as a folk remedy for earache.",
+   "Dried leaves were traditionally smoked for coughs."
+  ],
+  "cautions": "Fine leaf hairs irritate the throat; strain any tea through cloth. Do not eat the seeds.",
+  "lookalikes": "DEADLY LOOK-ALIKE: the first-year leaf rosette of foxglove looks like mullein (and comfrey). Mullein leaves are thick, silvery and velvety on both sides. Do not use a rosette you cannot positively identify.",
+  "image": "assets/plants/mullein.jpg",
+  "credit": {
+   "author": "Krzysztof Ziarnek, Kenraiz",
+   "license": "CC BY-SA 4.0",
+   "file": "Verbascum thapsus kz12.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "chicory",
+  "name": "Chicory",
+  "latin": "Cichorium intybus",
+  "family": "Daisy family (Asteraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Roots, leaves and flowers",
+  "uses": [
+   "Roasted, ground root brewed as a coffee substitute, widely used in wartime.",
+   "Bitter leaves and flower buds eaten as greens.",
+   "Root tea as a bitter digestive and liver tonic."
+  ],
+  "cautions": "People allergic to daisies or ragweed can react. Ask a doctor first if you have gallstones. Avoid medicinal amounts during pregnancy.",
+  "lookalikes": "Sold salad chicories and endive are cultivated forms. Wild chicory has sky-blue flowers that close by afternoon.",
+  "image": "assets/plants/chicory.jpg",
+  "credit": {
+   "author": "Alvesgaspar",
+   "license": "CC BY 2.5",
+   "file": "Cichorium intybus-alvesgaspar1.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "evening_primrose",
+  "name": "Evening primrose",
+  "latin": "Oenothera biennis",
+  "family": "Evening primrose family (Onagraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Root, leaves, young shoots and seeds",
+  "uses": [
+   "Native peoples poulticed the leaves and roots on bruises and wounds.",
+   "First-year roots boiled and eaten as a vegetable.",
+   "Seed oil is sold today for skin conditions; the evidence is limited."
+  ],
+  "cautions": "Seed oil may interact with blood thinners and seizure medicines. Little is known about safety in pregnancy.",
+  "lookalikes": "Other yellow evening primroses and sundrops look similar and are not known to be dangerous.",
+  "image": "assets/plants/evening_primrose.jpg",
+  "credit": {
+   "author": "Christian Ferrer",
+   "license": "CC BY-SA 4.0",
+   "file": "Oenothera_biennis,_Vic-la-Gardiole_01.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "foxglove",
+  "name": "Foxglove",
+  "latin": "Digitalis purpurea",
+  "family": "Plantain family (Plantaginaceae)",
+  "level": "danger",
+  "align": [
+   0.1,
+   -0.7
+  ],
+  "parts": "Do not use",
+  "uses": [
+   "The source of digoxin, a heart medicine. In 1785 William Withering described using the leaf for 'dropsy', now called heart failure.",
+   "It works only in a very narrow dose range, which is why it is dangerous outside a pharmacy.",
+   "This entry is here to help you recognise and avoid it."
+  ],
+  "cautions": "ALL PARTS ARE POISONOUS, including the flowers, seeds, leaves, and even water from a vase. Eating or brewing it can cause an irregular heartbeat, vomiting, confusion and death. There is no safe home use. Call Poison Control (1-800-222-1222 in the US) or emergency services at once.",
+  "lookalikes": "The first-year leaf rosette is often mistaken for comfrey or mullein, and people have been poisoned this way. Never use a leaf rosette you cannot positively identify.",
+  "image": "assets/plants/foxglove.jpg",
+  "credit": {
+   "author": "Jörg Hempel",
+   "license": "CC BY-SA 3.0 de",
+   "file": "Digitalis_purpurea_LC0101.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "jewelweed",
+  "name": "Jewelweed",
+  "latin": "Impatiens capensis",
+  "family": "Balsam family (Balsaminaceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Stem juice and leaves (external use)",
+  "uses": [
+   "Crushed stems rubbed on the skin after contact with poison ivy or stinging nettle.",
+   "Applied to insect bites and minor rashes.",
+   "Native peoples used the juice on skin problems and as a wash."
+  ],
+  "cautions": "Use on the skin only. Studies of its effect on poison ivy are mixed, so wash well with soap and cool water as soon as possible after contact. Eating the plant can upset the stomach.",
+  "lookalikes": "Look for the orange, spotted, trumpet-shaped flower and ripe seed pods that burst open when touched.",
+  "image": "assets/plants/jewelweed.jpg",
+  "credit": {
+   "author": "Fritz Geller-Grimm",
+   "license": "CC BY-SA 2.5",
+   "file": "Potapsco_fg13.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "butterfly_weed",
+  "name": "Butterfly weed",
+  "latin": "Asclepias tuberosa",
+  "family": "Milkweed family (Apocynaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Root (historical); do not use",
+  "uses": [
+   "The root, called 'pleurisy root', was used by Native peoples and by nineteenth-century physicians for lung and chest complaints.",
+   "It was once an official US medicine for pleurisy.",
+   "Today it is grown mainly as food for monarch butterflies."
+  ],
+  "cautions": "Contains heart-active compounds and is poisonous in quantity. The sap can irritate skin and eyes. Leave wild plants alone; they feed monarch butterflies.",
+  "lookalikes": "Other milkweeds are also poisonous. Butterfly weed is the one with orange flowers and clear, not milky, sap.",
+  "image": "assets/plants/butterfly_weed.jpg",
+  "credit": {
+   "author": "Eric Hunt",
+   "license": "CC BY-SA 4.0",
+   "file": "Asclepias_tuberosa_interior.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "boneset",
+  "name": "Boneset",
+  "latin": "Eupatorium perfoliatum",
+  "family": "Daisy family (Asteraceae)",
+  "level": "caution",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Leaves and flowering tops",
+  "uses": [
+   "A hot tea to bring on a sweat during flu, called 'breakbone fever'.",
+   "A cold tea taken as a bitter tonic.",
+   "A staple of nineteenth-century American home medicine."
+  ],
+  "cautions": "Contains pyrrolizidine alkaloids that can damage the liver, and hot tea can cause vomiting. Not suitable for long-term use, pregnancy or liver disease. Allergic reactions can occur in people allergic to daisies.",
+  "lookalikes": "DEADLY LOOK-ALIKE: white snakeroot has similar white flower clusters at the same time of year. It is poisonous and caused 'milk sickness' in settlers. Boneset leaves are joined in pairs around the stem, so the stem appears to pass through them.",
+  "image": "assets/plants/boneset.jpg",
+  "credit": {
+   "author": "SB_Johnny",
+   "license": "CC BY-SA 3.0",
+   "file": "Eupatorium_perfoliatum_001.JPG",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "bee_balm",
+  "name": "Wild bergamot",
+  "latin": "Monarda fistulosa",
+  "family": "Mint family (Lamiaceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Leaves and flowers",
+  "uses": [
+   "Tea for colds, sore throat, fever and upset stomach.",
+   "Crushed leaves applied to skin infections and insect bites; the plant contains thymol, an antiseptic.",
+   "Leaves and flowers used as a seasoning."
+  ],
+  "cautions": "Avoid medicinal amounts in pregnancy. People allergic to mint-family plants may react.",
+  "lookalikes": "Other Monarda species such as Oswego tea (M. didyma) have red flowers and were used in the same way.",
+  "image": "assets/plants/bee_balm.jpg",
+  "credit": {
+   "author": "Eric Hunt",
+   "license": "CC BY-SA 4.0",
+   "file": "Monarda_fistulosa_Arkansas.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "violet",
+  "name": "Sweet violet",
+  "latin": "Viola odorata",
+  "family": "Violet family (Violaceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Leaves and flowers",
+  "uses": [
+   "Leaf and flower tea or syrup for coughs, hoarseness and sore throat.",
+   "A soothing poultice for sore skin and swellings.",
+   "Flowers eaten in salads and candied."
+  ],
+  "cautions": "Roots and seeds can cause vomiting; do not eat them. Violet-like garden flowers such as African violet are unrelated and are not used this way.",
+  "lookalikes": "Many wild violets (Viola species) are used alike. Confirm the plant has heart-shaped leaves and five-petalled flowers with a spur.",
+  "image": "assets/plants/violet.jpg",
+  "credit": {
+   "author": "Fritz Geller-Grimm",
+   "license": "CC BY-SA 2.5",
+   "file": "Viola_odorata_fg01.JPG",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "passionflower",
+  "name": "Maypop",
+  "latin": "Passiflora incarnata",
+  "family": "Passionflower family (Passifloraceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Leaves, stems and flowers",
+  "uses": [
+   "Tea of the dried vine for nervousness, trouble sleeping and anxiety.",
+   "The Cherokee used root poultices for wounds and boils.",
+   "The ripe fruit, the 'maypop', is eaten."
+  ],
+  "cautions": "Can cause drowsiness and may add to the effect of sedatives. Avoid in pregnancy. Do not use other Passiflora species; some contain compounds that release cyanide.",
+  "lookalikes": "Several ornamental passionflowers look similar. Maypop is the hardy native with lavender-purple flowers and three-lobed leaves.",
+  "image": "assets/plants/passionflower.jpg",
+  "credit": {
+   "author": "H. Zell",
+   "license": "CC BY-SA 3.0",
+   "file": "Passiflora incarnata 003.JPG",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "borage",
+  "name": "Borage",
+  "latin": "Borago officinalis",
+  "family": "Borage family (Boraginaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Flowers (occasional food use)",
+  "uses": [
+   "Star-shaped blue flowers used in salads, drinks and cakes; old herbals credit it with raising spirits.",
+   "Leaf and flower tea for fevers and coughs.",
+   "Seed oil is sold for skin conditions."
+  ],
+  "cautions": "Leaves and flowers contain pyrrolizidine alkaloids that can damage the liver. Avoid regular or medicinal use, and avoid entirely in pregnancy, breastfeeding and liver disease. Choose seed oil labelled free of these alkaloids.",
+  "lookalikes": "The bristly, hairy stems and leaves are distinctive. Do not confuse it with other bristly plants such as comfrey.",
+  "image": "assets/plants/borage.jpg",
+  "credit": {
+   "author": "Christian Orlandi",
+   "license": "CC BY-SA 4.0",
+   "file": "Borago_officinalis_(2025).jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "comfrey",
+  "name": "Comfrey",
+  "latin": "Symphytum officinale",
+  "family": "Borage family (Boraginaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   -0.5
+  ],
+  "parts": "Leaves and root (external only)",
+  "uses": [
+   "Called 'knitbone': poultices of leaf or root on bruises, sprains, and slow-healing wounds.",
+   "Once taken as a tea for coughs and stomach trouble; this is now discouraged.",
+   "Widely used as garden compost and animal feed."
+  ],
+  "cautions": "Contains pyrrolizidine alkaloids that damage the liver. Do not swallow it. Several countries have banned internal products. Do not put it on broken or deep wounds, and do not use it for long.",
+  "lookalikes": "DEADLY LOOK-ALIKE: the first-year leaf rosette of foxglove is often mistaken for comfrey. Comfrey leaves are rough and hairy, and the flowers are drooping bells.",
+  "image": "assets/plants/comfrey.jpg",
+  "credit": {
+   "author": "Agnieszka Kwiecień (Nova)",
+   "license": "CC BY 2.5",
+   "file": "Symphytum_officinale_01.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "self_heal",
+  "name": "Self-heal",
+  "latin": "Prunella vulgaris",
+  "family": "Mint family (Lamiaceae)",
+  "level": "standard",
+  "align": [
+   -0.3,
+   -0.45
+  ],
+  "parts": "Leaves and flowering tops",
+  "uses": [
+   "Crushed leaves applied to cuts and sores; the name comes from this use.",
+   "Tea as a gargle for sore throat and mouth sores.",
+   "Young leaves eaten in salads."
+  ],
+  "cautions": "Considered mild, but there is little modern evidence for its uses. People allergic to mint-family plants may react.",
+  "lookalikes": "Bugle and other small mints look similar. Self-heal has a dense, oblong, purple-green flower head with a ring of small leaves beneath it.",
+  "image": "assets/plants/self_heal.jpg",
+  "credit": {
+   "author": "Ivar Leidus",
+   "license": "CC BY-SA 3.0",
+   "file": "Prunella_vulgaris_-_harilik_käbihein.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "dog_rose",
+  "name": "Dog rose",
+  "latin": "Rosa canina",
+  "family": "Rose family (Rosaceae)",
+  "level": "standard",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Rose hips (fruit) and petals",
+  "uses": [
+   "Rose hips made into syrup and tea as a source of vitamin C; hip syrup was widely issued in Britain during World War II.",
+   "Petals used as an astringent wash and in teas.",
+   "Hips used in jam and jelly."
+  ],
+  "cautions": "Remove the seeds and the fine hairs inside the hips; they irritate the mouth and gut. Do not pick roses that may have been sprayed.",
+  "lookalikes": "Other wild roses are used alike. All true roses have thorny stems and five-petalled flowers.",
+  "image": "assets/plants/dog_rose.jpg",
+  "credit": {
+   "author": "Roberta F.",
+   "license": "CC BY-SA 3.0",
+   "file": "Divlja_ruza_cvijet_270508.jpg",
+   "source": "Wikimedia Commons"
+  }
+ },
+ {
+  "id": "hawthorn",
+  "name": "Hawthorn",
+  "latin": "Crataegus monogyna",
+  "family": "Rose family (Rosaceae)",
+  "level": "caution",
+  "align": [
+   0,
+   0
+  ],
+  "parts": "Flowers, leaves and ripe berries",
+  "uses": [
+   "Flower and leaf tea or extract used in European herbal medicine as a heart and circulation tonic.",
+   "Ripe berries made into jelly and sauce.",
+   "Used as a hedge plant; the thorns are sharp."
+  ],
+  "cautions": "Can interact with heart and blood pressure medicines such as digoxin, beta-blockers and nitrates. Never try to treat a heart problem yourself. Seek care for chest pain. The seeds contain compounds that release cyanide, so do not crush or eat them.",
+  "lookalikes": "Several hawthorn species look alike. Do not confuse the berries with other red berries, some of which are poisonous.",
+  "image": "assets/plants/hawthorn.jpg",
+  "credit": {
+   "author": "Ermell",
+   "license": "CC BY-SA 4.0",
+   "file": "Weißdornblüte Crataegus monogyna -20220509-RM-104145.jpg",
+   "source": "Wikimedia Commons"
+  }
+ }
+]

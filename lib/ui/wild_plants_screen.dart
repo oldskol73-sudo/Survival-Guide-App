@@ -12,6 +12,7 @@ import '../core/settings.dart';
 import '../core/theme.dart';
 import '../downloads/download_engine.dart';
 import '../viewers/viewer_screens.dart';
+import 'plant_guide.dart';
 
 const _what = <String, String>{
   'millspaugh-medicinal-plants-v1-1892': 'Colour plates of 180 plants with description, range, history, uses and poisoning effects.',
@@ -45,41 +46,82 @@ class WildPlantsScreen extends StatelessWidget {
         builder: (context, _) => ListView(
           padding: const EdgeInsets.all(16),
           children: [
+            // The short rule stays visible; the full notice expands underneath it.
             Card(
               color: AppTheme.card,
+              clipBehavior: Clip.antiAlias,
+              margin: EdgeInsets.zero,
               shape: RoundedRectangleBorder(side: const BorderSide(color: AppTheme.danger), borderRadius: BorderRadius.circular(16)),
-              child: const Padding(
-                padding: EdgeInsets.all(14),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Row(children: [
-                    Icon(Icons.warning_amber_rounded, color: AppTheme.danger),
-                    SizedBox(width: 8),
-                    Expanded(child: Text('Read before you pick or eat anything', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
-                  ]),
-                  SizedBox(height: 8),
+              child: const ExpansionTile(
+                shape: Border(),
+                collapsedShape: Border(),
+                tilePadding: EdgeInsets.symmetric(horizontal: 14),
+                childrenPadding: EdgeInsets.fromLTRB(14, 0, 14, 14),
+                expandedCrossAxisAlignment: CrossAxisAlignment.start,
+                leading: Icon(Icons.warning_amber_rounded, color: AppTheme.danger),
+                title: Text('Read before you pick or eat anything', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 15)),
+                subtitle: Text('Never use a wild plant unless an expert has identified it in person. Tap for the full notice.',
+                    style: TextStyle(color: AppTheme.muted, fontSize: 12.5, height: 1.3)),
+                children: [
                   Text(
                     'Never eat, brew or apply a wild plant unless an expert has identified it in person. Many deadly plants look like harmless ones: '
                     'poison hemlock resembles wild carrot, water hemlock resembles wild parsnip, and death camas resembles wild onion. '
                     'One wrong guess can kill.\n\n'
-                    'These books are historical. They record what people once used, not what is safe or effective today. Doses, remedies and '
+                    'These entries and books are historical. They record what people once used, not what is safe or effective today. Doses, remedies and '
                     'safety statements are out of date, and some plants once used as medicine are now known to be harmful. They are not medical advice. '
                     'In an emergency, call your local emergency number (911 in the US) or Poison Control (1-800-222-1222 in the US).',
                     style: TextStyle(height: 1.4),
                   ),
-                ]),
+                ],
               ),
             ),
             const SizedBox(height: 14),
+            const Text('Tap a plant to read about it', style: TextStyle(fontWeight: FontWeight.w800, fontSize: 16)),
+            const SizedBox(height: 2),
             const Text(
-              'Public-domain references: US Government publications and books published before 1926. Each is downloaded on request and then works offline. '
-              'Start with the poisonous-plant guides.',
-              style: TextStyle(color: AppTheme.muted, height: 1.4),
+              '25 flowering plants, shown with their traditional uses and cautions. A warning mark means take extra care.',
+              style: TextStyle(color: AppTheme.muted, fontSize: 12.5, height: 1.3),
             ),
             const SizedBox(height: 12),
-            if (cat == null)
-              const Text('This section is not in the catalog.', style: TextStyle(color: AppTheme.muted))
-            else
-              for (final i in cat.items) _PlantBook(item: i, sealed: settings.sealed),
+            FutureBuilder<List<PlantEntry>>(
+              future: PlantEntry.load(),
+              builder: (context, snap) {
+                if (snap.hasError) return const Text('The plant guide could not be loaded.', style: TextStyle(color: AppTheme.danger));
+                if (!snap.hasData) return const Padding(padding: EdgeInsets.all(24), child: Center(child: CircularProgressIndicator()));
+                return PlantGrid(plants: snap.data!);
+              },
+            ),
+            const SizedBox(height: 16),
+            // The downloadable books are tucked away so the pictures get the screen.
+            Card(
+              clipBehavior: Clip.antiAlias,
+              margin: EdgeInsets.zero,
+              child: ExpansionTile(
+                shape: const Border(),
+                collapsedShape: const Border(),
+                leading: const Icon(Icons.menu_book_outlined, color: AppTheme.accent),
+                title: Text('Reference books (${cat?.items.length ?? 0})', style: const TextStyle(fontWeight: FontWeight.w800)),
+                subtitle: const Text(
+                  'Public-domain books you can download for offline reading. Start with the poisonous-plant guides.',
+                  style: TextStyle(color: AppTheme.muted, fontSize: 12.5, height: 1.3),
+                ),
+                childrenPadding: const EdgeInsets.fromLTRB(12, 0, 12, 4),
+                children: [
+                  if (cat == null)
+                    const Padding(
+                      padding: EdgeInsets.only(bottom: 12),
+                      child: Text('This section is not in the catalog.', style: TextStyle(color: AppTheme.muted)),
+                    )
+                  else
+                    for (final i in cat.items) _PlantBook(item: i, sealed: settings.sealed),
+                ],
+              ),
+            ),
+            const SizedBox(height: 8),
+            const Text(
+              'Plant photos are from Wikimedia Commons under Creative Commons licences; each photo\'s author and licence are shown on its plant page.',
+              style: TextStyle(color: AppTheme.muted, fontSize: 11, height: 1.35),
+            ),
           ],
         ),
       ),

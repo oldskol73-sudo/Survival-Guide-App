@@ -56,5 +56,6 @@ flutter:
     - assets/maps/style.json
     - assets/home/
     - assets/library/
+    - assets/plants/
     - assets/tour/
     - assets/maps/fonts/Noto Sans Regular/
