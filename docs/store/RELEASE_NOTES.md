@@ -1,6 +1,6 @@
 # Blackout IQ: Griddown Resilience: release notes
 
-Version 1.0.0 (version code 4). First test release. Package: com.twelvescentspub.blackoutiq.
+Version 1.0.0 (version code 6). First test release. Package: com.twelvescentspub.blackoutiq.
 
 ## Play Console "What's new" (limit 500 characters; paste this)
 
@@ -69,6 +69,7 @@ Twelve Scents Publishing
 
 | Version code | Changes |
 |---|---|
+| 6 | New shield launcher and store icon (Android and iOS). Merged iOS work: Library artwork on every tile, 25-plant picture guide, large-text layout fixes, tour buttons. |
 | 4 | Notification permission requested before the first download (Android 13+). All Library categories start off; the Sync button waits until one is on. |
 | 3 | Home: Library tile artwork aligned with the other tiles. |
 | 2 | Tour: welcome and tiles pictures retaken with the Blackout IQ name. |
