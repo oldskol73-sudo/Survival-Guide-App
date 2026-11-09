@@ -56,19 +56,24 @@ class _HomeShellState extends State<HomeShell> {
     ];
     return Scaffold(
       body: SafeArea(child: Column(children: [const Masthead(), Expanded(child: pages[_tab])])),
-      bottomNavigationBar: NavigationBar(
-        selectedIndex: _tab,
-        onDestinationSelected: (i) => setState(() => _tab = i),
-        height: 88,
-        indicatorColor: Colors.transparent,
-        destinations: const [
-          NavigationDestination(icon: _NavThumb('home'), selectedIcon: _NavThumb('home', selected: true), label: 'Home'),
-          NavigationDestination(icon: _NavThumb('library'), selectedIcon: _NavThumb('library', selected: true), label: 'Library'),
-          NavigationDestination(icon: _NavThumb('videos'), selectedIcon: _NavThumb('videos', selected: true), label: 'Videos'),
-          NavigationDestination(icon: _NavThumb('family'), selectedIcon: _NavThumb('family', selected: true), label: 'Family'),
-          NavigationDestination(icon: _NavThumb('search'), selectedIcon: _NavThumb('search', selected: true), label: 'Search'),
-          NavigationDestination(icon: _NavThumb('settings'), selectedIcon: _NavThumb('settings', selected: true), label: 'Settings'),
-        ],
+      // Six tabs share the width, so the labels must not grow with the system text size: at a large size
+      // "Settings" wrapped onto two lines and pushed its picture out of line with the others.
+      bottomNavigationBar: MediaQuery.withClampedTextScaling(
+        maxScaleFactor: 1.0,
+        child: NavigationBar(
+          selectedIndex: _tab,
+          onDestinationSelected: (i) => setState(() => _tab = i),
+          height: 88,
+          indicatorColor: Colors.transparent,
+          destinations: const [
+            NavigationDestination(icon: _NavThumb('home'), selectedIcon: _NavThumb('home', selected: true), label: 'Home'),
+            NavigationDestination(icon: _NavThumb('library'), selectedIcon: _NavThumb('library', selected: true), label: 'Library'),
+            NavigationDestination(icon: _NavThumb('videos'), selectedIcon: _NavThumb('videos', selected: true), label: 'Videos'),
+            NavigationDestination(icon: _NavThumb('family'), selectedIcon: _NavThumb('family', selected: true), label: 'Family'),
+            NavigationDestination(icon: _NavThumb('search'), selectedIcon: _NavThumb('search', selected: true), label: 'Search'),
+            NavigationDestination(icon: _NavThumb('settings'), selectedIcon: _NavThumb('settings', selected: true), label: 'Settings'),
+          ],
+        ),
       ),
     );
   }
@@ -109,8 +114,11 @@ class LibraryScreen extends StatelessWidget {
     final settings = AppSettings.instance;
     return ListenableBuilder(
       listenable: Listenable.merge([engine, settings, engine.lowDisk]),
-      builder: (context, _) => ListView(
-        padding: const EdgeInsets.all(16),
+      builder: (context, _) => LayoutBuilder(builder: (context, box) {
+        // Every Library size is drawn in design pixels (rows are 796px wide) and scaled to fit the screen.
+        final s = (box.maxWidth - 2 * _libraryPad) / _libraryDesignWidth;
+        return ListView(
+        padding: const EdgeInsets.all(_libraryPad),
         children: [
           if (engine.lowDisk.value)
             Card(
@@ -121,19 +129,19 @@ class LibraryScreen extends StatelessWidget {
                 trailing: TextButton(onPressed: engine.resumeAfterLowDisk, child: const Text('Resume')),
               ),
             ),
-          _LibraryShortcut(icon: Icons.map_rounded, label: 'Offline Maps', page: const MapsScreen()),
-          const SizedBox(height: 10),
-          _LibraryShortcut(icon: Icons.note_add_rounded, label: 'My Documents: add your own PDFs', page: const MyDocumentsScreen()),
-          const SizedBox(height: 10),
-          _LibraryShortcut(icon: Icons.local_florist_rounded, label: 'Wild Medicinal Plants', page: const WildPlantsScreen()),
-          const SizedBox(height: 10),
+          _LibraryShortcut(art: 'maps', label: 'Offline Maps', page: const MapsScreen(), scale: s, height: 67, artWidth: 192),
+          SizedBox(height: 10 * s),
+          _LibraryShortcut(art: 'documents', label: 'My Documents: add your own PDFs', page: const MyDocumentsScreen(), scale: s, height: 67, artWidth: 192),
+          SizedBox(height: 10 * s),
+          _LibraryShortcut(art: 'plants', label: 'Wild Medicinal Plants', page: const WildPlantsScreen(), scale: s, height: 67, artWidth: 192),
+          SizedBox(height: 10 * s),
           // Field Guide and Gear live here now that Home follows the new tile layout.
           Row(children: [
-            Expanded(child: _LibraryShortcut(icon: Icons.menu_book_rounded, label: 'Field Guide', page: const FieldGuideScreen())),
-            const SizedBox(width: 10),
-            Expanded(child: _LibraryShortcut(icon: Icons.backpack_rounded, label: 'Gear', page: const GearScreen())),
+            Expanded(child: _LibraryShortcut(art: 'fieldguide', label: 'Field Guide', page: const FieldGuideScreen(), scale: s, height: 72, artWidth: 182, fontSize: 27)),
+            SizedBox(width: 22 * s),
+            Expanded(child: _LibraryShortcut(art: 'gear', label: 'Gear', page: const GearScreen(), scale: s, height: 72, artWidth: 182, fontSize: 27)),
           ]),
-          const SizedBox(height: 12),
+          SizedBox(height: 12 * s),
           if (!settings.sealed)
             FilledButton.icon(
               icon: const Icon(Icons.cloud_download_outlined),
@@ -141,63 +149,181 @@ class LibraryScreen extends StatelessWidget {
               style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
               onPressed: settings.enabledCategories.isEmpty ? null : () => engine.enqueueCategories(settings.enabledCategories),
             ),
-          const SizedBox(height: 12),
-          for (final c in Services.catalog.categories) _CategoryTile(category: c),
+          SizedBox(height: 12 * s),
+          for (final c in Services.catalog.categories) _CategoryTile(category: c, scale: s),
         ],
-      ),
+        );
+      }),
     );
   }
 }
 
-class _LibraryShortcut extends StatelessWidget {
-  const _LibraryShortcut({required this.icon, required this.label, required this.page});
-  final IconData icon;
-  final String label;
-  final Widget page;
+// Library art strips live in assets/library/: shortcut_NAME.png and cat_CATEGORYID.png.
+// The art is a fixed width and stretches to whatever height its row ends up at.
+class _LibraryArt extends StatelessWidget {
+  const _LibraryArt(this.file, {required this.width});
+  final String file;
+  final double width;
 
   @override
-  Widget build(BuildContext context) => Material(
-        color: AppTheme.card,
-        shape: RoundedRectangleBorder(side: const BorderSide(color: AppTheme.outline), borderRadius: BorderRadius.circular(16)),
-        child: InkWell(
-          borderRadius: BorderRadius.circular(16),
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => page)),
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 16, horizontal: 14),
-            child: Row(children: [
-              Icon(icon, color: AppTheme.accent),
-              const SizedBox(width: 10),
-              Expanded(child: Text(label, style: const TextStyle(fontWeight: FontWeight.w800, fontSize: 16))),
-              const Icon(Icons.chevron_right, color: AppTheme.muted),
-            ]),
+  Widget build(BuildContext context) => SizedBox(
+        width: width,
+        child: Image.asset('assets/library/$file.png', fit: BoxFit.cover, filterQuality: FilterQuality.medium, gaplessPlayback: true),
+      );
+}
+
+// Library geometry, in design pixels: rows are 796px wide in the artwork and scale to the screen.
+const double _libraryDesignWidth = 796;
+const double _libraryPad = 13;
+// Rows are a little taller than the artwork so every title and count stays fully visible.
+const double _libraryRowStretch = 1.15;
+const _rowGradient = LinearGradient(colors: [AppTheme.card, Color(0xFF0D2B21)]);
+
+// Height of each category row in the design, taken from the supplied strips.
+const _categoryRowHeights = {
+  'water': 84, 'mechanical': 83, 'medical': 80, 'food': 81, 'carpentry': 69, 'energy': 66, 'transport': 65,
+  'comms': 65, 'metallurgy': 65, 'kiwix': 68, 'maps': 66, 'longterm': 73, 'plants': 84, 'models': 93,
+};
+
+BoxDecoration _libraryRowDecoration(double scale) => BoxDecoration(
+      gradient: _rowGradient,
+      borderRadius: BorderRadius.circular(14 * scale),
+      border: Border.all(color: AppTheme.outline),
+    );
+
+class _LibraryShortcut extends StatelessWidget {
+  const _LibraryShortcut({
+    required this.art,
+    required this.label,
+    required this.page,
+    required this.scale,
+    required this.height,
+    required this.artWidth,
+    this.fontSize = 29,
+  });
+  final String art;
+  final String label;
+  final Widget page;
+  final double scale;
+  final double height;
+  final double artWidth;
+  final double fontSize;
+
+  @override
+  Widget build(BuildContext context) => Container(
+        decoration: _libraryRowDecoration(scale),
+        clipBehavior: Clip.antiAlias,
+        child: Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (_) => page)),
+            // The design height is a minimum: the row grows if the text needs more room.
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minHeight: height * scale * _libraryRowStretch),
+              child: IntrinsicHeight(
+                child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+                  _LibraryArt('shortcut_$art', width: artWidth * scale),
+                  SizedBox(width: 16 * scale),
+                  Expanded(
+                    child: Align(
+                      alignment: Alignment.centerLeft,
+                      child: Padding(
+                        padding: EdgeInsets.symmetric(vertical: 7 * scale),
+                        child: Text(label, maxLines: 2, style: TextStyle(fontWeight: FontWeight.w800, fontSize: fontSize * scale, height: 1.1, color: Colors.white)),
+                      ),
+                    ),
+                  ),
+                  Center(child: Icon(Icons.chevron_right, color: AppTheme.muted, size: 34 * scale)),
+                  SizedBox(width: 10 * scale),
+                ]),
+              ),
+            ),
           ),
         ),
       );
 }
 
-class _CategoryTile extends StatelessWidget {
-  const _CategoryTile({required this.category});
+// A slim art row (art, number, title, ready count, switch) that expands to list its items.
+// Built by hand because ExpansionTile enforces a minimum height far taller than the design.
+class _CategoryTile extends StatefulWidget {
+  const _CategoryTile({required this.category, required this.scale});
   final Category category;
+  final double scale;
+
+  @override
+  State<_CategoryTile> createState() => _CategoryTileState();
+}
+
+class _CategoryTileState extends State<_CategoryTile> {
+  bool _open = false;
 
   @override
   Widget build(BuildContext context) {
+    final category = widget.category;
+    final k = widget.scale;
     final s = AppSettings.instance;
     final enabled = s.enabledCategories.contains(category.id);
     final jobs = DownloadEngine.instance.jobs;
     final usable = category.items.where((i) => jobs[i.id]?.isUsable ?? false).length;
-    return Card(
-      child: ExpansionTile(
-        leading: Text(category.code, style: const TextStyle(color: AppTheme.accent, fontWeight: FontWeight.w700)),
-        title: Text(category.title),
-        subtitle: Text('$usable / ${category.items.length} ready', style: const TextStyle(color: AppTheme.muted)),
-        trailing: Switch(
-          value: enabled,
-          onChanged: s.sealed
-              ? null
-              : (v) => s.update((x) => v ? x.enabledCategories.add(category.id) : x.enabledCategories.remove(category.id)),
+    final height = (_categoryRowHeights[category.id] ?? 70) * k;
+    return Container(
+      margin: EdgeInsets.only(bottom: 6 * k),
+      decoration: _libraryRowDecoration(k),
+      clipBehavior: Clip.antiAlias,
+      child: Column(children: [
+        Material(
+          color: Colors.transparent,
+          child: InkWell(
+            onTap: () => setState(() => _open = !_open),
+            // The design height is a minimum: the row grows if the text needs more room.
+            child: ConstrainedBox(
+              constraints: BoxConstraints(minHeight: height * _libraryRowStretch),
+              child: IntrinsicHeight(
+                child: Row(crossAxisAlignment: CrossAxisAlignment.stretch, children: [
+                  _LibraryArt('cat_${category.id}', width: 232 * k),
+                  Center(child: Container(width: 1, height: height * 0.8, color: AppTheme.warn.withValues(alpha: 0.4))),
+                  SizedBox(
+                    width: 102 * k,
+                    child: Center(child: Text(category.code, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 26 * k))),
+                  ),
+                  Expanded(
+                    child: Padding(
+                      padding: EdgeInsets.symmetric(vertical: 7 * k),
+                      child: Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                        Text(category.title, maxLines: 2, style: TextStyle(color: Colors.white, fontWeight: FontWeight.w800, fontSize: 25 * k, height: 1.1)),
+                        Text('$usable / ${category.items.length} ready', style: TextStyle(color: AppTheme.muted, fontWeight: FontWeight.w700, fontSize: 22 * k, height: 1.1)),
+                      ]),
+                    ),
+                  ),
+                  // The standard switch is 52x32pt; fit it into the design's smaller toggle slot.
+                  Center(
+                    child: SizedBox(
+                      width: 90 * k,
+                      height: 50 * k,
+                      child: FittedBox(
+                        child: Switch(
+                          value: enabled,
+                          onChanged: s.sealed
+                              ? null
+                              : (v) => s.update((x) => v ? x.enabledCategories.add(category.id) : x.enabledCategories.remove(category.id)),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(width: 32 * k),
+                ]),
+              ),
+            ),
+          ),
         ),
-        children: [for (final i in category.items) _ItemRow(item: i)],
-      ),
+        AnimatedSize(
+          duration: const Duration(milliseconds: 180),
+          alignment: Alignment.topCenter,
+          child: _open
+              ? Column(children: [for (final i in category.items) _ItemRow(item: i)])
+              : const SizedBox(width: double.infinity),
+        ),
+      ]),
     );
   }
 }
