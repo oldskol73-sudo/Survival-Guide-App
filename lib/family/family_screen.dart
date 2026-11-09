@@ -413,18 +413,26 @@ class _PillButton extends StatelessWidget {
           child: InkWell(
             borderRadius: BorderRadius.circular(30),
             onTap: onTap,
-            child: SizedBox(
-              height: 56,
-              child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                Icon(icon, color: fg, size: 28),
-                const SizedBox(width: 8),
-                Container(width: 1, height: 30, color: fg.withValues(alpha: 0.45)),
-                const SizedBox(width: 10),
-                Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text(label, style: TextStyle(color: fg, fontWeight: FontWeight.w900, fontSize: 17, letterSpacing: 0.6)),
-                  Text(sub, style: TextStyle(color: fg.withValues(alpha: 0.85), fontWeight: FontWeight.w700, fontSize: 9.5, letterSpacing: 0.9)),
-                ]),
-              ]),
+            // 56 is a minimum: the button grows with the text, and the text shrinks to fit the width, so a large
+            // system text size can no longer overflow the button.
+            child: ConstrainedBox(
+              constraints: const BoxConstraints(minHeight: 56),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    Icon(icon, color: fg, size: 28),
+                    const SizedBox(width: 8),
+                    Container(width: 1, height: 30, color: fg.withValues(alpha: 0.45)),
+                    const SizedBox(width: 10),
+                    Column(mainAxisAlignment: MainAxisAlignment.center, crossAxisAlignment: CrossAxisAlignment.start, children: [
+                      Text(label, style: TextStyle(color: fg, fontWeight: FontWeight.w900, fontSize: 17, letterSpacing: 0.6)),
+                      Text(sub, style: TextStyle(color: fg.withValues(alpha: 0.85), fontWeight: FontWeight.w700, fontSize: 9.5, letterSpacing: 0.9)),
+                    ]),
+                  ]),
+                ),
+              ),
             ),
           ),
         ),

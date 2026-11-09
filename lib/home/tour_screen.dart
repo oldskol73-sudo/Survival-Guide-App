@@ -102,34 +102,46 @@ class _TourScreenState extends State<TourScreen> {
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20, 4, 20, 14),
-            child: Row(children: [
-              SizedBox(
-                width: 84,
-                child: _i == 0
-                    ? null
-                    : TextButton(onPressed: () => _pc.previousPage(duration: const Duration(milliseconds: 250), curve: Curves.easeOut), child: const Text('Back')),
-              ),
-              Expanded(
-                child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  for (var d = 0; d < _pages.length; d++)
-                    AnimatedContainer(
-                      duration: const Duration(milliseconds: 200),
-                      margin: const EdgeInsets.symmetric(horizontal: 3),
-                      width: d == _i ? 18 : 7,
-                      height: 7,
-                      decoration: BoxDecoration(color: d == _i ? AppTheme.accent : AppTheme.outline, borderRadius: BorderRadius.circular(4)),
-                    ),
-                ]),
-              ),
-              SizedBox(
-                width: 84,
-                child: FilledButton(
-                  onPressed: last ? _finish : () => _pc.nextPage(duration: const Duration(milliseconds: 250), curve: Curves.easeOut),
-                  style: FilledButton.styleFrom(backgroundColor: AppTheme.accent, foregroundColor: AppTheme.bg),
-                  child: Text(last ? 'Done' : 'Next'),
+            // Back and Next sit in equal-width slots so the dots stay centred. The text size is capped so a large
+            // system font cannot wrap "Next" onto two lines and push the button out of line with the dots.
+            child: MediaQuery.withClampedTextScaling(
+              maxScaleFactor: 1.15,
+              child: Row(children: [
+                SizedBox(
+                  width: 96,
+                  child: _i == 0
+                      ? null
+                      : TextButton(
+                          onPressed: () => _pc.previousPage(duration: const Duration(milliseconds: 250), curve: Curves.easeOut),
+                          child: const Text('Back', maxLines: 1, softWrap: false),
+                        ),
                 ),
-              ),
-            ]),
+                Expanded(
+                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                    for (var d = 0; d < _pages.length; d++)
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 200),
+                        margin: const EdgeInsets.symmetric(horizontal: 3),
+                        width: d == _i ? 18 : 7,
+                        height: 7,
+                        decoration: BoxDecoration(color: d == _i ? AppTheme.accent : AppTheme.outline, borderRadius: BorderRadius.circular(4)),
+                      ),
+                  ]),
+                ),
+                SizedBox(
+                  width: 96,
+                  child: FilledButton(
+                    onPressed: last ? _finish : () => _pc.nextPage(duration: const Duration(milliseconds: 250), curve: Curves.easeOut),
+                    style: FilledButton.styleFrom(
+                      backgroundColor: AppTheme.accent,
+                      foregroundColor: AppTheme.bg,
+                      padding: const EdgeInsets.symmetric(horizontal: 12),
+                    ),
+                    child: Text(last ? 'Done' : 'Next', maxLines: 1, softWrap: false),
+                  ),
+                ),
+              ]),
+            ),
           ),
         ]),
       ),
