@@ -59,7 +59,15 @@ class RagButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => FilledButton(
-        onPressed: rag.busy ? rag.stop : onPressed,
+        // Closing the keyboard first: it otherwise covers the answer, which appears just below this button.
+        onPressed: rag.busy
+            ? rag.stop
+            : onPressed == null
+                ? null
+                : () {
+                    FocusManager.instance.primaryFocus?.unfocus();
+                    onPressed!();
+                  },
         style: FilledButton.styleFrom(minimumSize: const Size.fromHeight(52)),
         child: Text(rag.busy ? 'Stop' : label),
       );

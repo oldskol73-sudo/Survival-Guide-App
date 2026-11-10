@@ -32,8 +32,10 @@ class Services {
       return null;
     }
 
-    // Preferred tier first; a large-tier phone can always run the small model.
-    return pathFor(tier.catalogTier) ?? (tier.tier == LlmTier.large ? pathFor('small') : null);
+    // A model made for this phone's tier first, otherwise any installed one. The catalog now ships a single model
+    // (Qwen2.5-1.5B) for every tier: the 1B Llama it replaced refused a plain water question and added two
+    // alternative bleach doses together, so smaller phones are better served by Qwen, or by passages only.
+    return pathFor(tier.catalogTier) ?? pathFor(null);
   }
 
   static RagPipeline pipeline() => RagPipeline(

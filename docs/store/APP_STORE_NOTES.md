@@ -10,7 +10,7 @@
 ## Still to do on a Mac
 
 1. Open `ios/Runner.xcworkspace`, set the signing team and the bundle identifier (the Android id is `com.twelvescentspub.blackoutiq`; pick the iOS one and keep it).
-2. The native pieces (sqlite-vec, llama.cpp, the ZIM reader) have not been built for iOS. llama.cpp is not pinned to a fixed version. Decide whether the first iOS release ships without on-device AI, which is the quickest route.
+2. On-device AI: llama.cpp (release b12224, checksum-pinned in `ios/LocalAI/Package.swift`) and the app's `native/llama_shim` bridge are built into the iOS app, which needs iOS 16.4 or later. The language model (Qwen2.5-1.5B) is downloaded by the user and is not bundled. The engine has no iOS Simulator build, so it runs on a real iPhone only. sqlite-vec (semantic search) and the ZIM reader are not built for iOS yet; search falls back to keywords.
 3. Add the app icon set and launch screen artwork.
 4. `flutter build ipa --release`, upload with Transporter, test through TestFlight.
 

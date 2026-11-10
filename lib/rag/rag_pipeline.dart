@@ -50,12 +50,13 @@ class RagFailure extends RagEvent {
   final String message;
 }
 
+// Tuned against a real Qwen2.5-1.5B model. Small models ignore rules stated only in the system prompt, so the
+// rules are repeated after the question (see _userPrompt). The refusal wording is deliberately narrow: a stricter
+// version made the model refuse questions the sources answer directly, and a looser one let it answer from memory.
 const _systemPrompt = '''
-You are an offline field reference assistant. Answer ONLY from the numbered sources provided.
-Give exact procedures, quantities and units as written in the sources. Cite every fact with its
-source tag, for example [S1] or [S2]. If the sources do not contain the answer, reply exactly:
-"The library does not cover this." Do not guess. For medical, chemical or electrical steps, remind
-the reader to confirm against the cited page.''';
+You are an offline field reference assistant. Answer using the facts in the numbered sources, and cite the source tag such as [S1] after each fact. Never add facts from your own knowledge. Give procedures, quantities and units exactly as written in the sources. Only if the sources contain nothing relevant to the question, reply with exactly: The library does not cover this.''';
+
+const _refusal = 'The library does not cover this.';
 
 class RagPipeline {
   RagPipeline({required this.fts, required this.vectors, required this.embedder, required this.llm, required this.tier, required this.modelPath});
@@ -123,12 +124,14 @@ class RagPipeline {
 
     // 4. Stream.
     yield RagStatus('Answering…');
+    final answer = StringBuffer();
     await for (final e in llm!.generate(_systemPrompt, user, maxTokens: tier.maxNewTokens)) {
       switch (e) {
         case LlmToken(:final text):
+          answer.write(text);
           yield RagToken(text);
         case LlmDone(:final cancelled):
-          yield RagDone(retrievalOnly: false, cancelled: cancelled);
+          yield RagDone(retrievalOnly: false, cancelled: cancelled, reason: cancelled ? null : _groundingWarning(answer.toString()));
         case LlmError(:final message):
           yield RagFailure(message);
       }
@@ -136,6 +139,15 @@ class RagPipeline {
   }
 
   void cancel() => llm?.cancel();
+
+  /// A small model can drift from the sources. An answer that cites no source tag at all is not grounded in the
+  /// library, so the reader is told to check it against the passages instead of trusting it.
+  static String? _groundingWarning(String answer) {
+    final text = answer.trim();
+    if (text.isEmpty || text.startsWith(_refusal)) return null;
+    if (RegExp(r'\[S\d+\]').hasMatch(text)) return null;
+    return 'This answer does not cite the library. Check it against the passages below before relying on it.';
+  }
 
   String? _cannotGenerateReason() {
     if (!tier.canGenerate) return 'This device has too little memory for on-device AI. Showing the best passages.';
@@ -157,6 +169,8 @@ class RagPipeline {
     }
     b.writeln('Question: $q');
     if (instruction != null) b.writeln(instruction);
+    b.writeln('\nAnswer from the sources above and put the source tag, like [S1], after each fact. '
+        'If the sources are about something else entirely, reply exactly: $_refusal');
     return b.toString();
   }
 
