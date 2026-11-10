@@ -91,7 +91,7 @@
 	<key>NSFaceIDUsageDescription</key>
 	<string>Unlocks your private documents vault. Nothing leaves this device.</string>
 	<key>NSCameraUsageDescription</key>
-	<string>Photograph a document to store it in your private vault.</string>
+	<string>Photograph a document to store it in your private vault, or scan a family code shared by someone you know. Photos and scans stay on this phone.</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Choose a photo of a document to store it in your private vault.</string>
 </dict>

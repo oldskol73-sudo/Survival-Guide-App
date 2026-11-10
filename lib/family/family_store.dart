@@ -1,5 +1,5 @@
 // Family tab data: members, emergency contacts and gathering points. One small JSON file on the
-// device (atomic write). Nothing is uploaded; sharing is a copy/paste code the user sends themselves.
+// device (atomic write). Nothing is uploaded; sharing is a passphrase-encrypted QR/paste code the user sends themselves.
 
 import 'dart:convert';
 import 'dart:io';
@@ -73,19 +73,38 @@ class FamilyStore extends ChangeNotifier {
 
   static String newId() => DateTime.now().microsecondsSinceEpoch.toString();
 
-  // ----- share / import (copy-paste code, works with any messaging app, no network needed here)
+  // ----- share / import. Sharing is always encrypted (see family_code.dart); the store only deals in JSON.
 
-  static const _prefix = 'SNFAMILY1:';
+  bool get isEmpty => members.isEmpty && contacts.isEmpty && places.isEmpty;
 
-  String exportCode() => _prefix + base64Url.encode(utf8.encode(jsonEncode(_toJson(withCountry: false))));
+  /// The family details as JSON, ready to be encrypted into a share code. The country choice stays on this phone.
+  String exportJson() => jsonEncode(_toJson(withCountry: false));
 
-  /// Merges a pasted code into this device's data. Returns how many new entries were added, or null if invalid.
+  /// Older plain-text codes ("SNFAMILY1:"). They can still be imported but this app no longer creates them.
+  static const _legacyPrefix = 'SNFAMILY1:';
+
+  /// Imports an older plain-text code. Returns how many new entries were added, or null if it is not valid.
   Future<int?> importCode(String raw) async {
     final code = raw.trim();
-    if (!code.startsWith(_prefix)) return null;
+    if (!code.startsWith(_legacyPrefix)) return null;
+    try {
+      return await importJson(utf8.decode(base64Url.decode(code.substring(_legacyPrefix.length))));
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// Merges shared family JSON into this device's data. Returns how many new entries were added, or null if invalid.
+  Future<int?> importJson(String json) async {
     Map<String, dynamic> j;
     try {
-      j = jsonDecode(utf8.decode(base64Url.decode(code.substring(_prefix.length)))) as Map<String, dynamic>;
+      j = jsonDecode(json) as Map<String, dynamic>;
+      // Parse everything first so a malformed code changes nothing.
+      for (final k in const ['members', 'contacts', 'places']) {
+        for (final m in (j[k] as List? ?? const []).cast<Map<String, dynamic>>()) {
+          FamilyEntry.fromJson(m);
+        }
+      }
     } catch (_) {
       return null;
     }

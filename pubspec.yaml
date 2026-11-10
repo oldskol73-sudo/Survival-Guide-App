@@ -1,7 +1,7 @@
 name: survival_node_mobile
 description: Sovereign offline-first technical knowledge library with an enforced air gap.
 publish_to: none
-version: 1.0.0+6
+version: 1.0.0+4
 
 environment:
   sdk: ">=3.10.0 <4.0.0"
@@ -36,6 +36,8 @@ dependencies:
   geolocator: ^14.1.2
   url_launcher: ^6.3.1        # opens a YouTube link in the YouTube app or browser (Videos tab)
   file_picker: ^13.3.2
+  qr_flutter: ^4.1.0
+  mobile_scanner: ^7.5.0
 
 dev_dependencies:
   flutter_test:

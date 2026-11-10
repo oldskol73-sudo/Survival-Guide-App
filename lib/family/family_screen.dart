@@ -3,11 +3,11 @@
 import 'dart:ui' show PlatformDispatcher;
 
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 
 import '../core/theme.dart';
 import '../vault/vault_screen.dart';
 import 'emergency_numbers.dart';
+import 'family_share.dart';
 import 'family_store.dart';
 
 class FamilyScreen extends StatelessWidget {
@@ -34,7 +34,7 @@ class FamilyScreen extends StatelessWidget {
             kind: EntryKind.contact,
             title: 'Emergency Contacts',
             top: _LocalEmergencyCard(store: store),
-            emptyText: 'Tap + to add a doctor, neighbor or out-of-town contact',
+            emptyText: 'Nothing here yet. Tap + to add a doctor, neighbor or out-of-town contact',
             icon: Icons.call_outlined,
             noteLabel: 'Role or notes',
           ),
@@ -45,7 +45,7 @@ class FamilyScreen extends StatelessWidget {
             title: 'Family Members',
             banner: 'assets/home/family_members.jpg',
             bannerAlignX: -0.92,
-            emptyText: 'Tap the picture to add your first family member',
+            emptyText: 'Nothing here yet. Tap + to add your first family member',
             icon: Icons.groups_outlined,
             noteLabel: 'Medical notes, allergies, meds',
           ),
@@ -56,7 +56,7 @@ class FamilyScreen extends StatelessWidget {
             title: 'Gathering Points',
             banner: 'assets/home/family_places.jpg',
             bannerAlignX: -0.45,
-            emptyText: 'Tap the picture to add a place to meet if you are separated',
+            emptyText: 'Nothing here yet. Tap + to add a place to meet if you are separated',
             icon: Icons.place_outlined,
             noteLabel: 'Address or directions',
             showPhone: false,
@@ -106,9 +106,9 @@ class _SummaryCard extends StatelessWidget {
               ]),
               const SizedBox(height: 14),
               Row(children: [
-                Expanded(child: _PillButton(icon: Icons.qr_code_2, label: 'SHARE', sub: 'FAMILY CODE', gold: true, onTap: () => _share(context, store))),
+                Expanded(child: _PillButton(icon: Icons.qr_code_2, label: 'SHARE', sub: 'ENCRYPTED QR', gold: true, onTap: () => shareFamilyCode(context, store))),
                 const SizedBox(width: 12),
-                Expanded(child: _PillButton(icon: Icons.file_download_outlined, label: 'IMPORT', sub: 'PASTE CODE', gold: false, onTap: () => _import(context, store))),
+                Expanded(child: _PillButton(icon: Icons.qr_code_scanner_rounded, label: 'IMPORT', sub: 'SCAN OR PASTE', gold: false, onTap: () => importFamilyCode(context, store))),
               ]),
             ]),
           ),
@@ -117,38 +117,6 @@ class _SummaryCard extends StatelessWidget {
     );
   }
 
-  Future<void> _share(BuildContext context, FamilyStore store) async {
-    final messenger = ScaffoldMessenger.of(context);
-    final empty = store.members.isEmpty && store.contacts.isEmpty && store.places.isEmpty;
-    if (empty) {
-      messenger.showSnackBar(const SnackBar(content: Text('Add a member, contact or place first.')));
-      return;
-    }
-    await Clipboard.setData(ClipboardData(text: store.exportCode()));
-    messenger.showSnackBar(const SnackBar(content: Text('Family code copied. Paste it into a message to a family member, who taps Import.')));
-  }
-
-  Future<void> _import(BuildContext context, FamilyStore store) async {
-    final messenger = ScaffoldMessenger.of(context);
-    final c = TextEditingController();
-    final clip = (await Clipboard.getData(Clipboard.kTextPlain))?.text ?? '';
-    if (clip.trim().startsWith('SNFAMILY1:')) c.text = clip.trim();
-    if (!context.mounted) return;
-    final code = await showDialog<String>(
-      context: context,
-      builder: (ctx) => AlertDialog(
-        title: const Text('Import family code'),
-        content: TextField(controller: c, minLines: 2, maxLines: 5, decoration: const InputDecoration(hintText: 'Paste the code you received')),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx), child: const Text('Cancel')),
-          FilledButton(onPressed: () => Navigator.pop(ctx, c.text), child: const Text('Import')),
-        ],
-      ),
-    );
-    if (code == null) return;
-    final added = await store.importCode(code);
-    messenger.showSnackBar(SnackBar(content: Text(added == null ? 'That is not a valid family code.' : 'Added $added new ${added == 1 ? 'entry' : 'entries'}.')));
-  }
 }
 
 class _LocalEmergencyCard extends StatelessWidget {
@@ -234,12 +202,12 @@ class _LocalEmergencyCard extends StatelessWidget {
   }
 }
 
-class _Section extends StatelessWidget {
+class _Section extends StatefulWidget {
   const _Section({required this.store, required this.kind, required this.title, this.banner, this.bannerAlignX = -1, this.top, required this.emptyText, required this.icon, required this.noteLabel, this.showPhone = true});
   final FamilyStore store;
   final EntryKind kind;
   final String title;
-  final String? banner; // picture tile for the section; tap it to add
+  final String? banner; // picture tile for the section; tap it to show or hide the list
   final double bannerAlignX; // which part of the wide picture to show: -1 = left edge, 1 = right edge
   final Widget? top; // replaces the picture tile (the Emergency Contacts card)
   final String emptyText;
@@ -248,15 +216,54 @@ class _Section extends StatelessWidget {
   final bool showPhone;
 
   @override
+  State<_Section> createState() => _SectionState();
+}
+
+class _SectionState extends State<_Section> {
+  // The saved entries stay tucked away until the section is tapped, so the Family screen stays short.
+  bool _open = false;
+
+  FamilyStore get store => widget.store;
+  EntryKind get kind => widget.kind;
+  String get title => widget.title;
+  IconData get icon => widget.icon;
+
+  static const _anim = Duration(milliseconds: 200);
+
+  @override
   Widget build(BuildContext context) {
     final items = store.list(kind);
+    final count = items.length;
+    final top = widget.top;
+    final banner = widget.banner;
+    void toggle() => setState(() => _open = !_open);
     final addButton = IconButton.filled(tooltip: 'Add to $title', onPressed: () => _edit(context, null), icon: const Icon(Icons.add));
+    final chevron = AnimatedRotation(turns: _open ? 0.5 : 0, duration: _anim, child: const Icon(Icons.expand_more_rounded, color: AppTheme.muted));
     return Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
       if (top != null) ...[
-        top!,
-        const SizedBox(height: 12),
+        top,
+        const SizedBox(height: 8),
         Row(children: [
-          Expanded(child: Text('My $title', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
+          Expanded(
+            child: Semantics(
+              button: true,
+              label: 'My $title, $count saved',
+              hint: _open ? 'Tap to hide' : 'Tap to show',
+              excludeSemantics: true,
+              child: InkWell(
+                borderRadius: BorderRadius.circular(12),
+                onTap: toggle,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10, horizontal: 4),
+                  child: Row(children: [
+                    Expanded(child: Text(count == 0 ? 'My $title' : 'My $title ($count)', style: const TextStyle(fontSize: 18, fontWeight: FontWeight.w800))),
+                    chevron,
+                  ]),
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(width: 8),
           addButton,
         ]),
       ] else
@@ -264,14 +271,15 @@ class _Section extends StatelessWidget {
           Expanded(
             child: Semantics(
               button: true,
-              label: 'Add to $title',
+              label: '$title, $count saved',
+              hint: _open ? 'Tap to hide' : 'Tap to show',
               excludeSemantics: true,
               child: AspectRatio(
                 aspectRatio: 2,
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(20),
                   child: Stack(fit: StackFit.expand, children: [
-                    Image.asset(banner!, fit: BoxFit.cover, alignment: Alignment(bannerAlignX, 0), filterQuality: FilterQuality.medium),
+                    Image.asset(banner!, fit: BoxFit.cover, alignment: Alignment(widget.bannerAlignX, 0), filterQuality: FilterQuality.medium),
                     // Dark wash at the bottom so the live title reads over the picture.
                     const DecoratedBox(
                       decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Color(0x00061410), Color(0xF2061410)], stops: [0.6, 1.0])),
@@ -284,7 +292,7 @@ class _Section extends StatelessWidget {
                       child: FittedBox(
                         fit: BoxFit.scaleDown,
                         alignment: Alignment.centerLeft,
-                        child: Text(title,
+                        child: Text(count == 0 ? title : '$title  ·  $count',
                             maxLines: 1,
                             style: const TextStyle(
                               fontFamily: 'serif',
@@ -302,11 +310,11 @@ class _Section extends StatelessWidget {
                         width: 46,
                         height: 46,
                         decoration: BoxDecoration(color: const Color(0xCC061410), shape: BoxShape.circle, border: Border.all(color: const Color(0xFFE3B341), width: 1.6)),
-                        child: Icon(icon, color: const Color(0xFFE3B341), size: 26),
+                        child: AnimatedRotation(turns: _open ? 0.5 : 0, duration: _anim, child: const Icon(Icons.expand_more_rounded, color: Color(0xFFE3B341), size: 30)),
                       ),
                     ),
                     DecoratedBox(decoration: BoxDecoration(borderRadius: BorderRadius.circular(20), border: Border.all(color: AppTheme.outline, width: 1.5))),
-                    Material(color: Colors.transparent, child: InkWell(onTap: () => _edit(context, null))),
+                    Material(color: Colors.transparent, child: InkWell(onTap: toggle)),
                   ]),
                 ),
               ),
@@ -315,24 +323,33 @@ class _Section extends StatelessWidget {
           const SizedBox(width: 8),
           addButton,
         ]),
-      if (items.isEmpty) ...[
-        if (top != null)
-          Padding(
-            padding: const EdgeInsets.only(top: 8, left: 4),
-            child: InkWell(onTap: () => _edit(context, null), child: Text(emptyText, style: const TextStyle(color: AppTheme.muted))),
-          ),
-      ] else
-        for (final e in items)
-          Card(
-            child: ListTile(
-              leading: CircleAvatar(backgroundColor: AppTheme.accentSoft, foregroundColor: AppTheme.accent, child: Icon(icon, size: 20)),
-              title: Text(e.name, style: const TextStyle(fontWeight: FontWeight.w700)),
-              subtitle: (e.phone.isEmpty && e.note.isEmpty) ? null : Text([if (e.phone.isNotEmpty) e.phone, if (e.note.isNotEmpty) e.note].join('\n')),
-              isThreeLine: e.phone.isNotEmpty && e.note.isNotEmpty,
-              trailing: IconButton(tooltip: 'Delete', icon: const Icon(Icons.delete_outline), onPressed: () => _confirmDelete(context, e)),
-              onTap: () => _edit(context, e),
-            ),
-          ),
+      AnimatedSize(
+        duration: _anim,
+        alignment: Alignment.topCenter,
+        child: !_open
+            ? const SizedBox(width: double.infinity)
+            : Padding(
+                padding: const EdgeInsets.only(top: 8),
+                child: items.isEmpty
+                    ? Padding(
+                        padding: const EdgeInsets.only(left: 4, bottom: 4),
+                        child: InkWell(onTap: () => _edit(context, null), child: Text(widget.emptyText, style: const TextStyle(color: AppTheme.muted))),
+                      )
+                    : Column(children: [
+                        for (final e in items)
+                          Card(
+                            child: ListTile(
+                              leading: CircleAvatar(backgroundColor: AppTheme.accentSoft, foregroundColor: AppTheme.accent, child: Icon(icon, size: 20)),
+                              title: Text(e.name, style: const TextStyle(fontWeight: FontWeight.w700)),
+                              subtitle: (e.phone.isEmpty && e.note.isEmpty) ? null : Text([if (e.phone.isNotEmpty) e.phone, if (e.note.isNotEmpty) e.note].join('\n')),
+                              isThreeLine: e.phone.isNotEmpty && e.note.isNotEmpty,
+                              trailing: IconButton(tooltip: 'Delete', icon: const Icon(Icons.delete_outline), onPressed: () => _confirmDelete(context, e)),
+                              onTap: () => _edit(context, e),
+                            ),
+                          ),
+                      ]),
+              ),
+      ),
     ]);
   }
 
@@ -350,29 +367,44 @@ class _Section extends StatelessWidget {
     if (ok == true) await store.remove(kind, e);
   }
 
+  /// Short on purpose: a long title wrapped onto three lines and left almost no room for the fields above the keyboard.
+  String get _addTitle => switch (kind) {
+        EntryKind.contact => 'New contact',
+        EntryKind.member => 'New family member',
+        EntryKind.place => 'New gathering point',
+      };
+
   Future<void> _edit(BuildContext context, FamilyEntry? existing) async {
     final name = TextEditingController(text: existing?.name ?? '');
     final phone = TextEditingController(text: existing?.phone ?? '');
     final note = TextEditingController(text: existing?.note ?? '');
     final saved = await showDialog<bool>(
       context: context,
-      builder: (ctx) => AlertDialog(
-        title: Text(existing == null ? 'Add to $title' : 'Edit'),
-        content: SingleChildScrollView(
-          child: Column(mainAxisSize: MainAxisSize.min, children: [
-            TextField(controller: name, autofocus: true, textCapitalization: TextCapitalization.words, decoration: const InputDecoration(labelText: 'Name')),
-            if (showPhone) ...[
-              const SizedBox(height: 12),
-              TextField(controller: phone, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'Phone')),
-            ],
-            const SizedBox(height: 12),
-            TextField(controller: note, minLines: 1, maxLines: 4, textCapitalization: TextCapitalization.sentences, decoration: InputDecoration(labelText: noteLabel)),
-          ]),
+      builder: (ctx) => MediaQuery.withClampedTextScaling(
+        maxScaleFactor: 1.2,
+        child: AlertDialog(
+          // Close to the screen edges and compact, so the Name, Phone and notes fields all fit above the keyboard.
+          insetPadding: const EdgeInsets.symmetric(horizontal: 20, vertical: 12),
+          titlePadding: const EdgeInsets.fromLTRB(22, 18, 22, 6),
+          contentPadding: const EdgeInsets.fromLTRB(22, 4, 22, 0),
+          title: Text(existing == null ? _addTitle : 'Edit', style: Theme.of(ctx).textTheme.titleLarge?.copyWith(fontWeight: FontWeight.w800)),
+          content: SingleChildScrollView(
+            child: Column(mainAxisSize: MainAxisSize.min, children: [
+              TextField(controller: name, autofocus: true, textCapitalization: TextCapitalization.words, decoration: const InputDecoration(labelText: 'Name')),
+              if (widget.showPhone) ...[
+                const SizedBox(height: 10),
+                TextField(controller: phone, keyboardType: TextInputType.phone, decoration: const InputDecoration(labelText: 'Phone')),
+              ],
+              const SizedBox(height: 10),
+              TextField(controller: note, minLines: 1, maxLines: 3, textCapitalization: TextCapitalization.sentences, decoration: InputDecoration(labelText: widget.noteLabel)),
+              const SizedBox(height: 4),
+            ]),
+          ),
+          actions: [
+            TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
+            FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Save')),
+          ],
         ),
-        actions: [
-          TextButton(onPressed: () => Navigator.pop(ctx, false), child: const Text('Cancel')),
-          FilledButton(onPressed: () => Navigator.pop(ctx, true), child: const Text('Save')),
-        ],
       ),
     );
     final n = name.text.trim();
