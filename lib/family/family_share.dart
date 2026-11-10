@@ -84,7 +84,7 @@ Future<String?> _askNewPassphrase(BuildContext context) {
                   decoration: InputDecoration(
                     labelText: 'Passphrase',
                     helperText:
-                        'At least 8 characters. Several words is easy to remember.',
+                        'At least 8 characters. A few words works well.',
                     suffixIcon: IconButton(
                       tooltip: hidden ? 'Show' : 'Hide',
                       icon: Icon(
