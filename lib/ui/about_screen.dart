@@ -50,7 +50,7 @@ class AboutScreen extends StatelessWidget {
         bullet('Manuals and guides in the catalog are mainly US Government works from FEMA, CDC, NOAA, USGS, USDA and the US Army, plus archive copies of older public-domain publications. Each item lists its own licence in the Library.'),
         bullet('Wikipedia articles, if you download them through Kiwix, are © Wikipedia contributors under CC BY-SA 4.0.'),
         bullet('On-device AI models, if you install them: Qwen2.5 (Apache 2.0) and all-MiniLM-L6-v2 (Apache 2.0). The AI engine is llama.cpp (MIT).'),
-        bullet('Video tutorials belong to their creators and play on YouTube. The list links to videos from The Prepping Team, City Prepping, Canadian Prepper, Lead Farmer and FEMA. Nothing is copied or downloaded.'),
+        bullet('Video tutorials belong to their creators and play on YouTube. The list links to videos from The Prepping Team, City Prepping, Canadian Prepper, Lead Farmer, We Da People Podcast and FEMA. Nothing is copied or downloaded.'),
         const SizedBox(height: 24),
         OutlinedButton.icon(
           onPressed: () => showLicensePage(context: context, applicationName: 'Blackout IQ: Griddown Resilience', applicationVersion: kAppVersionLabel.replaceFirst('Version ', '')),
