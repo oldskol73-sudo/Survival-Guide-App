@@ -6,6 +6,7 @@ import '../core/services.dart';
 import '../core/theme.dart';
 import '../rag/rag_controller.dart';
 import '../viewers/viewer_screens.dart';
+import 'answer_text.dart';
 
 class RagResult extends StatelessWidget {
   const RagResult({super.key, required this.rag});
@@ -19,7 +20,7 @@ class RagResult extends StatelessWidget {
       if (rag.notice != null) Padding(padding: const EdgeInsets.only(top: 12), child: Text(rag.notice!, style: const TextStyle(color: AppTheme.warn))),
       if (rag.error != null) Padding(padding: const EdgeInsets.only(top: 12), child: Text(rag.error!, style: const TextStyle(color: AppTheme.danger))),
       if (rag.answer.isNotEmpty)
-        Padding(padding: const EdgeInsets.only(top: 16), child: SelectableText(rag.answer, style: const TextStyle(fontSize: 16, height: 1.55))),
+        Padding(padding: const EdgeInsets.only(top: 16), child: SelectableText.rich(answerSpan(rag.answer, const TextStyle(fontSize: 16, height: 1.55)))),
       if (rag.sources.isNotEmpty) ...[
         const SizedBox(height: 20),
         const Text('Sources', style: TextStyle(fontWeight: FontWeight.w700)),
