@@ -17,7 +17,7 @@
 Blackout IQ keeps practical survival knowledge on your phone, so it works when the network does not.
 
 WHAT YOU GET
-- A library of free manuals and guides on water, food, first aid, shelter, power and more. Most are public-domain US Government publications (FEMA, CDC, EPA, NOAA, USGS, USDA, US Army, US Navy), plus older public-domain titles and a few papers written by us. Each title links to its original source, and where an agency has issued a newer edition we link to that. Download the ones you want; they stay on the phone.
+- A library of free manuals and guides on water, food, first aid, shelter, power and more. Each title links to its original source, and where an agency has issued a newer edition we link to that. Download the ones you want; they stay on the phone.
 - Step By Step Problem Solver, Answer Questions and Priority Plan: describe your situation in plain words and get the best passages from the library, with the page to read. With an optional on-device AI model installed, answers are written out as steps.
 - Offline Maps: download a map of the area around you (choose how many miles), then use it with no signal.
 - Survival Kit Checklist, Gear list and a Field Guide that groups the library by topic.
