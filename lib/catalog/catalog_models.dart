@@ -30,6 +30,7 @@ class CatalogItem {
     required this.categoryId,
     required this.kind,
     this.tier,
+    this.sourceUrl,
   });
 
   final String id;
@@ -44,6 +45,8 @@ class CatalogItem {
   final bool index; // run FTS + embeddings after verification
   final String categoryId;
   final CategoryKind kind;
+  /// Official page of the agency that published the item (for example a .gov address). Shown to the user as a link.
+  final Uri? sourceUrl;
   final String? tier; // models only: "small" | "large"
 
   /// True for a PDF found on disk by the local-library scan (not downloaded through the catalog).
@@ -85,6 +88,7 @@ class CatalogItem {
       categoryId: categoryId,
       kind: kind,
       tier: j['tier'] as String?,
+      sourceUrl: j['sourceUrl'] == null ? null : parseUrl(j['sourceUrl'] as String),
     );
   }
 }

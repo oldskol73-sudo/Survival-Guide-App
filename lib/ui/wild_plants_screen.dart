@@ -13,6 +13,7 @@ import '../core/theme.dart';
 import '../downloads/download_engine.dart';
 import '../viewers/viewer_screens.dart';
 import 'plant_guide.dart';
+import 'source_link.dart';
 
 const _what = <String, String>{
   'millspaugh-medicinal-plants-v1-1892': 'Colour plates of 180 plants with description, range, history, uses and poisoning effects.',
@@ -166,6 +167,7 @@ class _PlantBook extends StatelessWidget {
           Text(_what[item.id] ?? '', style: const TextStyle(color: AppTheme.muted, height: 1.35)),
           const SizedBox(height: 4),
           Text('Licence: ${item.license}', style: const TextStyle(color: AppTheme.muted, fontSize: 12)),
+          if (item.sourceUrl != null) SourceLink(url: item.sourceUrl!),
           const SizedBox(height: 8),
           Row(children: [
             Expanded(child: Text(status, style: TextStyle(color: statusColor))),

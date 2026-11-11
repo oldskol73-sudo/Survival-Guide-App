@@ -32,6 +32,19 @@ BUILT FOR WHEN THINGS GO WRONG
 IMPORTANT
 Blackout IQ is reference material. Information can be wrong, out of date or not fit your situation, and AI-written answers can contain mistakes. It is not medical, legal or professional advice, and the app cannot call or alert emergency services. In an emergency, call your local emergency number (911 in the US).
 
+GOVERNMENT INFORMATION AND SOURCES
+Blackout IQ is not a government app. It is not affiliated with, endorsed by or sponsored by any government agency. The government manuals in the library are public-domain US Government works, and each one links to its original publisher inside the app (Library, and Settings > About). Official sources:
+- FEMA, Are You Ready?: https://www.ready.gov/collection/are-you-ready
+- Ready.gov wildfire, heat and pets: https://www.ready.gov/wildfires, https://www.ready.gov/heat, https://www.ready.gov/pets
+- EPA, emergency disinfection of drinking water: https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water
+- CDC, emergency wound care: https://www.cdc.gov/disasters/hurricanes/pdf/woundcare.pdf
+- NOAA National Weather Service, tornado safety: https://www.weather.gov/safety/tornado
+- USGS, earthquake handbook: https://pubs.usgs.gov/gip/2005/15/
+- USDA, home canning: https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation
+- US Army Publishing Directorate: https://armypubs.army.mil/ (current first aid manual ATP 4-02.11, field hygiene TC 4-02.3, map reading TC 3-25.26, carpentry TM 3-34.47)
+- US Navy: https://www.navy.mil/
+For current official guidance, always check the agency sites above.
+
 Map data (c) OpenStreetMap contributors. Video tutorials belong to their creators and play on YouTube.
 ```
 

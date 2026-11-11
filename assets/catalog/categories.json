@@ -10,7 +10,7 @@
       "subdirs": ["Purification", "Wells_Pumps", "Waste_Latrines", "Testing"],
       "items": [
         {
-          "id": "epa-emergency-disinfection",
+          "id": "epa-emergency-disinfection", "sourceUrl": "https://www.epa.gov/ground-water-and-drinking-water/emergency-disinfection-drinking-water",
           "title": "EPA - Emergency Disinfection of Drinking Water",
           "url": "https://19january2021snapshot.epa.gov/sites/static/files/2017-09/documents/emergency_disinfection_of_drinking_water_sept2017.pdf",
           "mirrors": [],
@@ -19,7 +19,7 @@
           "license": "US Government work", "index": true
         },
         {
-          "id": "fm-21-10",
+          "id": "fm-21-10", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=105251",
           "title": "FM 21-10 / MCRP 4-11.1D - Field Hygiene and Sanitation",
           "url": "https://archive.org/download/FM21-10_2000/FM21-10_2000.pdf",
           "mirrors": [],
@@ -34,7 +34,7 @@
           "mirrors": [],
           "sha256": null, "sha256Url": null, "sizeBytes": null,
           "target": "01_Water_Sanitation/Purification/Drinking_Water_Still_Construction.pdf",
-          "license": "US Government work", "index": true
+          "license": "Self-produced paper by Twelve Scents Publishing", "index": true
         }
       ]
     },
@@ -44,7 +44,7 @@
       "subdirs": ["Electrical_Theory", "Wiring_Codes", "Small_Engines", "Generators"],
       "items": [
         {
-          "id": "neets-01",
+          "id": "neets-01", "sourceUrl": "https://www.navy.mil/",
           "title": "Navy NEETS Module 1 - Matter, Energy and Direct Current",
           "url": "https://archive.org/download/NEETSModule01/NEETSModule01.pdf",
           "mirrors": [],
@@ -59,12 +59,12 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["First_Aid", "Field_Medicine", "Pharmacology", "Dental"],
       "items": [
-        { "id": "fm-4-25-11", "title": "FM 4-25.11 - First Aid (2002, Change 1 2004)", "url": "https://ciehub.info/ref/FM/4-25x11_2004.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/First_Aid/FM 4-25.11 First Aid (2002, Change 1 2004).pdf", "license": "US Government work (Department of the Army)", "index": true },
-        { "id": "fm-21-11", "title": "FM 21-11 - First Aid for Soldiers (1991)", "url": "https://ciehub.info/ref/FM/21-11_1991.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/First_Aid/FM 21-11 First Aid for Soldiers (1991).pdf", "license": "US Government work (Department of the Army)", "index": true },
-        { "id": "cdc-wound-care-public", "title": "CDC - Emergency Wound Care After a Natural Disaster", "url": "https://webarchive.library.unt.edu/web/20130222163741if_/http://www.bt.cdc.gov/disasters/pdf/woundcare.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/Emergency_Wound_Care/CDC Emergency Wound Care After a Natural Disaster.pdf", "license": "US Government work (CDC)", "index": true },
-        { "id": "cdc-wound-mgmt-hcp", "title": "CDC - Emergency Wound Management for Healthcare Professionals", "url": "https://webarchive.library.unt.edu/web/20090114230604if_/http://www.bt.cdc.gov/disasters/pdf/emergwoundhcp.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/Emergency_Wound_Care/CDC Emergency Wound Management for Healthcare Professionals.pdf", "license": "US Government work (CDC)", "index": true },
+        { "id": "fm-4-25-11", "sourceUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf", "title": "FM 4-25.11 - First Aid (2002, Change 1 2004)", "url": "https://ciehub.info/ref/FM/4-25x11_2004.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/First_Aid/FM 4-25.11 First Aid (2002, Change 1 2004).pdf", "license": "US Government work (Department of the Army)", "index": true },
+        { "id": "fm-21-11", "sourceUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf", "title": "FM 21-11 - First Aid for Soldiers (1991)", "url": "https://ciehub.info/ref/FM/21-11_1991.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/First_Aid/FM 21-11 First Aid for Soldiers (1991).pdf", "license": "US Government work (Department of the Army)", "index": true },
+        { "id": "cdc-wound-care-public", "sourceUrl": "https://www.cdc.gov/disasters/hurricanes/pdf/woundcare.pdf", "title": "CDC - Emergency Wound Care After a Natural Disaster", "url": "https://webarchive.library.unt.edu/web/20130222163741if_/http://www.bt.cdc.gov/disasters/pdf/woundcare.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/Emergency_Wound_Care/CDC Emergency Wound Care After a Natural Disaster.pdf", "license": "US Government work (CDC)", "index": true },
+        { "id": "cdc-wound-mgmt-hcp", "sourceUrl": "https://archive.cdc.gov/www_cdc_gov/disasters/management.html", "title": "CDC - Emergency Wound Management for Healthcare Professionals", "url": "https://webarchive.library.unt.edu/web/20090114230604if_/http://www.bt.cdc.gov/disasters/pdf/emergwoundhcp.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "03_Medical/Emergency_Wound_Care/CDC Emergency Wound Management for Healthcare Professionals.pdf", "license": "US Government work (CDC)", "index": true },
         {
-          "id": "tc-4-02-1",
+          "id": "tc-4-02-1", "sourceUrl": "https://armypubs.army.mil/epubs/DR_pubs/DR_a/ARN46159-ATP_4-02.11-000-WEB-1.pdf",
           "title": "TC 4-02.1 - First Aid",
           "url": "https://ciehub.info/ref/TC/4-02x1_2018.pdf",
           "mirrors": [],
@@ -79,15 +79,15 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["Canning_Preservation", "Gardening_Seeds", "Livestock", "Foraging"],
       "items": [
-        { "id": "usda-canning-00", "title": "USDA Home Canning - Introduction", "url": "https://nchfp.uga.edu/papers/guide/INTRO_HomeCanrev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_00_Introduction.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-01", "title": "USDA Guide 1 - Principles of Home Canning", "url": "https://nchfp.uga.edu/papers/guide/GUIDE01_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_01_Principles.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-02", "title": "USDA Guide 2 - Fruit and Fruit Products", "url": "https://nchfp.uga.edu/papers/guide/GUIDE02_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_02_Fruit.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-03", "title": "USDA Guide 3 - Tomatoes", "url": "https://nchfp.uga.edu/papers/guide/GUIDE03_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_03_Tomatoes.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-04", "title": "USDA Guide 4 - Vegetables", "url": "https://nchfp.uga.edu/papers/guide/GUIDE04_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_04_Vegetables.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-05", "title": "USDA Guide 5 - Poultry, Red Meats, Seafoods", "url": "https://nchfp.uga.edu/papers/guide/GUIDE05_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_05_Meat_Poultry_Seafood.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-06", "title": "USDA Guide 6 - Fermented and Pickled", "url": "https://nchfp.uga.edu/papers/guide/GUIDE06_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_06_Fermented_Pickled.pdf", "license": "US Government work", "index": true },
-        { "id": "usda-canning-07", "title": "USDA Guide 7 - Jams and Jellies", "url": "https://nchfp.uga.edu/papers/guide/GUIDE07_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_07_Jams_Jellies.pdf", "license": "US Government work", "index": true },
-        { "id": "fm-21-76-1957", "title": "FM 21-76 - Survival (1957)", "url": "https://archive.org/download/FM21-76Survival1957/FM21-76Survival1957.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Foraging/FM_21-76_Survival_1957.pdf", "license": "US Government work", "index": true }
+        { "id": "usda-canning-00", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Home Canning - Introduction", "url": "https://nchfp.uga.edu/papers/guide/INTRO_HomeCanrev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_00_Introduction.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-01", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 1 - Principles of Home Canning", "url": "https://nchfp.uga.edu/papers/guide/GUIDE01_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_01_Principles.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-02", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 2 - Fruit and Fruit Products", "url": "https://nchfp.uga.edu/papers/guide/GUIDE02_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_02_Fruit.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-03", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 3 - Tomatoes", "url": "https://nchfp.uga.edu/papers/guide/GUIDE03_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_03_Tomatoes.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-04", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 4 - Vegetables", "url": "https://nchfp.uga.edu/papers/guide/GUIDE04_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_04_Vegetables.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-05", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 5 - Poultry, Red Meats, Seafoods", "url": "https://nchfp.uga.edu/papers/guide/GUIDE05_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_05_Meat_Poultry_Seafood.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-06", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 6 - Fermented and Pickled", "url": "https://nchfp.uga.edu/papers/guide/GUIDE06_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_06_Fermented_Pickled.pdf", "license": "US Government work", "index": true },
+        { "id": "usda-canning-07", "sourceUrl": "https://www.nal.usda.gov/research-tools/food-safety-research-projects/national-center-home-food-processing-and-preservation", "title": "USDA Guide 7 - Jams and Jellies", "url": "https://nchfp.uga.edu/papers/guide/GUIDE07_HomeCan_rev0715.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Canning_Preservation/USDA_Canning_07_Jams_Jellies.pdf", "license": "US Government work", "index": true },
+        { "id": "fm-21-76-1957", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/FM.aspx", "title": "FM 21-76 - Survival (1957)", "url": "https://archive.org/download/FM21-76Survival1957/FM21-76Survival1957.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "04_Food_Agriculture/Foraging/FM_21-76_Survival_1957.pdf", "license": "US Government work", "index": true }
       ]
     },
     {
@@ -95,7 +95,7 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["Framing_Shelter", "Joinery", "Tools_Sharpening", "Plans"],
       "items": [
-        { "id": "fm-5-426", "title": "FM 5-426 - Carpentry", "url": "https://archive.org/download/FM5-426/FM5-426.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "05_Carpentry/Framing_Shelter/FM_5-426_Carpentry.pdf", "license": "US Government work", "index": true }
+        { "id": "fm-5-426", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=1025240", "title": "FM 5-426 - Carpentry", "url": "https://archive.org/download/FM5-426/FM5-426.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "05_Carpentry/Framing_Shelter/FM_5-426_Carpentry.pdf", "license": "US Government work", "index": true }
       ]
     },
     {
@@ -109,7 +109,7 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["Engine_Principles", "Electrical_Systems", "Bicycles", "Vehicle_Manuals"],
       "items": [
-        { "id": "tm-9-2700", "title": "TM 9-2700 - Principles of Automotive Vehicles", "url": "https://archive.org/download/military-automotive-manuals/TM_9-2700_1947_PRINCIPLES_OF_AUTOMOTIVE_VEHICLES.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "07_Auto_Transport/Engine_Principles/TM_9-2700_Principles_of_Automotive_Vehicles_1947.pdf", "license": "US Government work", "index": true }
+        { "id": "tm-9-2700", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/TM_9.aspx", "title": "TM 9-2700 - Principles of Automotive Vehicles", "url": "https://archive.org/download/military-automotive-manuals/TM_9-2700_1947_PRINCIPLES_OF_AUTOMOTIVE_VEHICLES.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "07_Auto_Transport/Engine_Principles/TM_9-2700_Principles_of_Automotive_Vehicles_1947.pdf", "license": "US Government work", "index": true }
       ]
     },
     {
@@ -117,8 +117,8 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["Radio_Theory", "Antennas", "Frequencies_Plans", "Ham_Licensing"],
       "items": [
-        { "id": "fm-3-25-26", "title": "FM 3-25.26 - Map Reading and Land Navigation (2001)", "url": "https://ciehub.info/ref/FM/3-25x26_2001_html.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "08_Communications/Navigation/FM 3-25.26 Map Reading and Land Navigation (2001).pdf", "license": "US Government work (Department of the Army)", "index": true },
-        { "id": "fm-24-18", "title": "FM 24-18 - Tactical Single-Channel Radio Communications Techniques", "url": "https://archive.org/download/MManuals/UsArmyTacticalSingleChannelRadioTechniques1987.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "08_Communications/Radio_Theory/FM_24-18_Tactical_Single_Channel_Radio_1987.pdf", "license": "US Government work", "index": true }
+        { "id": "fm-3-25-26", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/Details.aspx?PUB_ID=103749", "title": "FM 3-25.26 - Map Reading and Land Navigation (2001)", "url": "https://ciehub.info/ref/FM/3-25x26_2001_html.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "08_Communications/Navigation/FM 3-25.26 Map Reading and Land Navigation (2001).pdf", "license": "US Government work (Department of the Army)", "index": true },
+        { "id": "fm-24-18", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/FM.aspx", "title": "FM 24-18 - Tactical Single-Channel Radio Communications Techniques", "url": "https://archive.org/download/MManuals/UsArmyTacticalSingleChannelRadioTechniques1987.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "08_Communications/Radio_Theory/FM_24-18_Tactical_Single_Channel_Radio_1987.pdf", "license": "US Government work", "index": true }
       ]
     },
     {
@@ -126,7 +126,7 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": ["Machining", "Welding", "Blacksmithing_Forge", "Casting"],
       "items": [
-        { "id": "tc-9-524", "title": "TC 9-524 - Fundamentals of Machine Tools", "url": "https://archive.org/download/MManuals/UsArmyMachinistFundamentals-machineTools1996.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "09_Metallurgy/Machining/TC_9-524_Fundamentals_of_Machine_Tools_1996.pdf", "license": "US Government work", "index": true }
+        { "id": "tc-9-524", "sourceUrl": "https://armypubs.army.mil/ProductMaps/PubForm/TC.aspx", "title": "TC 9-524 - Fundamentals of Machine Tools", "url": "https://archive.org/download/MManuals/UsArmyMachinistFundamentals-machineTools1996.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "09_Metallurgy/Machining/TC_9-524_Fundamentals_of_Machine_Tools_1996.pdf", "license": "US Government work", "index": true }
       ]
     },
     {
@@ -234,13 +234,13 @@
       "kind": "pdf", "defaultEnabled": true,
       "subdirs": [],
       "items": [
-        { "id": "fema-are-you-ready", "title": "FEMA - Are You Ready? Citizen Preparedness Guide", "url": "https://bready.sd.gov/bReady/areyouready_full.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Are You Ready - Citizen Preparedness Guide.pdf", "license": "US Government work (FEMA)", "index": true },
-        { "id": "nws-tornado-safety", "title": "NWS - Tornado Safety", "url": "https://www.weather.gov/media/tbw/brochures/TornadoSafety.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/NWS Tornado Safety.pdf", "license": "US Government work (NOAA)", "index": true },
-        { "id": "usgs-earthquake-roots", "title": "USGS - Putting Down Roots in Earthquake Country", "url": "https://pubs.usgs.gov/gip/2005/15/gip-15.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/USGS Putting Down Roots in Earthquake Country.pdf", "license": "US Government work (USGS)", "index": true },
-        { "id": "ready-wildfire", "title": "Ready.gov - Wildfire Info Sheet", "url": "https://www.ready.gov/sites/default/files/2021-01/ready_wildfire_info-sheet.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/Ready.gov Wildfire Info Sheet.pdf", "license": "US Government work (FEMA)", "index": true },
-        { "id": "ready-extreme-heat", "title": "Ready.gov - Extreme Heat Info Sheet", "url": "https://www.ready.gov/sites/default/files/2021-01/ready_extreme-heat_info-sheet.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/Ready.gov Extreme Heat Info Sheet.pdf", "license": "US Government work (FEMA)", "index": true },
-        { "id": "fema-pet-toolkit", "title": "FEMA - Pet Preparedness Toolkit (2024)", "url": "https://content.govdelivery.com/attachments/USDHSFEMA/2024/05/15/file_attachments/2878877/Pet%20Preparedness%20Toolkit%202024.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Pet Preparedness Toolkit 2024.pdf", "license": "US Government work (FEMA)", "index": true },
-        { "id": "usda-bees-fb447", "title": "USDA Farmers Bulletin 447 - Bees (1911)", "url": "https://archive.org/download/beesusdept00phil/beesusdept00phil.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Homestead/USDA Farmers Bulletin 447 - Bees (1911).pdf", "license": "US Government work (USDA)", "index": true }
+        { "id": "fema-are-you-ready", "sourceUrl": "https://www.ready.gov/collection/are-you-ready", "title": "FEMA - Are You Ready? Citizen Preparedness Guide", "url": "https://bready.sd.gov/bReady/areyouready_full.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Are You Ready - Citizen Preparedness Guide.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "nws-tornado-safety", "sourceUrl": "https://www.weather.gov/safety/tornado", "title": "NWS - Tornado Safety", "url": "https://www.weather.gov/media/tbw/brochures/TornadoSafety.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/NWS Tornado Safety.pdf", "license": "US Government work (NOAA)", "index": true },
+        { "id": "usgs-earthquake-roots", "sourceUrl": "https://pubs.usgs.gov/gip/2005/15/", "title": "USGS - Putting Down Roots in Earthquake Country", "url": "https://pubs.usgs.gov/gip/2005/15/gip-15.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/USGS Putting Down Roots in Earthquake Country.pdf", "license": "US Government work (USGS)", "index": true },
+        { "id": "ready-wildfire", "sourceUrl": "https://www.ready.gov/wildfires", "title": "Ready.gov - Wildfire Info Sheet", "url": "https://www.ready.gov/sites/default/files/2021-01/ready_wildfire_info-sheet.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/Ready.gov Wildfire Info Sheet.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "ready-extreme-heat", "sourceUrl": "https://www.ready.gov/heat", "title": "Ready.gov - Extreme Heat Info Sheet", "url": "https://www.ready.gov/sites/default/files/2021-01/ready_extreme-heat_info-sheet.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/Ready.gov Extreme Heat Info Sheet.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "fema-pet-toolkit", "sourceUrl": "https://www.ready.gov/pets", "title": "FEMA - Pet Preparedness Toolkit (2024)", "url": "https://content.govdelivery.com/attachments/USDHSFEMA/2024/05/15/file_attachments/2878877/Pet%20Preparedness%20Toolkit%202024.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Disaster_Preparedness/FEMA Pet Preparedness Toolkit 2024.pdf", "license": "US Government work (FEMA)", "index": true },
+        { "id": "usda-bees-fb447", "sourceUrl": "https://www.nal.usda.gov/", "title": "USDA Farmers Bulletin 447 - Bees (1911)", "url": "https://archive.org/download/beesusdept00phil/beesusdept00phil.pdf", "mirrors": [], "sha256": null, "sha256Url": null, "sizeBytes": null, "target": "12_Long_Term_Survival/Homestead/USDA Farmers Bulletin 447 - Bees (1911).pdf", "license": "US Government work (USDA)", "index": true }
       ]
     },
     {
@@ -263,35 +263,35 @@
           "license": "Public domain (published 1892)", "index": true
         },
         {
-          "id": "henkel-wild-medicinal-1906", "title": "Henkel - Wild Medicinal Plants of the United States, USDA Bulletin 89 (1906)",
+          "id": "henkel-wild-medicinal-1906", "sourceUrl": "https://www.nal.usda.gov/", "title": "Henkel - Wild Medicinal Plants of the United States, USDA Bulletin 89 (1906)",
           "url": "https://archive.org/download/wildmedicinalpla89henk/wildmedicinalpla89henk.pdf", "mirrors": [],
           "target": "13_Wild_Medicinal_Plants/Names_and_Reference/Henkel_Wild_Medicinal_Plants_of_the_United_States_USDA_Bulletin_89.pdf",
           "sha256": null, "sha256Url": null, "sizeBytes": 8970968,
           "license": "US Government work (USDA), public domain", "index": true
         },
         {
-          "id": "henkel-weeds-medicine-1904", "title": "Henkel - Weeds Used in Medicine, USDA Farmers Bulletin 188 (1904)",
+          "id": "henkel-weeds-medicine-1904", "sourceUrl": "https://www.nal.usda.gov/", "title": "Henkel - Weeds Used in Medicine, USDA Farmers Bulletin 188 (1904)",
           "url": "https://archive.org/download/CAT87202292/farmbul0188.pdf", "mirrors": [],
           "target": "13_Wild_Medicinal_Plants/Identification_and_Uses/Henkel_Weeds_Used_in_Medicine_USDA_Farmers_Bulletin_188.pdf",
           "sha256": null, "sha256Url": null, "sizeBytes": 2028906,
           "license": "US Government work (USDA), public domain", "index": true
         },
         {
-          "id": "chesnut-poisonous-1898", "title": "Chesnut - Thirty Poisonous Plants of the United States, USDA Farmers Bulletin 86 (1898)",
+          "id": "chesnut-poisonous-1898", "sourceUrl": "https://www.nal.usda.gov/", "title": "Chesnut - Thirty Poisonous Plants of the United States, USDA Farmers Bulletin 86 (1898)",
           "url": "https://archive.org/download/CAT87202204/farmbul0086.pdf", "mirrors": [],
           "target": "13_Wild_Medicinal_Plants/Poisonous_Plants/Chesnut_Thirty_Poisonous_Plants_of_the_United_States_USDA_Farmers_Bulletin_86.pdf",
           "sha256": null, "sha256Url": null, "sizeBytes": 2259109,
           "license": "US Government work (USDA), public domain", "index": true
         },
         {
-          "id": "marsh-stock-poisoning-1924", "title": "Marsh - Stock-Poisoning Plants of the Range, USDA Bulletin 1245 (1924)",
+          "id": "marsh-stock-poisoning-1924", "sourceUrl": "https://www.nal.usda.gov/", "title": "Marsh - Stock-Poisoning Plants of the Range, USDA Bulletin 1245 (1924)",
           "url": "https://archive.org/download/stockpoisoningpl1245mars_0/stockpoisoningpl1245mars_0.pdf", "mirrors": [],
           "target": "13_Wild_Medicinal_Plants/Poisonous_Plants/Marsh_Stock-Poisoning_Plants_of_the_Range_USDA_Bulletin_1245.pdf",
           "sha256": null, "sha256Url": null, "sizeBytes": 10666768,
           "license": "US Government work (USDA), public domain", "index": true
         },
         {
-          "id": "densmore-chippewa-plants-1928", "title": "Densmore - Uses of Plants by the Chippewa Indians, Smithsonian BAE (1928)",
+          "id": "densmore-chippewa-plants-1928", "sourceUrl": "https://www.si.edu/", "title": "Densmore - Uses of Plants by the Chippewa Indians, Smithsonian BAE (1928)",
           "url": "https://archive.org/download/usesofplantsbych00dens/usesofplantsbych00dens.pdf", "mirrors": [],
           "target": "13_Wild_Medicinal_Plants/Traditional_Uses/Densmore_Uses_of_Plants_by_the_Chippewa_Indians_Smithsonian_BAE.pdf",
           "sha256": null, "sha256Url": null, "sizeBytes": 18051788,

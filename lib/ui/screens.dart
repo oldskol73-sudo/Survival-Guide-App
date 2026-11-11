@@ -19,6 +19,7 @@ import 'about_screen.dart';
 import '../maps/maps_screen.dart';
 import '../videos/videos_screen.dart';
 import 'masthead.dart';
+import 'source_link.dart';
 import '../search/fts_index.dart';
 import 'my_documents_screen.dart';
 import 'wild_plants_screen.dart';
@@ -354,7 +355,10 @@ class _ItemRow extends StatelessWidget {
     return ListTile(
       dense: true,
       title: Text(item.title),
-      subtitle: Text(label, style: TextStyle(color: color)),
+      subtitle: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+        Text(label, style: TextStyle(color: color)),
+        if (item.sourceUrl != null) SourceLink(url: item.sourceUrl!),
+      ]),
       trailing: (j?.isUsable ?? false) && item.kind != CategoryKind.model ? const Icon(Icons.chevron_right) : null,
       onTap: (j?.isUsable ?? false) ? () => _open(context, item) : null,
     );
