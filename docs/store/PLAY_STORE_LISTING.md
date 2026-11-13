@@ -9,11 +9,13 @@
 **Tagline:** Knowledge When Everything Goes Dark.
 
 **Short description** (80 max, this is 78):
-`Knowledge when everything goes dark: offline manuals, maps, checklists, vault.`
+`Offline survival manuals, maps and checklists. Not a government app.`
 
 **Full description** (4000 max):
 
 ```
+NOT A GOVERNMENT APP. Blackout IQ is not affiliated with, endorsed by or sponsored by any government agency. Official sources are listed at the end of this description.
+
 Blackout IQ keeps practical survival knowledge on your phone, so it works when the network does not.
 
 WHAT YOU GET
